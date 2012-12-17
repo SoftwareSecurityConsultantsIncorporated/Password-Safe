@@ -29,6 +29,7 @@
 		0A2E48C11679596900E84172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; };
 		0A2E48C91679596900E84172 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48C71679596900E84172 /* InfoPlist.strings */; };
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
+		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		0A2E48C81679596900E84172 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A2E48CA1679596900E84172 /* PasswordSafeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordSafeTests.h; sourceTree = "<group>"; };
 		0A2E48CB1679596900E84172 /* PasswordSafeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSafeTests.m; sourceTree = "<group>"; };
+		0A2E48D5167A83BD00E84172 /* Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generator.h; sourceTree = "<group>"; };
+		0A2E48D6167A83BD00E84172 /* Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				0A2E489B1679596800E84172 /* AppDelegate.h */,
+				0A2E48D5167A83BD00E84172 /* Generator.h */,
+				0A2E48D6167A83BD00E84172 /* Generator.m */,
 				0A2E489C1679596800E84172 /* AppDelegate.m */,
 				0A2E48A41679596800E84172 /* MainStoryboard_iPhone.storyboard */,
 				0A2E48A71679596800E84172 /* MainStoryboard_iPad.storyboard */,
@@ -299,6 +304,7 @@
 				0A2E489D1679596800E84172 /* AppDelegate.m in Sources */,
 				0A2E48AC1679596800E84172 /* FirstViewController.m in Sources */,
 				0A2E48B31679596800E84172 /* SecondViewController.m in Sources */,
+				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
