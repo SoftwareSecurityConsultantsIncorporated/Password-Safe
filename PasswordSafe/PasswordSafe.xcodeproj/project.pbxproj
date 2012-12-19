@@ -488,6 +488,7 @@
 				0A2E48D11679596900E84172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A2E48D21679596900E84172 /* Build configuration list for PBXNativeTarget "PasswordSafeTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +497,7 @@
 				0A2E48D41679596900E84172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
