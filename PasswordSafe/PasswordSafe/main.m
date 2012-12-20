@@ -14,7 +14,10 @@
 int main(int argc, char *argv[])
 {
     Generator *test = [[Generator alloc] init];
-    [test generateWithLength:5 andCaps:3 andLowers:2 andSpecials:0 andNums:0];
+    for (int i = 0; i < 5; i++) {
+    NSString *testString = [test generatePassword:5 :3 :2 :0 :0];
+    NSLog(testString);
+    }
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

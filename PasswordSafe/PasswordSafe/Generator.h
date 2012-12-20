@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Generator : NSObject {
+    @public
+    NSArray* charPool;
 }
+-(id)init;
 
--(NSString*) generateWithLength: (int) length
-                andCaps: (int) numCaps
-                andLowers: (int) numLowers
-                andSpecials: (int) numSpecials
-                andNums: (int) numNums;
+-(NSString*) generatePassword: (int) length: (int) numCaps: (int) numLowers: (int) numSpecials: (int) numNums;
+
+-(NSMutableArray*) knuthShuffle: (NSMutableArray*) password: (int)length;
 
 @end
