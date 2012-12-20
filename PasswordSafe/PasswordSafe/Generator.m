@@ -56,8 +56,10 @@
             count++;
         }
         else {
-           [passwordArray addObject:character];
-            count++;
+            if (Caps <= 0 && Lowers <= 0 && Specials <= 0 && Nums <= 0){
+                [passwordArray addObject:character];
+                count++;
+            }
         }
     }
     passwordArray = [self knuthShuffle:passwordArray :length];

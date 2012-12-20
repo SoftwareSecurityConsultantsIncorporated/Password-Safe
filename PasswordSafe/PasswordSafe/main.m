@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
     Generator *test = [[Generator alloc] init];
     for (int i = 0; i < 5; i++) {
-    NSString *testString = [test generatePassword:5 :3 :2 :0 :0];
+    NSString *testString = [test generatePassword:8 :1 :3 :2 :2];
     NSLog(testString);
     }
     @autoreleasepool {
