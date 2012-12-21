@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Account : NSObject {
-@public
+@private
     NSMutableString* password;
     NSMutableString* name;
     NSMutableString* site;

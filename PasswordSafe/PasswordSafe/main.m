@@ -10,14 +10,20 @@
 
 #import "AppDelegate.h"
 #import "Generator.h"
+#import "Note.h"
+#import "Account.h"
 
 int main(int argc, char *argv[])
 {
     Generator *test = [[Generator alloc] init];
-    for (int i = 0; i < 5; i++) {
-    NSString *testString = [test generatePassword:8 :1 :3 :2 :2];
+    NSMutableString *testString = [[NSMutableString alloc] initWithString:[test generatePassword:8 :1 :3 :2 :2]];
+    NSMutableString *aTitle = [[NSMutableString alloc] initWithString:@"titulars"];
+    for (int i = 0; i < 1; i++) {
     NSLog(testString);
     }
+    [testString setString:[test generatePassword:8 :1 :3 :2 :2]];
+    Note *testNote = [[Note alloc] init: aTitle: testString];
+    [testNote saveNote];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

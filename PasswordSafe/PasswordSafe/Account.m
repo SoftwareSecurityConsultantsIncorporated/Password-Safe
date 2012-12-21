@@ -31,28 +31,28 @@
     return self;
 }
 
--(NSString*) getPassword{
+-(NSMutableString*) getPassword{
     return password;
 }
--(NSString*) getName{
+-(NSMutableString*) getName{
     return name;
 }
--(NSString*) getSite{
+-(NSMutableString*) getSite{
     return site;
 }
--(NSString*) getDescription{
+-(NSMutableString*) getDescription{
     return description;
 }
--(void) setPassword: (NSString*) newPassword{
+-(void) setPassword: (NSMutableString*) newPassword{
     [password setString:newPassword];
 }
--(void) setName: (NSString*) newName{
+-(void) setName: (NSMutableString*) newName{
     [name setString:newName];
 }
--(void) setSite: (NSString*) newSite{
+-(void) setSite: (NSMutableString*) newSite{
     [site setString:newSite];
 }
--(void)setDescription: (NSString*) newDescription{
+-(void)setDescription: (NSMutableString*) newDescription{
     [description setString:newDescription];
 }
 @end

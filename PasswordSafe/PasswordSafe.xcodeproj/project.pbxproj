@@ -31,6 +31,7 @@
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
 		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 		0A66FA531683F27000F864E2 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA521683F27000F864E2 /* Account.m */; };
+		0A66FA571683FAEC00F864E2 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA561683FAEC00F864E2 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		0A2E48D6167A83BD00E84172 /* Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generator.m; sourceTree = "<group>"; };
 		0A66FA511683F27000F864E2 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		0A66FA521683F27000F864E2 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		0A66FA551683FAEC00F864E2 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		0A66FA561683FAEC00F864E2 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 			children = (
 				0A66FA511683F27000F864E2 /* Account.h */,
 				0A66FA521683F27000F864E2 /* Account.m */,
+				0A66FA551683FAEC00F864E2 /* Note.h */,
+				0A66FA561683FAEC00F864E2 /* Note.m */,
 				0A2E489B1679596800E84172 /* AppDelegate.h */,
 				0A2E48D5167A83BD00E84172 /* Generator.h */,
 				0A2E48D6167A83BD00E84172 /* Generator.m */,
@@ -311,6 +316,7 @@
 				0A2E48B31679596800E84172 /* SecondViewController.m in Sources */,
 				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
 				0A66FA531683F27000F864E2 /* Account.m in Sources */,
+				0A66FA571683FAEC00F864E2 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
