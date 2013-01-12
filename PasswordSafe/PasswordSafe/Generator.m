@@ -19,7 +19,7 @@
 }
 
 
--(NSString*)generatePassword: (int)length: (int)numCaps: (int)numLowers: (int)numSpecials: (int)numNums{
+-(NSMutableString*)generatePassword: (int)length: (int)numCaps: (int)numLowers: (int)numSpecials: (int)numNums{
 //    if ((numCaps + numLowers + numSpecials + numNums) > length){
 //        
 //    }

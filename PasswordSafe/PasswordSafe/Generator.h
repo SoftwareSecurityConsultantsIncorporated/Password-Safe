@@ -14,7 +14,7 @@
 }
 -(id)init;
 
--(NSString*) generatePassword: (int) length: (int) numCaps: (int) numLowers: (int) numSpecials: (int) numNums;
+-(NSMutableString*) generatePassword: (int) length: (int) numCaps: (int) numLowers: (int) numSpecials: (int) numNums;
 
 -(NSMutableArray*) knuthShuffle: (NSMutableArray*) password: (int)length;
 

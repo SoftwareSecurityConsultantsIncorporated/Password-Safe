@@ -9,16 +9,8 @@
 #import "Note.h"
 
 @implementation Note
-- (id)init {
-    self = [super init];
-    if (self){
-        title = NULL;
-        text = NULL;
-    }
-    return self;
-}
 
-- (id)init: (NSMutableString*) newTitle: (NSMutableString*) newText {
+- (id)initWithValues: (NSMutableString*) newTitle: (NSMutableString*) newText {
     self = [super init];
     if (self){
         [self setTitle:newTitle];
@@ -45,8 +37,7 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"note.txt"];
     
-    
-    NSMutableString *str = [[NSMutableString alloc] initWithString:@"title"];
+    NSMutableString *str = [[NSMutableString alloc]initWithString:@"title"];
     [str appendString:@"\n"];
     [str appendString:@"text"];
     [str appendString:@"\n"];

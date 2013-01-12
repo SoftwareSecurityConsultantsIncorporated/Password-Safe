@@ -13,8 +13,7 @@
     NSMutableString* title;
     NSMutableString* text;
 }
--(id)init;
--(id)init: (NSMutableString*) newTitle: (NSMutableString*) newText;
+-(id)initWithValues: (NSMutableString*) newTitle: (NSMutableString*) newText;
 
 -(NSMutableString*) getTitle;
 -(NSMutableString*) getText;
