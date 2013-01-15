@@ -19,14 +19,21 @@
 }
 
 
--(NSMutableString*)generatePassword: (int)length: (int)numCaps: (int)numLowers: (int)numSpecials: (int)numNums{
+-(NSMutableString*)generatePassword: (int)length: (int)numCaps: (int)numLowers: (int)numSpecials: (int)numNums:
+(Boolean)caps: (Boolean)lowers: (Boolean)specs: (Boolean)nums{
 //    if ((numCaps + numLowers + numSpecials + numNums) > length){
-//        
+//
 //    }
-    int Caps = numCaps;
-    int Lowers = numLowers;
-    int Specials = numSpecials;
-    int Nums = numNums;
+    int Caps = -1;
+    int Lowers = -1;
+    int Specials = -1;
+    int Nums = -1;
+    
+    if (nums) Nums = numNums;
+    if (lowers) Lowers = numLowers;
+    if (caps) Caps = numCaps;
+    if (specs) Specials = numSpecials;
+    
     NSMutableArray *passwordArray = [[NSMutableArray alloc] init];
     NSMutableString *password = [[NSMutableString alloc] init];
     int count = 0;
@@ -34,29 +41,40 @@
         int pos = arc4random_uniform(84);
         NSString* character = [charPool objectAtIndex:pos];
         int ascii = [character characterAtIndex:0];
-        if ((ascii > 64 && ascii < 91) && Caps > 0){
+        if ([self isCapital:ascii] && Caps > 0){
             [passwordArray addObject:character];
             Caps--;
             count++;
         }
-        else if ((ascii > 96 && ascii < 123) && Lowers > 0){
+        else if ([self isLower:ascii] && Lowers > 0){
             [passwordArray addObject:character];
             Lowers--;
             count++;
         }
-        else if (((ascii == 21) || (ascii > 34 && ascii < 39) || (ascii > 39 && ascii < 47) || (ascii > 57 && ascii < 65) ||
-                  (ascii > 90 && ascii < 96) || (ascii == 123) || (ascii == 125)) && (Specials > 0)){
+        else if ([self isSpecial:ascii] && (Specials > 0)){
             [passwordArray addObject:character];
             Specials--;
             count++;
         }
-        else if ((ascii > 47 && ascii < 58) && Nums > 0){
+        else if ([self isNumber:ascii] && Nums > 0){
             [passwordArray addObject:character];
             Nums--;
             count++;
         }
-        else {
-            if (Caps <= 0 && Lowers <= 0 && Specials <= 0 && Nums <= 0){
+        else if ((Caps <= 0) && (Lowers <= 0) && (Specials <= 0) && (Nums <= 0)){
+            if ([self isCapital:ascii] && Caps == 0){
+                [passwordArray addObject:character];
+                count++;
+            }
+            else if ([self isLower:ascii] && Lowers == 0){
+                [passwordArray addObject:character];
+                count++;
+            }
+            else if ([self isSpecial:ascii] && Specials == 0){
+                [passwordArray addObject:character];
+                count++;
+            }
+            else if ([self isNumber:ascii] && Nums == 0){
                 [passwordArray addObject:character];
                 count++;
             }
@@ -80,4 +98,24 @@
     }
     return password;
 }
+
+-(Boolean)isCapital: (int)ascii{
+    return (ascii > 64 && ascii < 91);
+}
+
+-(Boolean)isLower:(int)ascii{
+    return (ascii > 96 && ascii < 123);
+}
+
+-(Boolean)isSpecial: (int)ascii{
+    return (ascii == 21) || (ascii > 34 && ascii < 39) || (ascii > 39 && ascii < 47) || (ascii > 57 && ascii < 65) ||
+            (ascii > 90 && ascii < 96) || (ascii == 123) || (ascii == 125);
+}
+
+-(Boolean)isNumber: (int)ascii{
+    return (ascii > 47 && ascii < 58);
+}
+    
+    
+
 @end
