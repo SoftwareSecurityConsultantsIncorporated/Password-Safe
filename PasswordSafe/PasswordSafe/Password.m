@@ -1,12 +1,12 @@
 //
-//  Account.m
+//  Password.m
 //  PasswordSafe
 //
 //  Created by CSSE Department on 12/20/12.
 //  Copyright (c) 2012 Software Security Consultants Incorporated. All rights reserved.
 //
 
-#import "Account.h"
+#import "Password.h"
 
 @implementation Account
 - (id)init {

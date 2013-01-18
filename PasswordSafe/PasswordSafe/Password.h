@@ -1,5 +1,5 @@
 //
-//  Account.h
+//  Password.h
 //  PasswordSafe
 //
 //  Created by CSSE Department on 12/20/12.
