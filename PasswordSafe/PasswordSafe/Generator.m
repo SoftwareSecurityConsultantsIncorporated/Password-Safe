@@ -24,6 +24,7 @@
 //    if ((numCaps + numLowers + numSpecials + numNums) > length){
 //
 //    }
+    // TODO error checking
     int Caps = -1;
     int Lowers = -1;
     int Specials = -1;

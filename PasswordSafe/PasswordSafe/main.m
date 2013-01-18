@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "Generator.h"
 #import "Note.h"
-#import "Account.h"
+#import "Password.h"
 
 int main(int argc, char *argv[])
 {
