@@ -38,10 +38,13 @@
     NSMutableString *password = [[NSMutableString alloc] init];
     int count = 0;
     while (count < length){
+        // TODO Fix magic number
         int pos = arc4random_uniform(84);
         NSString* character = [charPool objectAtIndex:pos];
         int ascii = [character characterAtIndex:0];
         if ([self isCapital:ascii] && Caps > 0){
+        // TODO Fix magic numbers
+        if ((ascii > 64 && ascii < 91) && Caps > 0){
             [passwordArray addObject:character];
             Caps--;
             count++;
