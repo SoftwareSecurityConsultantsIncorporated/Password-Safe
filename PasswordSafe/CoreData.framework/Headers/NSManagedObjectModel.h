@@ -18,7 +18,7 @@ NS_CLASS_AVAILABLE(10_4,3_0)
 @interface NSManagedObjectModel : NSObject <NSCoding, NSCopying, NSFastEnumeration> {
 @private
 	id _dataForOptimization;
-	id *_optimizationHints; 
+	id _optimizationHints; 
     id _localizationPolicy;
     NSMutableDictionary *_entities;
     NSMutableDictionary *_configurations;

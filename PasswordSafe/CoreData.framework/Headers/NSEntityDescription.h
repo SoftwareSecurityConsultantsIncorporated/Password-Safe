@@ -48,7 +48,7 @@ NS_CLASS_AVAILABLE(10_4,3_0)
     __strong void *_extraIvars;
     NSMutableDictionary *_userInfo;
     id _flattenedSubentities;
-    id** _kvcPropertyAccessors;
+    id _kvcPropertyAccessors;
     long _modelsReferenceIDForEntity;
 }
 

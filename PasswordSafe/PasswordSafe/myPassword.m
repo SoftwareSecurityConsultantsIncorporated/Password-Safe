@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Software Security Consultants Incorporated. All rights reserved.
 //
 
-#import "Password.h"
+#import "myPassword.h"
 
 @implementation Account
 - (id)init {
@@ -30,7 +30,7 @@
     }
     return self;
 }
-
+/*
 -(NSMutableString*) getPassword{
     return password;
 }
@@ -54,5 +54,5 @@
 }
 -(void)setDescription: (NSMutableString*) newDescription{
     [description setString:newDescription];
-}
+}*/
 @end

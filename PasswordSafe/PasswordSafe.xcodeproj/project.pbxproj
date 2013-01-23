@@ -49,6 +49,12 @@
 		0AA8E79D16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
 		0AA8E79E16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
 		0AA8E79F16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
+		0AA8E7A116AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
+		0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
+		0AA8E7A316AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
+		0AA8E7A616AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
+		0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
+		0AA8E7A816AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,9 @@
 		0AA8E79716AB34480070D2C4 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		0AA8E79B16AB34770070D2C4 /* Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Password.h; sourceTree = "<group>"; };
 		0AA8E79C16AB34770070D2C4 /* Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Password.m; sourceTree = "<group>"; };
+		0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
+		0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +217,9 @@
 				0A2E48B41679596800E84172 /* second.png */,
 				0A2E48B61679596800E84172 /* second@2x.png */,
 				0A2E48931679596800E84172 /* Supporting Files */,
+				0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */,
+				0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */,
+				0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */,
 			);
 			path = PasswordSafe;
 			sourceTree = "<group>";
@@ -365,6 +377,7 @@
 				0A2E48B01679596800E84172 /* first@2x.png in Resources */,
 				0A2E48B51679596800E84172 /* second.png in Resources */,
 				0A2E48B71679596800E84172 /* second@2x.png in Resources */,
+				0AA8E7A116AF63DB0070D2C4 /* NoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2E48C91679596900E84172 /* InfoPlist.strings in Resources */,
+				0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA8E6AD16A8DE860070D2C4 /* InfoPlist.strings in Resources */,
+				0AA8E7A316AF63DB0070D2C4 /* NoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +445,7 @@
 				0AA8E79316AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */,
 				0AA8E79816AB34480070D2C4 /* Note.m in Sources */,
 				0AA8E79D16AB34770070D2C4 /* Password.m in Sources */,
+				0AA8E7A616AF6A7C0070D2C4 /* NoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +457,7 @@
 				0AA8E79416AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */,
 				0AA8E79916AB34480070D2C4 /* Note.m in Sources */,
 				0AA8E79E16AB34770070D2C4 /* Password.m in Sources */,
+				0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +469,7 @@
 				0AA8E79516AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */,
 				0AA8E79A16AB34480070D2C4 /* Note.m in Sources */,
 				0AA8E79F16AB34770070D2C4 /* Password.m in Sources */,
+				0AA8E7A816AF6A7C0070D2C4 /* NoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
