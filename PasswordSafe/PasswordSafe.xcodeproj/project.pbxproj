@@ -17,54 +17,24 @@
 		0A2E488F1679596800E84172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; };
 		0A2E48911679596800E84172 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48901679596800E84172 /* CoreGraphics.framework */; };
 		0A2E48971679596800E84172 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48951679596800E84172 /* InfoPlist.strings */; };
-		0A2E48991679596800E84172 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48981679596800E84172 /* main.m */; };
-		0A2E489D1679596800E84172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E489C1679596800E84172 /* AppDelegate.m */; };
-		0A2E489F1679596800E84172 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E489E1679596800E84172 /* Default.png */; };
-		0A2E48A11679596800E84172 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48A01679596800E84172 /* Default@2x.png */; };
-		0A2E48A31679596800E84172 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48A21679596800E84172 /* Default-568h@2x.png */; };
-		0A2E48A61679596800E84172 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48A41679596800E84172 /* MainStoryboard_iPhone.storyboard */; };
-		0A2E48A91679596800E84172 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48A71679596800E84172 /* MainStoryboard_iPad.storyboard */; };
-		0A2E48AC1679596800E84172 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48AB1679596800E84172 /* FirstViewController.m */; };
-		0A2E48AE1679596800E84172 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48AD1679596800E84172 /* first.png */; };
-		0A2E48B01679596800E84172 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48AF1679596800E84172 /* first@2x.png */; };
-		0A2E48B31679596800E84172 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48B21679596800E84172 /* SecondViewController.m */; };
-		0A2E48B51679596800E84172 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48B41679596800E84172 /* second.png */; };
-		0A2E48B71679596800E84172 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48B61679596800E84172 /* second@2x.png */; };
 		0A2E48BF1679596900E84172 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
 		0A2E48C01679596900E84172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488C1679596800E84172 /* UIKit.framework */; };
 		0A2E48C11679596900E84172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; };
 		0A2E48C91679596900E84172 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48C71679596900E84172 /* InfoPlist.strings */; };
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
 		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
-		0A66FA531683F27000F864E2 /* myPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA521683F27000F864E2 /* myPassword.m */; };
-		0A66FA571683FAEC00F864E2 /* myNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA561683FAEC00F864E2 /* myNote.m */; };
-		0AA8E6A516A8DE860070D2C4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
-		0AA8E6A616A8DE860070D2C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488C1679596800E84172 /* UIKit.framework */; };
-		0AA8E6A716A8DE860070D2C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; };
-		0AA8E6AD16A8DE860070D2C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E6AB16A8DE860070D2C4 /* InfoPlist.strings */; };
-		0AA8E6B016A8DE860070D2C4 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E6AF16A8DE860070D2C4 /* GeneratorTests.m */; };
+		0A65F73C16AB430700DC7097 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 		0AA8E78E16AB2AD00070D2C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */; };
 		0AA8E78F16AB2AD00070D2C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */; };
-		0AA8E79016AB2AD00070D2C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */; };
-		0AA8E79316AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
 		0AA8E79416AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
-		0AA8E79516AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
-		0AA8E79816AB34480070D2C4 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
 		0AA8E79916AB34480070D2C4 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
-		0AA8E79A16AB34480070D2C4 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
-		0AA8E79D16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
 		0AA8E79E16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
-		0AA8E79F16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
-		0AA8E7A116AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
 		0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
-		0AA8E7A316AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
-		0AA8E7A616AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
 		0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
-		0AA8E7A816AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
-		0A65F73B16AB42D500DC7097 /* Generator.h in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D5167A83BD00E84172 /* Generator.h */; };
-		0A65F73C16AB430700DC7097 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
-		0A66FA531683F27000F864E2 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA521683F27000F864E2 /* Password.m */; };
-		0A66FA571683FAEC00F864E2 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA561683FAEC00F864E2 /* Note.m */; };
+		0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F76616AB31A800F63233 /* GeneratorTest.m */; };
+		0AEEB5BF16B2208A00EDA79D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
+		0AEEB5C116B2219F00EDA79D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */; };
+		0AEEB5C216B2237900EDA79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48981679596800E84172 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,30 +86,17 @@
 		0A2E48CB1679596900E84172 /* PasswordSafeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSafeTests.m; sourceTree = "<group>"; };
 		0A2E48D5167A83BD00E84172 /* Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generator.h; sourceTree = "<group>"; };
 		0A2E48D6167A83BD00E84172 /* Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generator.m; sourceTree = "<group>"; };
-		0A66FA511683F27000F864E2 /* myPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPassword.h; sourceTree = "<group>"; };
-		0A66FA521683F27000F864E2 /* myPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPassword.m; sourceTree = "<group>"; };
-		0A66FA551683FAEC00F864E2 /* myNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myNote.h; sourceTree = "<group>"; };
-		0A66FA561683FAEC00F864E2 /* myNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myNote.m; sourceTree = "<group>"; };
-		0AA8E6A416A8DE860070D2C4 /* GeneratorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeneratorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AA8E6AA16A8DE860070D2C4 /* GeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeneratorTests-Info.plist"; sourceTree = "<group>"; };
-		0AA8E6AC16A8DE860070D2C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0AA8E6AE16A8DE860070D2C4 /* GeneratorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
-		0AA8E6AF16A8DE860070D2C4 /* GeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratorTests.m; sourceTree = "<group>"; };
-		0AA8E6B116A8DE860070D2C4 /* GeneratorTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeneratorTests-Prefix.pch"; sourceTree = "<group>"; };
+		0A65F73D16ABA84A00DC7097 /* GeneratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTest.h; sourceTree = "<group>"; };
 		0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreData.framework; sourceTree = "<group>"; };
 		0AA8E79216AB30DF0070D2C4 /* PasswordSafeData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PasswordSafeData.xcdatamodel; sourceTree = "<group>"; };
-		0AA8E79616AB34480070D2C4 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		0AA8E79716AB34480070D2C4 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		0AA8E79B16AB34770070D2C4 /* Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Password.h; sourceTree = "<group>"; };
-		0AA8E79C16AB34770070D2C4 /* Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Password.m; sourceTree = "<group>"; };
+		0AA8E79616AB34480070D2C4 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Note.h; path = ../Note.h; sourceTree = "<group>"; };
+		0AA8E79716AB34480070D2C4 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = ../Note.m; sourceTree = "<group>"; };
+		0AA8E79B16AB34770070D2C4 /* Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Password.h; path = ../Password.h; sourceTree = "<group>"; };
+		0AA8E79C16AB34770070D2C4 /* Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Password.m; path = ../Password.m; sourceTree = "<group>"; };
 		0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
 		0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
 		0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
-		0A65F73D16ABA84A00DC7097 /* GeneratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTest.h; sourceTree = "<group>"; };
-		0A66FA511683F27000F864E2 /* Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Password.h; sourceTree = "<group>"; };
-		0A66FA521683F27000F864E2 /* Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Password.m; sourceTree = "<group>"; };
-		0A66FA551683FAEC00F864E2 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		0A66FA561683FAEC00F864E2 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEB5BF16B2208A00EDA79D /* SenTestingKit.framework in Frameworks */,
 				0A2E488D1679596800E84172 /* UIKit.framework in Frameworks */,
 				0A2E488F1679596800E84172 /* Foundation.framework in Frameworks */,
 				0A2E48911679596800E84172 /* CoreGraphics.framework in Frameworks */,
@@ -175,18 +133,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AA8E6A016A8DE860070D2C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0AA8E6A516A8DE860070D2C4 /* SenTestingKit.framework in Frameworks */,
-				0AA8E6A616A8DE860070D2C4 /* UIKit.framework in Frameworks */,
-				0AA8E6A716A8DE860070D2C4 /* Foundation.framework in Frameworks */,
-				0AA8E79016AB2AD00070D2C4 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -215,11 +161,7 @@
 		0A2E487D1679596800E84172 = {
 			isa = PBXGroup;
 			children = (
-				0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */,
-				0AA8E79B16AB34770070D2C4 /* Password.h */,
-				0AA8E79C16AB34770070D2C4 /* Password.m */,
-				0AA8E79616AB34480070D2C4 /* Note.h */,
-				0AA8E79716AB34480070D2C4 /* Note.m */,
+				0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */,
 				0A2E48921679596800E84172 /* PasswordSafe */,
 				0A2E48C41679596900E84172 /* PasswordSafeTests */,
 				0A06F75716AB314400F63233 /* PasswordSafeLogicTests */,
@@ -253,10 +195,11 @@
 		0A2E48921679596800E84172 /* PasswordSafe */ = {
 			isa = PBXGroup;
 			children = (
-				0A66FA511683F27000F864E2 /* myPassword.h */,
-				0A66FA521683F27000F864E2 /* myPassword.m */,
-				0A66FA551683FAEC00F864E2 /* myNote.h */,
-				0A66FA561683FAEC00F864E2 /* myNote.m */,
+				0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */,
+				0AA8E79C16AB34770070D2C4 /* Password.m */,
+				0AA8E79B16AB34770070D2C4 /* Password.h */,
+				0AA8E79616AB34480070D2C4 /* Note.h */,
+				0AA8E79716AB34480070D2C4 /* Note.m */,
 				0A2E489B1679596800E84172 /* AppDelegate.h */,
 				0A2E48D5167A83BD00E84172 /* Generator.h */,
 				0A2E48D6167A83BD00E84172 /* Generator.m */,
@@ -411,16 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2E48971679596800E84172 /* InfoPlist.strings in Resources */,
-				0A2E489F1679596800E84172 /* Default.png in Resources */,
-				0A2E48A11679596800E84172 /* Default@2x.png in Resources */,
-				0A2E48A31679596800E84172 /* Default-568h@2x.png in Resources */,
-				0A2E48A61679596800E84172 /* MainStoryboard_iPhone.storyboard in Resources */,
-				0A2E48A91679596800E84172 /* MainStoryboard_iPad.storyboard in Resources */,
-				0A2E48AE1679596800E84172 /* first.png in Resources */,
-				0A2E48B01679596800E84172 /* first@2x.png in Resources */,
-				0A2E48B51679596800E84172 /* second.png in Resources */,
-				0A2E48B71679596800E84172 /* second@2x.png in Resources */,
-				0AA8E7A116AF63DB0070D2C4 /* NoteView.xib in Resources */,
+				0AEEB5C116B2219F00EDA79D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,15 +364,6 @@
 			files = (
 				0A2E48C91679596900E84172 /* InfoPlist.strings in Resources */,
 				0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0AA8E6A116A8DE860070D2C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0AA8E6AD16A8DE860070D2C4 /* InfoPlist.strings in Resources */,
-				0AA8E7A316AF63DB0070D2C4 /* NoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +403,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A65F73B16AB42D500DC7097 /* Generator.h in Sources */,
 				0A65F73C16AB430700DC7097 /* Generator.m in Sources */,
 				0A06F75F16AB314400F63233 /* PasswordSafeLogicTests.m in Sources */,
 				0A06F76716AB31A800F63233 /* GeneratorTest.m in Sources */,
@@ -489,17 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2E48991679596800E84172 /* main.m in Sources */,
-				0A2E489D1679596800E84172 /* AppDelegate.m in Sources */,
-				0A2E48AC1679596800E84172 /* FirstViewController.m in Sources */,
-				0A2E48B31679596800E84172 /* SecondViewController.m in Sources */,
+				0AEEB5C216B2237900EDA79D /* main.m in Sources */,
 				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
-				0A66FA531683F27000F864E2 /* myPassword.m in Sources */,
-				0A66FA571683FAEC00F864E2 /* myNote.m in Sources */,
-				0AA8E79316AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */,
-				0AA8E79816AB34480070D2C4 /* Note.m in Sources */,
-				0AA8E79D16AB34770070D2C4 /* Password.m in Sources */,
-				0AA8E7A616AF6A7C0070D2C4 /* NoteViewController.m in Sources */,
+				0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,19 +431,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0AA8E69F16A8DE860070D2C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0AA8E6B016A8DE860070D2C4 /* GeneratorTests.m in Sources */,
-				0AA8E79516AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */,
-				0AA8E79A16AB34480070D2C4 /* Note.m in Sources */,
-				0AA8E79F16AB34770070D2C4 /* Password.m in Sources */,
-				0AA8E7A816AF6A7C0070D2C4 /* NoteViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -623,8 +526,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -637,6 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -651,14 +560,20 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -671,6 +586,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PasswordSafe/PasswordSafe-Prefix.pch";
@@ -686,6 +602,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PasswordSafe/PasswordSafe-Prefix.pch";
@@ -727,39 +644,6 @@
 				INFOPLIST_FILE = "PasswordSafeTests/PasswordSafeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-		0AA8E6B316A8DE870070D2C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GeneratorTests/GeneratorTests-Prefix.pch";
-				INFOPLIST_FILE = "GeneratorTests/GeneratorTests-Info.plist";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		0AA8E6B416A8DE870070D2C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-					"\"$(SRCROOT)\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GeneratorTests/GeneratorTests-Prefix.pch";
-				INFOPLIST_FILE = "GeneratorTests/GeneratorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -813,7 +697,7 @@
 			);
 			currentVersion = 0AA8E79216AB30DF0070D2C4 /* PasswordSafeData.xcdatamodel */;
 			path = PasswordSafeData.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
