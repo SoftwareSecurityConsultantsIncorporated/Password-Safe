@@ -7,6 +7,8 @@
 //
 
 #import "Password.h"
+#import <CoreData/CoreData.h>
+#import <Foundation/Foundation.h>
 
 
 @implementation Password

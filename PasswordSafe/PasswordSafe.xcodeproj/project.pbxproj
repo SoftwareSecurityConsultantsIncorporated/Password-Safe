@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A06F75416AB314400F63233 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
 		0A06F75516AB314400F63233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488C1679596800E84172 /* UIKit.framework */; };
-		0A06F75616AB314400F63233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; };
+		0A06F75616AB314400F63233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0A06F75C16AB314400F63233 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A06F75A16AB314400F63233 /* InfoPlist.strings */; };
 		0A06F75F16AB314400F63233 /* PasswordSafeLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F75E16AB314400F63233 /* PasswordSafeLogicTests.m */; };
 		0A06F76716AB31A800F63233 /* GeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F76616AB31A800F63233 /* GeneratorTest.m */; };
@@ -24,8 +24,6 @@
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
 		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 		0A65F73C16AB430700DC7097 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
-		0AA8E78E16AB2AD00070D2C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */; };
-		0AA8E78F16AB2AD00070D2C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */; };
 		0AA8E79416AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
 		0AA8E79916AB34480070D2C4 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
 		0AA8E79E16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
@@ -36,6 +34,18 @@
 		0AEEB5BF16B2208A00EDA79D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
 		0AEEB5C116B2219F00EDA79D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */; };
 		0AEEB5C216B2237900EDA79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48981679596800E84172 /* main.m */; };
+		0AEEB5C316B224F000EDA79D /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
+		0AEEB5C416B224F900EDA79D /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
+		0AEEB5C516B224FD00EDA79D /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
+		0AEEB5C616B2251900EDA79D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E489C1679596800E84172 /* AppDelegate.m */; };
+		0AEEB5CA16B2275100EDA79D /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C916B2275100EDA79D /* CoreDataTest.m */; };
+		0AEEB5CB16B2286E00EDA79D /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
+		0AEEB5CC16B2287200EDA79D /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
+		0AEEB5CD16B2288300EDA79D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E489C1679596800E84172 /* AppDelegate.m */; };
+		0AEEB5CF16B2289300EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; };
+		0AEEB5D016B22FF200EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; };
+		0AEEB5D116B22FFC00EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; };
+		0AEEB5D216B2307D00EDA79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48981679596800E84172 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +98,6 @@
 		0A2E48D5167A83BD00E84172 /* Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generator.h; sourceTree = "<group>"; };
 		0A2E48D6167A83BD00E84172 /* Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generator.m; sourceTree = "<group>"; };
 		0A65F73D16ABA84A00DC7097 /* GeneratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTest.h; sourceTree = "<group>"; };
-		0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreData.framework; sourceTree = "<group>"; };
 		0AA8E79216AB30DF0070D2C4 /* PasswordSafeData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PasswordSafeData.xcdatamodel; sourceTree = "<group>"; };
 		0AA8E79616AB34480070D2C4 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Note.h; path = ../Note.h; sourceTree = "<group>"; };
 		0AA8E79716AB34480070D2C4 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = ../Note.m; sourceTree = "<group>"; };
@@ -100,6 +109,9 @@
 		0AA8E7B116B22AC00070D2C4 /* WebDAVAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDAVAPI.h; sourceTree = "<group>"; };
 		0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDAVAPI.m; sourceTree = "<group>"; };
 		0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0AEEB5C816B2275100EDA79D /* CoreDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTest.h; sourceTree = "<group>"; };
+		0AEEB5C916B2275100EDA79D /* CoreDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTest.m; sourceTree = "<group>"; };
+		0AEEB5CE16B2289200EDA79D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEB5CF16B2289300EDA79D /* CoreData.framework in Frameworks */,
 				0A06F75416AB314400F63233 /* SenTestingKit.framework in Frameworks */,
 				0A06F75516AB314400F63233 /* UIKit.framework in Frameworks */,
 				0A06F75616AB314400F63233 /* Foundation.framework in Frameworks */,
@@ -117,11 +130,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEB5D116B22FFC00EDA79D /* CoreData.framework in Frameworks */,
 				0AEEB5BF16B2208A00EDA79D /* SenTestingKit.framework in Frameworks */,
 				0A2E488D1679596800E84172 /* UIKit.framework in Frameworks */,
 				0A2E488F1679596800E84172 /* Foundation.framework in Frameworks */,
 				0A2E48911679596800E84172 /* CoreGraphics.framework in Frameworks */,
-				0AA8E78E16AB2AD00070D2C4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,10 +142,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEB5D016B22FF200EDA79D /* CoreData.framework in Frameworks */,
 				0A2E48BF1679596900E84172 /* SenTestingKit.framework in Frameworks */,
 				0A2E48C01679596900E84172 /* UIKit.framework in Frameworks */,
 				0A2E48C11679596900E84172 /* Foundation.framework in Frameworks */,
-				0AA8E78F16AB2AD00070D2C4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +155,8 @@
 		0A06F75716AB314400F63233 /* PasswordSafeLogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AEEB5C916B2275100EDA79D /* CoreDataTest.m */,
+				0AEEB5C816B2275100EDA79D /* CoreDataTest.h */,
 				0A65F73D16ABA84A00DC7097 /* GeneratorTest.h */,
 				0A06F76616AB31A800F63233 /* GeneratorTest.m */,
 				0A06F75D16AB314400F63233 /* PasswordSafeLogicTests.h */,
@@ -186,7 +201,7 @@
 		0A2E488B1679596800E84172 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AA8E78D16AB2AD00070D2C4 /* CoreData.framework */,
+				0AEEB5CE16B2289200EDA79D /* CoreData.framework */,
 				0A2E488C1679596800E84172 /* UIKit.framework */,
 				0A2E488E1679596800E84172 /* Foundation.framework */,
 				0A2E48901679596800E84172 /* CoreGraphics.framework */,
@@ -408,9 +423,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEB5D216B2307D00EDA79D /* main.m in Sources */,
+				0AEEB5C616B2251900EDA79D /* AppDelegate.m in Sources */,
+				0AEEB5C516B224FD00EDA79D /* Note.m in Sources */,
+				0AEEB5C416B224F900EDA79D /* Password.m in Sources */,
+				0AEEB5C316B224F000EDA79D /* PasswordSafeData.xcdatamodeld in Sources */,
 				0A65F73C16AB430700DC7097 /* Generator.m in Sources */,
 				0A06F75F16AB314400F63233 /* PasswordSafeLogicTests.m in Sources */,
 				0A06F76716AB31A800F63233 /* GeneratorTest.m in Sources */,
+				0AEEB5CA16B2275100EDA79D /* CoreDataTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +439,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEEB5CD16B2288300EDA79D /* AppDelegate.m in Sources */,
+				0AEEB5CC16B2287200EDA79D /* Note.m in Sources */,
+				0AEEB5CB16B2286E00EDA79D /* Password.m in Sources */,
 				0AEEB5C216B2237900EDA79D /* main.m in Sources */,
 				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
 				0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */,
