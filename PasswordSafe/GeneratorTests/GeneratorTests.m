@@ -41,7 +41,7 @@
     numSpecials = 0;
     numNums = 0;
     
-    [password setString:[test generatePassword: length: numCaps: numLowers: numSpecials: numNums: TRUE: TRUE: TRUE: TRUE]];
+ [password setString:[test generatePassword: length: numCaps: numLowers: numSpecials: numNums: TRUE: TRUE: TRUE: TRUE]];
     
     STAssertEqualObjects(password, @"", @"The generator did not return a blank string.");
     [self tearDown];

@@ -115,6 +115,47 @@
 
 -(Boolean)isNumber: (int)ascii{
     return (ascii > 47 && ascii < 58);
-}    
+}
+-(int)countUpperCaseCharacters: (NSMutableString*)string{
+    int count=0;
+    int i=0;
+    for (i = 0; i < [string length]; i++) {
+        BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[string characterAtIndex:i]];
+        if (isUppercase == YES)
+            count++;
+    }
+    return count;
+}
+-(int)countLowerCaseCharacters: (NSMutableString*)string{
+    int count=0;
+    int i=0;
+    for (i = 0; i < [string length]; i++) {
+        BOOL isUppercase = [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:[string characterAtIndex:i]];
+        if (isUppercase == YES)
+            count++;
+    }
+    return count;
+}
+
+-(int)countSpecialCaseCharacters: (NSMutableString*)string{
+    int count = 0;
+    int i = 0;
+    for(i=0; i<[string length]; i++){
+        if([self isSpecial: [string characterAtIndex:i]]){
+            count++;
+        }
+    }
+    return count;
+}
+-(int)countNumbers: (NSMutableString*)string{
+    int count = 0;
+    int i = 0;
+    for(i=0; i<[string length]; i++){
+        if([self isNumber: [string characterAtIndex:i]]){
+            count++;
+        }
+    }
+    return count;
+}
 
 @end

@@ -36,7 +36,7 @@ NS_CLASS_AVAILABLE(10_4,3_0) NS_REQUIRES_PROPERTY_DEFINITIONS
     NSManagedObjectID*  _cd_objectID;
     uintptr_t           _cd_extraFlags;
     id                  _cd_observationInfo;
-    id*                 _cd_snapshots;
+    id                  _cd_snapshots;
     uintptr_t           _cd_lockingInfo;
     id                  _cd_queueReference;
 }

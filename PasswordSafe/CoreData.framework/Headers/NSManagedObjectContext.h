@@ -101,7 +101,7 @@ NS_CLASS_AVAILABLE(10_4,3_0)
   NSMutableSet *_lockedObjects;
   NSMutableSet *_refreshedObjects;
   id _infoByGID;
-  id *_cachedObsInfoByEntity;
+  id _cachedObsInfoByEntity;
   short _undoTransactionID;
   id _lock;
   long _lockCount;
@@ -114,7 +114,7 @@ NS_CLASS_AVAILABLE(10_4,3_0)
   int32_t _cd_rc;
   int32_t _ignoreChangeNotification;
   id _editors;
-  id* _debuggingRecords;
+  id _debuggingRecords;
   id _childObjectStores;
   id _reserved2;
 }

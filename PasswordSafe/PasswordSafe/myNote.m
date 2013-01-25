@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Software Security Consultants Incorporated. All rights reserved.
 //
 
-#import "Note.h"
+#import "myNote.h"
 
 @implementation Note
 

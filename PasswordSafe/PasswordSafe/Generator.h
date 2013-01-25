@@ -26,6 +26,10 @@
 -(Boolean)isSpecial: (int)ascii;
 
 -(Boolean)isNumber: (int)ascii;
+-(int)countUpperCaseCharacters: (NSMutableString*)string;
+-(int)countLowerCaseCharacters: (NSMutableString*)string;
+-(int)countSpecialCaseCharacters: (NSMutableString*)string;
+-(int)countNumbers: (NSMutableString*)string;
 
 @end
 
