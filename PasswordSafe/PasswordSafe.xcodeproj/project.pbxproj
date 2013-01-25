@@ -31,6 +31,7 @@
 		0AA8E79E16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
 		0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
 		0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
+		0AA8E7B316B22AC00070D2C4 /* WebDAVAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */; };
 		0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F76616AB31A800F63233 /* GeneratorTest.m */; };
 		0AEEB5BF16B2208A00EDA79D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
 		0AEEB5C116B2219F00EDA79D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */; };
@@ -96,6 +97,8 @@
 		0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
 		0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
 		0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		0AA8E7B116B22AC00070D2C4 /* WebDAVAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDAVAPI.h; sourceTree = "<group>"; };
+		0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDAVAPI.m; sourceTree = "<group>"; };
 		0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +202,8 @@
 				0AA8E79C16AB34770070D2C4 /* Password.m */,
 				0AA8E79B16AB34770070D2C4 /* Password.h */,
 				0AA8E79616AB34480070D2C4 /* Note.h */,
+				0AA8E7B116B22AC00070D2C4 /* WebDAVAPI.h */,
+				0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */,
 				0AA8E79716AB34480070D2C4 /* Note.m */,
 				0A2E489B1679596800E84172 /* AppDelegate.h */,
 				0A2E48D5167A83BD00E84172 /* Generator.h */,
@@ -416,6 +421,7 @@
 				0AEEB5C216B2237900EDA79D /* main.m in Sources */,
 				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
 				0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */,
+				0AA8E7B316B22AC00070D2C4 /* WebDAVAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
