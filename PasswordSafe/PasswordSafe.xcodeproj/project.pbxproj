@@ -36,7 +36,6 @@
 		0A2E48C91679596900E84172 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48C71679596900E84172 /* InfoPlist.strings */; };
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
 		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
-<<<<<<< HEAD
 		0A66FA531683F27000F864E2 /* myPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA521683F27000F864E2 /* myPassword.m */; };
 		0A66FA571683FAEC00F864E2 /* myNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA561683FAEC00F864E2 /* myNote.m */; };
 		0AA8E6A516A8DE860070D2C4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
@@ -62,12 +61,10 @@
 		0AA8E7A616AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
 		0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
 		0AA8E7A816AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
-=======
 		0A65F73B16AB42D500DC7097 /* Generator.h in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D5167A83BD00E84172 /* Generator.h */; };
 		0A65F73C16AB430700DC7097 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 		0A66FA531683F27000F864E2 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA521683F27000F864E2 /* Password.m */; };
 		0A66FA571683FAEC00F864E2 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FA561683FAEC00F864E2 /* Note.m */; };
->>>>>>> Change in the generator, and adding the unit tests
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +116,6 @@
 		0A2E48CB1679596900E84172 /* PasswordSafeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSafeTests.m; sourceTree = "<group>"; };
 		0A2E48D5167A83BD00E84172 /* Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Generator.h; sourceTree = "<group>"; };
 		0A2E48D6167A83BD00E84172 /* Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Generator.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		0A66FA511683F27000F864E2 /* myPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myPassword.h; sourceTree = "<group>"; };
 		0A66FA521683F27000F864E2 /* myPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myPassword.m; sourceTree = "<group>"; };
 		0A66FA551683FAEC00F864E2 /* myNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myNote.h; sourceTree = "<group>"; };
@@ -139,13 +135,11 @@
 		0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
 		0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
 		0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
-=======
 		0A65F73D16ABA84A00DC7097 /* GeneratorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTest.h; sourceTree = "<group>"; };
 		0A66FA511683F27000F864E2 /* Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Password.h; sourceTree = "<group>"; };
 		0A66FA521683F27000F864E2 /* Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Password.m; sourceTree = "<group>"; };
 		0A66FA551683FAEC00F864E2 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		0A66FA561683FAEC00F864E2 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
->>>>>>> Change in the generator, and adding the unit tests
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +175,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		0AA8E6A016A8DE860070D2C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,8 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-=======
->>>>>>> Change in the generator, and adding the unit tests
+
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -441,7 +433,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		0AA8E6A116A8DE860070D2C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,8 +442,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-=======
->>>>>>> Change in the generator, and adding the unit tests
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -526,7 +515,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		0AA8E69F16A8DE860070D2C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,8 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-=======
->>>>>>> Change in the generator, and adding the unit tests
+
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -744,7 +731,6 @@
 			};
 			name = Release;
 		};
-<<<<<<< HEAD
 		0AA8E6B316A8DE870070D2C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -778,8 +764,6 @@
 			};
 			name = Release;
 		};
-=======
->>>>>>> Change in the generator, and adding the unit tests
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
