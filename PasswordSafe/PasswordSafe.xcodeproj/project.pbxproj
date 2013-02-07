@@ -24,12 +24,10 @@
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
 		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 		0A65F73C16AB430700DC7097 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
+		0A90FCAA16C333AA00ED0A1E /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C916B2275100EDA79D /* CoreDataTest.m */; };
 		0AA8E79416AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
 		0AA8E79916AB34480070D2C4 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
 		0AA8E79E16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
-		0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */; };
-		0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */; };
-		0AA8E7B316B22AC00070D2C4 /* WebDAVAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */; };
 		0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F76616AB31A800F63233 /* GeneratorTest.m */; };
 		0AEEB5BF16B2208A00EDA79D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48BE1679596900E84172 /* SenTestingKit.framework */; };
 		0AEEB5C116B2219F00EDA79D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */; };
@@ -41,10 +39,9 @@
 		0AEEB5CA16B2275100EDA79D /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C916B2275100EDA79D /* CoreDataTest.m */; };
 		0AEEB5CB16B2286E00EDA79D /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
 		0AEEB5CC16B2287200EDA79D /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
-		0AEEB5CD16B2288300EDA79D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E489C1679596800E84172 /* AppDelegate.m */; };
 		0AEEB5CF16B2289300EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; };
 		0AEEB5D016B22FF200EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; };
-		0AEEB5D116B22FFC00EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; };
+		0AEEB5D116B22FFC00EDA79D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEEB5CE16B2289200EDA79D /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0AEEB5D216B2307D00EDA79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48981679596800E84172 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -83,12 +80,8 @@
 		0A2E48A81679596800E84172 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0A2E48AA1679596800E84172 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		0A2E48AB1679596800E84172 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0A2E48AD1679596800E84172 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		0A2E48AF1679596800E84172 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		0A2E48B11679596800E84172 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		0A2E48B21679596800E84172 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		0A2E48B41679596800E84172 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		0A2E48B61679596800E84172 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		0A2E48BD1679596900E84172 /* PasswordSafeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordSafeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2E48BE1679596900E84172 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0A2E48C61679596900E84172 /* PasswordSafeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PasswordSafeTests-Info.plist"; sourceTree = "<group>"; };
@@ -103,9 +96,6 @@
 		0AA8E79716AB34480070D2C4 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = ../Note.m; sourceTree = "<group>"; };
 		0AA8E79B16AB34770070D2C4 /* Password.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Password.h; path = ../Password.h; sourceTree = "<group>"; };
 		0AA8E79C16AB34770070D2C4 /* Password.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Password.m; path = ../Password.m; sourceTree = "<group>"; };
-		0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteView.xib; sourceTree = "<group>"; };
-		0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
-		0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		0AA8E7B116B22AC00070D2C4 /* WebDAVAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebDAVAPI.h; sourceTree = "<group>"; };
 		0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebDAVAPI.m; sourceTree = "<group>"; };
 		0AEEB5C016B2219E00EDA79D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -228,16 +218,9 @@
 				0A2E48A71679596800E84172 /* MainStoryboard_iPad.storyboard */,
 				0A2E48AA1679596800E84172 /* FirstViewController.h */,
 				0A2E48AB1679596800E84172 /* FirstViewController.m */,
-				0A2E48AD1679596800E84172 /* first.png */,
-				0A2E48AF1679596800E84172 /* first@2x.png */,
 				0A2E48B11679596800E84172 /* SecondViewController.h */,
 				0A2E48B21679596800E84172 /* SecondViewController.m */,
-				0A2E48B41679596800E84172 /* second.png */,
-				0A2E48B61679596800E84172 /* second@2x.png */,
 				0A2E48931679596800E84172 /* Supporting Files */,
-				0AA8E7A016AF63DB0070D2C4 /* NoteView.xib */,
-				0AA8E7A416AF6A7C0070D2C4 /* NoteViewController.h */,
-				0AA8E7A516AF6A7C0070D2C4 /* NoteViewController.m */,
 			);
 			path = PasswordSafe;
 			sourceTree = "<group>";
@@ -383,7 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2E48C91679596900E84172 /* InfoPlist.strings in Resources */,
-				0AA8E7A216AF63DB0070D2C4 /* NoteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,13 +421,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AEEB5CD16B2288300EDA79D /* AppDelegate.m in Sources */,
+				0A90FCAA16C333AA00ED0A1E /* CoreDataTest.m in Sources */,
 				0AEEB5CC16B2287200EDA79D /* Note.m in Sources */,
 				0AEEB5CB16B2286E00EDA79D /* Password.m in Sources */,
 				0AEEB5C216B2237900EDA79D /* main.m in Sources */,
 				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
 				0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */,
-				0AA8E7B316B22AC00070D2C4 /* WebDAVAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +438,6 @@
 				0AA8E79416AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */,
 				0AA8E79916AB34480070D2C4 /* Note.m in Sources */,
 				0AA8E79E16AB34770070D2C4 /* Password.m in Sources */,
-				0AA8E7A716AF6A7C0070D2C4 /* NoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

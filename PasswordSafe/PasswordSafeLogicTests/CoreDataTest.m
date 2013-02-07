@@ -13,10 +13,9 @@
 -(void) setUp{
     NSArray *bundles = [NSArray arrayWithObject:[NSBundle bundleForClass:[self class]]];
     NSManagedObjectModel *mom = [NSManagedObjectModel mergedModelFromBundles:bundles];
-    STAssertNotNil(mom, @"ManangedObjectModel ist nil");
+    STAssertNotNil(mom, @"ManangedObjectModel is nil");
     NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
     STAssertTrue([psc addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:nil options:nil error:NULL] ? YES : NO, @"Should be able to add in-memory store");
-    
     context = [[NSManagedObjectContext alloc] init];
     context.persistentStoreCoordinator = psc;
     free(&mom);
@@ -31,21 +30,21 @@
     if (![context save:&error]) {
         STFail(@"Failed the test: %@, %@", error, [error userInfo]);
         }
-}
--(void) testGettingPasswordFromCoreData{
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Password" inManagedObjectContext:context];
     [request setEntity:entity];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id==17"];
     [request setPredicate:predicate];
-    NSError *error;
     NSArray *array = [context executeFetchRequest:request error:&error];
     if (array !=nil){
-        STAssertEquals([array count], 1, @"There is not 1 record in the database");
+        STAssertEquals([array count], (NSUInteger) 1, @"There is not 1 object in the database");
     }else{
         STFail(@"Something went wrong");
     }
+}
+-(void) testGettingPasswordFromCoreData{
+ 
 }
 
 @end

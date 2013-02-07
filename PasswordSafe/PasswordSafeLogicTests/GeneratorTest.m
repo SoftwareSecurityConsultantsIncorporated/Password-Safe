@@ -55,19 +55,15 @@
     
         [password setString:[test generatePassword: length: numCaps: numLowers: numSpecials: numNums: TRUE: TRUE: TRUE: TRUE]];
         if(numCaps>[test countUpperCaseCharacters:password]){
-            //NSLOG(@"Number of characters expected %@. Number recieved %@.", numCaps, [test countUpperCaseCharacters:password]);
             STFail(@"Password generated did not contain at least the number specified of capitals");
         }
         if(length != [password length]){
             STFail(@"Password generated did not contain at least the number specified of length");
         }if(numLowers>[test countLowerCaseCharacters:password]){
-            //NSLOG(@"Number of characters expected %@. Number recieved %@.", numLowers, [test countLowerCaseCharacters:password]);\
             STFail(@"Password generated did not contain at least the number specified of low case");
         }if(numSpecials>[test countSpecialCaseCharacters:password]){
-            //NSLOG(@"Number of characters expected %@. Number recieved %@.", numSpecials, [test countSpecialCaseCharacters:password]);
             STFail(@"Password generated did not contain at least the number specified of special characters");
         }if(numNums>[test countNumbers:password]){
-           // NSLOG(@"Number of characters expected %@. Number recieved %@.", numNums, [test countNumbers:password]);
             STFail(@"Password generated did not contain at least the number specified of numbers");
         }
     }

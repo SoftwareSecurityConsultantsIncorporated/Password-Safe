@@ -12,7 +12,7 @@
 #import "Generator.h"
 #import "Note.h"
 #import "Password.h"
-
+#import <CoreData/CoreData.h>
 int main(int argc, char *argv[])
 {
 
