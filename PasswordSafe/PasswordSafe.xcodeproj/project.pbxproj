@@ -13,6 +13,8 @@
 		0A06F75C16AB314400F63233 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A06F75A16AB314400F63233 /* InfoPlist.strings */; };
 		0A06F75F16AB314400F63233 /* PasswordSafeLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F75E16AB314400F63233 /* PasswordSafeLogicTests.m */; };
 		0A06F76716AB31A800F63233 /* GeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F76616AB31A800F63233 /* GeneratorTest.m */; };
+		0A2891E616CB35A600B23506 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2891E516CB35A600B23506 /* NavigationViewController.m */; };
+		0A2891E716CB3ACF00B23506 /* MainStoryboard_iPhone1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E48A41679596800E84172 /* MainStoryboard_iPhone1.storyboard */; };
 		0A2E488D1679596800E84172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488C1679596800E84172 /* UIKit.framework */; };
 		0A2E488F1679596800E84172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E488E1679596800E84172 /* Foundation.framework */; };
 		0A2E48911679596800E84172 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2E48901679596800E84172 /* CoreGraphics.framework */; };
@@ -24,7 +26,9 @@
 		0A2E48CC1679596900E84172 /* PasswordSafeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48CB1679596900E84172 /* PasswordSafeTests.m */; };
 		0A2E48D7167A83BD00E84172 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
 		0A65F73C16AB430700DC7097 /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E48D6167A83BD00E84172 /* Generator.m */; };
-		0A90FCAA16C333AA00ED0A1E /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C916B2275100EDA79D /* CoreDataTest.m */; };
+		0A90FCAB16C3369200ED0A1E /* PasswordSafeLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A06F75E16AB314400F63233 /* PasswordSafeLogicTests.m */; };
+		0A90FCAC16C3385000ED0A1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E489C1679596800E84172 /* AppDelegate.m */; };
+		0A90FCAF16C3386C00ED0A1E /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEB5C916B2275100EDA79D /* CoreDataTest.m */; };
 		0AA8E79416AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */; };
 		0AA8E79916AB34480070D2C4 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79716AB34480070D2C4 /* Note.m */; };
 		0AA8E79E16AB34770070D2C4 /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8E79C16AB34770070D2C4 /* Password.m */; };
@@ -63,6 +67,8 @@
 		0A06F75E16AB314400F63233 /* PasswordSafeLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSafeLogicTests.m; sourceTree = "<group>"; };
 		0A06F76016AB314400F63233 /* PasswordSafeLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PasswordSafeLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		0A06F76616AB31A800F63233 /* GeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorTest.m; sourceTree = "<group>"; };
+		0A2891E416CB35A600B23506 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		0A2891E516CB35A600B23506 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		0A2E48881679596800E84172 /* PasswordSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2E488C1679596800E84172 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A2E488E1679596800E84172 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,12 +82,8 @@
 		0A2E489E1679596800E84172 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0A2E48A01679596800E84172 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0A2E48A21679596800E84172 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		0A2E48A51679596800E84172 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		0A2E48A51679596800E84172 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone1.storyboard; sourceTree = "<group>"; };
 		0A2E48A81679596800E84172 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		0A2E48AA1679596800E84172 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		0A2E48AB1679596800E84172 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0A2E48B11679596800E84172 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		0A2E48B21679596800E84172 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0A2E48BD1679596900E84172 /* PasswordSafeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordSafeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2E48BE1679596900E84172 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0A2E48C61679596900E84172 /* PasswordSafeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PasswordSafeTests-Info.plist"; sourceTree = "<group>"; };
@@ -204,22 +206,20 @@
 			isa = PBXGroup;
 			children = (
 				0AA8E79116AB30DF0070D2C4 /* PasswordSafeData.xcdatamodeld */,
-				0AA8E79C16AB34770070D2C4 /* Password.m */,
 				0AA8E79B16AB34770070D2C4 /* Password.h */,
-				0AA8E79616AB34480070D2C4 /* Note.h */,
+				0AA8E79C16AB34770070D2C4 /* Password.m */,
 				0AA8E7B116B22AC00070D2C4 /* WebDAVAPI.h */,
 				0AA8E7B216B22AC00070D2C4 /* WebDAVAPI.m */,
+				0AA8E79616AB34480070D2C4 /* Note.h */,
 				0AA8E79716AB34480070D2C4 /* Note.m */,
 				0A2E489B1679596800E84172 /* AppDelegate.h */,
+				0A2E489C1679596800E84172 /* AppDelegate.m */,
+				0A2891E416CB35A600B23506 /* NavigationViewController.h */,
+				0A2891E516CB35A600B23506 /* NavigationViewController.m */,
 				0A2E48D5167A83BD00E84172 /* Generator.h */,
 				0A2E48D6167A83BD00E84172 /* Generator.m */,
-				0A2E489C1679596800E84172 /* AppDelegate.m */,
-				0A2E48A41679596800E84172 /* MainStoryboard_iPhone.storyboard */,
+				0A2E48A41679596800E84172 /* MainStoryboard_iPhone1.storyboard */,
 				0A2E48A71679596800E84172 /* MainStoryboard_iPad.storyboard */,
-				0A2E48AA1679596800E84172 /* FirstViewController.h */,
-				0A2E48AB1679596800E84172 /* FirstViewController.m */,
-				0A2E48B11679596800E84172 /* SecondViewController.h */,
-				0A2E48B21679596800E84172 /* SecondViewController.m */,
 				0A2E48931679596800E84172 /* Supporting Files */,
 			);
 			path = PasswordSafe;
@@ -356,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2891E716CB3ACF00B23506 /* MainStoryboard_iPhone1.storyboard in Resources */,
 				0A2E48971679596800E84172 /* InfoPlist.strings in Resources */,
 				0AEEB5C116B2219F00EDA79D /* Default-568h@2x.png in Resources */,
 			);
@@ -421,12 +422,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A90FCAA16C333AA00ED0A1E /* CoreDataTest.m in Sources */,
+				0A90FCAF16C3386C00ED0A1E /* CoreDataTest.m in Sources */,
+				0A90FCAC16C3385000ED0A1E /* AppDelegate.m in Sources */,
+				0A90FCAB16C3369200ED0A1E /* PasswordSafeLogicTests.m in Sources */,
 				0AEEB5CC16B2287200EDA79D /* Note.m in Sources */,
 				0AEEB5CB16B2286E00EDA79D /* Password.m in Sources */,
 				0AEEB5C216B2237900EDA79D /* main.m in Sources */,
 				0A2E48D7167A83BD00E84172 /* Generator.m in Sources */,
 				0AEEB5BD16B21FF200EDA79D /* GeneratorTest.m in Sources */,
+				0A2891E616CB35A600B23506 /* NavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,12 +472,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0A2E48A41679596800E84172 /* MainStoryboard_iPhone.storyboard */ = {
+		0A2E48A41679596800E84172 /* MainStoryboard_iPhone1.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0A2E48A51679596800E84172 /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
+			name = MainStoryboard_iPhone1.storyboard;
 			sourceTree = "<group>";
 		};
 		0A2E48A71679596800E84172 /* MainStoryboard_iPad.storyboard */ = {
