@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B2080" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Note View Controller - Notes-->
@@ -33,6 +33,11 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Notes" image="notes.png" id="dL9-g4-OJW"/>
                     <navigationItem key="navigationItem" title="Notes" id="gUe-sA-gFK">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="DvM-xn-feZ">
+                            <connections>
+                                <action selector="down:" destination="LdX-Ec-pil" id="xUk-lX-oKw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0NR-Kq-tPz">
                             <connections>
                                 <segue destination="T7Q-mW-Q21" kind="push" identifier="Add Note Segue" id="QDv-G2-sbO"/>
@@ -1031,76 +1036,6 @@
         <image name="notes.png" width="30" height="30"/>
         <image name="passwords.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="AddNoteViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddNoteViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddpasswordViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddpasswordViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
-        </class>
-        <class className="GeneratorViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="generateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lengthLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lengthSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="lowerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lowersSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="makeNewPasswordButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="specialsSlider" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NoteViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
-        </class>
-        <class className="PasswordViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PasswordViewController.h"/>
-        </class>
-        <class className="noteDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/noteDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="passwordDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/passwordDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
