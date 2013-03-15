@@ -30,7 +30,7 @@
     int Specials = -1;
     int Nums = -1;
     
-    if (nums) Nums = numNums;
+    if (nums)Nums = numNums;
     if (lowers) Lowers = numLowers;
     if (caps) Caps = numCaps;
     if (specs) Specials = numSpecials;

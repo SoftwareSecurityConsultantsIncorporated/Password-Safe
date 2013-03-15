@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface GeneratorViewController : UITableViewController
-
+#import "Generator.h"
+@interface GeneratorViewController : UITableViewController {
+    Generator *generator;
+}
 @property (strong, nonatomic) IBOutlet UISlider *lengthSlider;
 @property (strong, nonatomic) IBOutlet UISlider *capitalsSlider;
 @property (strong, nonatomic) IBOutlet UISlider *lowersSlider;
@@ -23,5 +24,16 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet UIButton *makeNewPasswordButton;
+@property (strong, nonatomic) IBOutlet UISwitch *capitalSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *lowerSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *specialSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *numberSwitch;
+
+- (IBAction)generateButton:(id)sender;
+- (IBAction)updateLengthSlider:(id)sender;
+- (IBAction)updateCapitalSlider:(id)sender;
+- (IBAction)updateLowerSlider:(id)sender;
+- (IBAction)updateSpecialSlider:(id)sender;
+- (IBAction)updateNumbersSlider:(id)sender;
 
 @end

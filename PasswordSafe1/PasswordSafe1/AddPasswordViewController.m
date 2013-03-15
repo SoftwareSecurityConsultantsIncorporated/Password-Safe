@@ -18,8 +18,8 @@
 @synthesize accountTitleTextField = __accountTitleTextField;
 @synthesize userNameTextField = __userNameTextField;
 @synthesize passwordTextField = __passwordTextField;
-@synthesize  websiteTextField = __websiteTextField;
-@synthesize  accountDescriptionTextField = __accountDescriptionTextField;
+@synthesize websiteTextField = __websiteTextField;
+@synthesize accountDescriptionTextField = __accountDescriptionTextField;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

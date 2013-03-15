@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B2080" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Note View Controller - Notes-->
@@ -437,7 +437,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uui-Nw-XKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="846"/>
+            <point key="canvasLocation" x="1800" y="1007"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F2N-eN-Ude">
@@ -511,8 +511,11 @@
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-Fh-raV">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="113" id="WZS-Xc-KtH"/>
+                                                        <constraint firstAttribute="width" constant="161" id="uDr-hD-su9"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="updateLengthSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="x7i-Af-K0N"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKl-gZ-h69">
                                                     <constraints>
@@ -538,23 +541,18 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lbg-YU-sXn">
-                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
-                                                </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Lbg-YU-sXn" firstAttribute="centerY" secondItem="WSh-EQ-iOy" secondAttribute="centerY" type="default" id="0Mp-XN-Ae1"/>
-                                            <constraint firstItem="ZKl-gZ-h69" firstAttribute="centerY" secondItem="In2-Ga-gd9" secondAttribute="centerY" type="default" id="21z-Xx-Ocz"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lbg-YU-sXn" secondAttribute="trailing" constant="24" id="6AZ-Aw-c4o"/>
-                                            <constraint firstItem="WSh-EQ-iOy" firstAttribute="leading" secondItem="jXb-Fh-raV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="92P-oo-vOA"/>
-                                            <constraint firstItem="Lbg-YU-sXn" firstAttribute="centerX" secondItem="0Ii-gr-XCu" secondAttribute="centerX" type="default" id="F0L-6C-3CA"/>
-                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="centerY" secondItem="0Ii-gr-XCu" secondAttribute="centerY" type="default" id="Nhm-Rf-xs0"/>
-                                            <constraint firstItem="ZKl-gZ-h69" firstAttribute="top" secondItem="jXb-Fh-raV" secondAttribute="top" type="default" id="Qlw-R3-5Sx"/>
+                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="leading" secondItem="In2-Ga-gd9" secondAttribute="leading" constant="89" id="7QY-Jx-uFD"/>
+                                            <constraint firstItem="WSh-EQ-iOy" firstAttribute="baseline" secondItem="ZKl-gZ-h69" secondAttribute="baseline" type="default" id="9BE-GP-9n2"/>
+                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="bottom" secondItem="WSh-EQ-iOy" secondAttribute="bottom" type="default" id="GcS-CZ-z1E"/>
+                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="centerY" secondItem="In2-Ga-gd9" secondAttribute="centerY" type="default" id="KQd-8q-pcD"/>
+                                            <constraint firstItem="WSh-EQ-iOy" firstAttribute="leading" secondItem="0Ii-gr-XCu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="agZ-pW-o3O"/>
                                             <constraint firstItem="ZKl-gZ-h69" firstAttribute="leading" secondItem="In2-Ga-gd9" secondAttribute="leading" constant="20" type="default" id="cuB-a6-ezq"/>
-                                            <constraint firstItem="Lbg-YU-sXn" firstAttribute="top" secondItem="jXb-Fh-raV" secondAttribute="top" type="default" id="kmC-3G-HMk"/>
-                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="leading" secondItem="In2-Ga-gd9" secondAttribute="leading" constant="81" id="vir-B3-EqE"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Ii-gr-XCu" secondAttribute="bottom" constant="22" id="dwO-8t-ZxQ"/>
+                                            <constraint firstItem="0Ii-gr-XCu" firstAttribute="leading" secondItem="jXb-Fh-raV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yjY-Dd-E1b"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="wVd-gL-rvm">
@@ -568,6 +566,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="113" id="U6W-q6-G4x"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="updateCapitalSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="EWO-En-0qi"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Capitals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLU-xz-clZ">
                                                     <constraints>
@@ -582,21 +583,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-U2-iWn">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-U2-iWn">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="B66-hz-2xl" firstAttribute="bottom" secondItem="l0s-9a-Qhs" secondAttribute="bottom" type="default" id="1qH-aK-Xce"/>
-                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="82" id="2sh-Jj-rVQ"/>
-                                            <constraint firstItem="gLU-xz-clZ" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="17" id="Bjm-Tj-6Pm"/>
-                                            <constraint firstItem="kIT-U2-iWn" firstAttribute="leading" secondItem="B66-hz-2xl" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OwK-Jy-1OU"/>
-                                            <constraint firstItem="B66-hz-2xl" firstAttribute="leading" secondItem="l0s-9a-Qhs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aDN-aN-EEE"/>
+                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="bottom" secondItem="B66-hz-2xl" secondAttribute="bottom" type="default" id="5wh-bx-cvl"/>
+                                            <constraint firstItem="gLU-xz-clZ" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="17" id="8ld-LE-sIz"/>
+                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="top" secondItem="gLU-xz-clZ" secondAttribute="top" type="default" id="Prc-NC-qbx"/>
+                                            <constraint firstItem="B66-hz-2xl" firstAttribute="leading" secondItem="l0s-9a-Qhs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Rr6-jU-Lb6"/>
+                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="89" id="Sfq-Ly-LSH"/>
+                                            <constraint firstAttribute="trailing" secondItem="kIT-U2-iWn" secondAttribute="trailing" constant="10" id="apr-HD-d26"/>
+                                            <constraint firstItem="kIT-U2-iWn" firstAttribute="centerY" secondItem="wVd-gL-rvm" secondAttribute="centerY" type="default" id="b3u-4Z-wTL"/>
                                             <constraint firstItem="kIT-U2-iWn" firstAttribute="centerY" secondItem="B66-hz-2xl" secondAttribute="centerY" type="default" id="b5M-Fq-b4g"/>
-                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="top" secondItem="gLU-xz-clZ" secondAttribute="top" type="default" id="oTE-7V-uGf"/>
-                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="centerY" secondItem="wVd-gL-rvm" secondAttribute="centerY" type="user" id="wAJ-eE-hq6"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="Ba8-pL-ajo">
@@ -610,6 +611,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="111" id="oIA-mC-IKk"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="updateLowerSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="mL3-L7-oCI"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lowers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-pf-BDl">
                                                     <constraints>
@@ -624,21 +628,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-OH-aCs">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-OH-aCs">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="isa-GI-H92" firstAttribute="centerY" secondItem="Ba8-pL-ajo" secondAttribute="centerY" type="default" id="2To-ed-auT"/>
-                                            <constraint firstItem="Vbo-pf-BDl" firstAttribute="top" secondItem="isa-GI-H92" secondAttribute="top" type="default" id="MfQ-gK-5Mu"/>
-                                            <constraint firstItem="kx6-lj-fKp" firstAttribute="leading" secondItem="isa-GI-H92" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Qpx-Tj-t9f"/>
-                                            <constraint firstItem="kx6-lj-fKp" firstAttribute="bottom" secondItem="isa-GI-H92" secondAttribute="bottom" type="default" id="Vkq-ah-uSV"/>
+                                            <constraint firstItem="isa-GI-H92" firstAttribute="top" secondItem="Ba8-pL-ajo" secondAttribute="top" constant="10" id="DAQ-tc-eW4"/>
+                                            <constraint firstItem="kx6-lj-fKp" firstAttribute="centerY" secondItem="Ba8-pL-ajo" secondAttribute="centerY" type="default" id="Lr1-oe-y3Y"/>
+                                            <constraint firstItem="isa-GI-H92" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="91" id="OU1-Qu-eDH"/>
                                             <constraint firstItem="Vbo-pf-BDl" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="22" id="Yy7-i5-WW9"/>
+                                            <constraint firstItem="isa-GI-H92" firstAttribute="bottom" secondItem="Vbo-pf-BDl" secondAttribute="bottom" type="default" id="aLQ-k3-4Ci"/>
                                             <constraint firstItem="DIj-OH-aCs" firstAttribute="top" secondItem="kx6-lj-fKp" secondAttribute="top" type="default" id="gzn-uY-e3c"/>
-                                            <constraint firstItem="DIj-OH-aCs" firstAttribute="leading" secondItem="kx6-lj-fKp" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="l3S-w1-dTE"/>
-                                            <constraint firstItem="isa-GI-H92" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="85" id="zkV-w0-aQU"/>
+                                            <constraint firstItem="kx6-lj-fKp" firstAttribute="leading" secondItem="isa-GI-H92" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="iTO-VT-ugY"/>
+                                            <constraint firstAttribute="trailing" secondItem="DIj-OH-aCs" secondAttribute="trailing" constant="10" id="r20-mi-tvH"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="cgZ-UW-56n">
@@ -650,8 +654,11 @@
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="ARF-UZ-NYX">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="111" id="HFc-lQ-SzO"/>
+                                                        <constraint firstAttribute="width" constant="106" id="vR7-hM-3uV"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="updateSpecialSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="uRi-uE-CC7"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Specials" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrZ-f3-EFT">
                                                     <constraints>
@@ -669,21 +676,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-WE-2fd">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-WE-2fd">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="7HG-WE-2fd" firstAttribute="centerY" secondItem="GrZ-f3-EFT" secondAttribute="centerY" type="default" id="05b-Rr-dzf"/>
-                                            <constraint firstAttribute="trailing" secondItem="7HG-WE-2fd" secondAttribute="trailing" constant="20" type="default" id="95n-5e-FqW"/>
-                                            <constraint firstItem="GrZ-f3-EFT" firstAttribute="leading" secondItem="cgZ-UW-56n" secondAttribute="leading" constant="19" id="HDd-rX-Y9b"/>
-                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="top" secondItem="GrZ-f3-EFT" secondAttribute="top" type="default" id="Xkv-hM-18W"/>
-                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="leading" secondItem="ARF-UZ-NYX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bRp-sg-Qcw"/>
-                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="centerY" secondItem="cgZ-UW-56n" secondAttribute="centerY" type="user" id="hdf-7K-pfe"/>
-                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="bottom" secondItem="ARF-UZ-NYX" secondAttribute="bottom" type="default" id="qRz-LO-CNO"/>
-                                            <constraint firstItem="7HG-WE-2fd" firstAttribute="leading" secondItem="NWe-RX-2PL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zoG-48-nQi"/>
+                                            <constraint firstItem="7HG-WE-2fd" firstAttribute="top" secondItem="cgZ-UW-56n" secondAttribute="top" constant="8" id="9oH-NV-dbK"/>
+                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="bottom" secondItem="GrZ-f3-EFT" secondAttribute="bottom" type="default" id="JCN-Rd-5ic"/>
+                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="centerY" secondItem="7HG-WE-2fd" secondAttribute="centerY" type="default" id="VJA-1d-dOP"/>
+                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="top" secondItem="ARF-UZ-NYX" secondAttribute="top" type="default" id="XB8-m8-qeD"/>
+                                            <constraint firstAttribute="trailing" secondItem="7HG-WE-2fd" secondAttribute="trailing" constant="10" id="asE-Jv-YTU"/>
+                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="leading" secondItem="GrZ-f3-EFT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jAf-We-A0M"/>
+                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="leading" secondItem="ARF-UZ-NYX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="klp-41-C3k"/>
+                                            <constraint firstItem="GrZ-f3-EFT" firstAttribute="leading" secondItem="cgZ-UW-56n" secondAttribute="leading" constant="19" id="mQa-yb-FIq"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="ADe-86-y99">
@@ -697,6 +704,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="qoP-UC-p59"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="updateNumbersSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="Ue9-i8-XSf"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Numbers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1k-p8-O3W">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -708,21 +718,21 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-80-GUQ">
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-80-GUQ">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="leading" secondItem="Lr8-ik-QL7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6mr-3e-NIK"/>
-                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="bottom" secondItem="Lr8-ik-QL7" secondAttribute="bottom" type="default" id="BTO-8n-nFo"/>
-                                            <constraint firstItem="Lr8-ik-QL7" firstAttribute="centerY" secondItem="ADe-86-y99" secondAttribute="centerY" type="default" id="Bbr-2C-WdW"/>
-                                            <constraint firstItem="Lr8-ik-QL7" firstAttribute="top" secondItem="Z1k-p8-O3W" secondAttribute="top" type="default" id="Kms-BC-xLP"/>
-                                            <constraint firstItem="Lr8-ik-QL7" firstAttribute="leading" secondItem="ADe-86-y99" secondAttribute="leading" constant="89" id="edo-Hf-oR2"/>
-                                            <constraint firstItem="oNB-80-GUQ" firstAttribute="centerY" secondItem="Z1k-p8-O3W" secondAttribute="centerY" type="default" id="g39-BX-bdT"/>
-                                            <constraint firstItem="oNB-80-GUQ" firstAttribute="leading" secondItem="XPE-bP-SIr" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="rNP-1D-6ju"/>
+                                            <constraint firstItem="Lr8-ik-QL7" firstAttribute="centerY" secondItem="ADe-86-y99" secondAttribute="centerY" type="default" id="82o-jO-SKE"/>
+                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="centerY" secondItem="oNB-80-GUQ" secondAttribute="centerY" type="default" id="NHy-ax-0ga"/>
+                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="bottom" secondItem="Lr8-ik-QL7" secondAttribute="bottom" type="default" id="Z21-Un-bUi"/>
+                                            <constraint firstItem="Lr8-ik-QL7" firstAttribute="leading" secondItem="Z1k-p8-O3W" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Zps-8a-d8H"/>
+                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="baseline" secondItem="Z1k-p8-O3W" secondAttribute="baseline" type="default" id="cVX-l8-OHm"/>
+                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="leading" secondItem="Lr8-ik-QL7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dg3-1C-qbC"/>
                                             <constraint firstItem="Z1k-p8-O3W" firstAttribute="leading" secondItem="ADe-86-y99" secondAttribute="leading" constant="17" id="rrR-Tb-xR8"/>
+                                            <constraint firstAttribute="trailing" secondItem="oNB-80-GUQ" secondAttribute="trailing" constant="10" id="shy-SM-X7i"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -795,6 +805,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="f5O-SM-Uzd" kind="push" id="GG8-Ne-QrR"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-8Z-VOk">
                                                     <constraints>
@@ -808,6 +821,9 @@
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="generateButton:" destination="gH3-Fd-xRR" eventType="touchUpInside" id="NNK-0O-gIX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -838,18 +854,22 @@
                     <navigationItem key="navigationItem" title="Generator" id="d43-BX-YHt"/>
                     <connections>
                         <outlet property="capitalLabel" destination="B66-hz-2xl" id="A39-sY-Vnd"/>
+                        <outlet property="capitalSwitch" destination="kIT-U2-iWn" id="vAo-CE-fqe"/>
                         <outlet property="capitalsSlider" destination="l0s-9a-Qhs" id="G2w-2f-P4Z"/>
                         <outlet property="generateButton" destination="qdJ-8Z-VOk" id="PcG-3s-gan"/>
                         <outlet property="lengthLabel" destination="WSh-EQ-iOy" id="Zhd-hG-Vju"/>
                         <outlet property="lengthSlider" destination="jXb-Fh-raV" id="187-Zi-gdt"/>
-                        <outlet property="lowerLabel" destination="kx6-lj-fKp" id="CE2-xq-x4j"/>
-                        <outlet property="lowersSlider" destination="Vbo-pf-BDl" id="QP4-Rf-Uqe"/>
+                        <outlet property="lowerLabel" destination="kx6-lj-fKp" id="ujj-zN-dWq"/>
+                        <outlet property="lowerSwitch" destination="DIj-OH-aCs" id="wqz-41-1e1"/>
+                        <outlet property="lowersSlider" destination="isa-GI-H92" id="20J-UW-iBV"/>
                         <outlet property="makeNewPasswordButton" destination="wnj-3G-TkS" id="Fl9-uO-qn0"/>
                         <outlet property="numberLabel" destination="XPE-bP-SIr" id="XLk-RI-oqc"/>
+                        <outlet property="numberSwitch" destination="oNB-80-GUQ" id="NmY-iu-CaT"/>
                         <outlet property="numbersSlider" destination="Lr8-ik-QL7" id="FNg-ia-PkU"/>
                         <outlet property="passwordTextField" destination="UGH-Oo-BOf" id="o84-8E-vfy"/>
-                        <outlet property="specialLabel" destination="NWe-RX-2PL" id="jbM-rM-PsZ"/>
-                        <outlet property="specialsSlider" destination="hdf-7K-pfe" id="pTn-hZ-nXH"/>
+                        <outlet property="specialLabel" destination="NWe-RX-2PL" id="wRn-yq-5ho"/>
+                        <outlet property="specialSwitch" destination="7HG-WE-2fd" id="7jy-A9-J3U"/>
+                        <outlet property="specialsSlider" destination="ARF-UZ-NYX" id="Ui4-31-TkE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gE5-Go-fuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1057,19 +1077,28 @@
         <class className="GeneratorViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="valueChanged::" candidateClass="UISlider"/>
+                <relationship kind="action" name="generateButton:"/>
+                <relationship kind="action" name="updateCapitalSlider:"/>
+                <relationship kind="action" name="updateLengthSlider:"/>
+                <relationship kind="action" name="updateLowerSlider:"/>
+                <relationship kind="action" name="updateNumbersSlider:"/>
+                <relationship kind="action" name="updateSpecialSlider:"/>
                 <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="capitalSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="generateButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="lengthLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lengthSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="lowerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowerSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="lowersSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="makeNewPasswordButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="specialSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="specialsSlider" candidateClass="UISlider"/>
             </relationships>
         </class>
@@ -1107,4 +1136,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="GG8-Ne-QrR"/>
+    </inferredMetricsTieBreakers>
 </document>
