@@ -19,6 +19,11 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
++ (AppDelegate *)sharedAppDelegate
+{
+    return (AppDelegate *) [UIApplication sharedApplication].delegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // The Tab Bar
@@ -169,6 +174,11 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (NSURL *)getServerURL
+{
+    return [NSURL URLWithString:@"https://sync.omnigroup.com/passwordsync/passwordSync/password.txt"];
 }
 
 @end
