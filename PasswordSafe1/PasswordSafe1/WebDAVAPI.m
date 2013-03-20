@@ -45,18 +45,29 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachesDirectory = [paths objectAtIndex:0];
     filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
-    NSMutableURLRequest *request= [[NSMutableURLRequest alloc] init];
+    
     NSData* fileData = [[NSData alloc] initWithContentsOfFile:filepath];
-    NSInputStream *fileStream = [NSInputStream inputStreamWithFileAtPath:filepath];
-    assert(fileStream != nil);
+    //NSInputStream *fileStream = [NSInputStream inputStreamWithFileAtPath:filePath];
+    
+    NSMutableURLRequest *request= [[NSMutableURLRequest alloc] init];
     NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
+    [request setHTTPMethod:@"PUT"];
     [request setURL:url];
-    [request setHTTPBodyStream:fileStream];
-    [request setHTTPMethod:@"POST"];
     NSUInteger fileSize = [[[[NSFileManager defaultManager] attributesOfItemAtPath:filepath error:nil] objectForKey:NSFileSize] unsignedIntegerValue];
     [request setValue:[NSString stringWithFormat:@"%u", fileSize] forHTTPHeaderField:@"Content-Length"];
-    request = [NSMutableURLRequest requestWithURL:url];
-    [fileStream open];
+    [request setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
+    //[request setHTTPBodyStream:fileStream];
+    [request setHTTPBody:fileData];
+    
+    connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    if (connection){
+        //connection();//TODO fill out this call
+        NSLog(@"Connecting");
+    }
+    else {
+        //connection failed
+        NSLog(@"Connection failed");
+    }
     
     
     // One method of uploading; can't get to work
