@@ -21,18 +21,18 @@
 
 -(NSMutableString*)generatePassword: (int)length: (int)numCaps: (int)numLowers: (int)numSpecials: (int)numNums:
 (Boolean)caps: (Boolean)lowers: (Boolean)specs: (Boolean)nums{
-//    if ((numCaps + numLowers + numSpecials + numNums) > length){
-//
-//    }
+    if ((numCaps + numLowers + numSpecials + numNums) > length){
+        NSLog(@"Length not set high enough");
+    }
     // TODO error checking
-    int Caps = -1;
+    int Capitals = -1;
     int Lowers = -1;
     int Specials = -1;
-    int Nums = -1;
+    int Numbers = -1;
     
-    if (nums)Nums = numNums;
+    if (nums)Numbers = numNums;
     if (lowers) Lowers = numLowers;
-    if (caps) Caps = numCaps;
+    if (caps) Capitals = numCaps;
     if (specs) Specials = numSpecials;
     
     NSMutableArray *passwordArray = [[NSMutableArray alloc] init];
@@ -42,9 +42,9 @@
         int pos = arc4random_uniform([charPool count]);
         NSString* character = [charPool objectAtIndex:pos];
         int ascii = [character characterAtIndex:0];
-        if ([self isCapital:ascii] && Caps > 0){
+        if ([self isCapital:ascii] && Capitals > 0){
             [passwordArray addObject:character];
-            Caps--;
+            Capitals--;
             count++;
         }
         else if ([self isLower:ascii] && Lowers > 0){
@@ -57,13 +57,13 @@
             Specials--;
             count++;
         }
-        else if ([self isNumber:ascii] && Nums > 0){
+        else if ([self isNumber:ascii] && Numbers > 0){
             [passwordArray addObject:character];
-            Nums--;
+            Numbers--;
             count++;
         }
-        else if ((Caps <= 0) && (Lowers <= 0) && (Specials <= 0) && (Nums <= 0)){
-            if ([self isCapital:ascii] && Caps == 0){
+        else if ([self finishedCharacterRequirements:Capitals lowers:Lowers specials:Specials numbers:Numbers]){
+            if ([self isCapital:ascii] && Capitals == 0){
                 [passwordArray addObject:character];
                 count++;
             }
@@ -75,7 +75,7 @@
                 [passwordArray addObject:character];
                 count++;
             }
-            else if ([self isNumber:ascii] && Nums == 0){
+            else if ([self isNumber:ascii] && Numbers == 0){
                 [passwordArray addObject:character];
                 count++;
             }
@@ -156,6 +156,10 @@
         }
     }
     return count;
+}
+
+-(Boolean)finishedCharacterRequirements: (int)Capitals lowers:(int)Lowers specials:(int)Specials numbers:(int)Numbers{
+    return (Capitals <= 0) && (Lowers <= 0) && (Specials <= 0) && (Numbers <= 0);
 }
 
 @end
