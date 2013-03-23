@@ -27,6 +27,7 @@
 @synthesize passwordTextField = __passwordTextField;
 @synthesize generateButton = __generateButton;
 @synthesize makeNewPasswordButton = __makeNewPasswordButton;
+@synthesize passwordCopyButton = __passwordCopyButton;
 @synthesize capitalSwitch = __capitalSwitch;
 @synthesize lowerSwitch = __lowerSwitch;
 @synthesize specialSwitch = __specialSwitch;
@@ -62,10 +63,7 @@
 
 -(IBAction)updateLengthSlider:(id)sender{
     self.lengthLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.lengthSlider.value];
-    self.capitalsSlider.maximumValue = self.lengthSlider.value;
-    self.lowersSlider.maximumValue = self.lengthSlider.value;
-    self.specialsSlider.maximumValue = self.lengthSlider.value;
-    self.numbersSlider.maximumValue = self.lengthSlider.value;
+    [self sliderAdjustment:self.lengthSlider];
     [self updateCapitalSlider:self.lengthSlider];
     [self updateLowerSlider:self.lengthSlider];
     [self updateSpecialSlider:self.lengthSlider];
@@ -82,6 +80,66 @@
 }
 - (IBAction)updateNumbersSlider:(id)sender{
      self.numberLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.numbersSlider.value];
+}
+
+- (IBAction)copyToClipboard:(id)sender{
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    
+    pasteboard.persistent = YES;
+    [pasteboard setString:self.passwordTextField.text];
+}
+
+- (IBAction)setCapitalSliderToZero:(id)sender{
+    self.capitalsSlider.value = 0;
+    [self updateCapitalSlider:self.lengthSlider];
+}
+
+- (IBAction)setLowerSliderToZero:(id)sender{
+    self.lowersSlider.value = 0;
+    [self updateLowerSlider:self.lengthSlider];
+}
+
+- (IBAction)setSpecialSliderToZero:(id)sender{
+    self.specialsSlider.value = 0;
+    [self updateSpecialSlider:self.lengthSlider];
+}
+
+- (IBAction)setNumberSliderToZero:(id)sender{
+    self.numbersSlider.value = 0;
+    
+}
+
+- (IBAction)sliderAdjustment:(id)sender{
+
+    if (self.capitalSwitch.on && self.capitalsSlider.value >= 0){
+    self.capitalsSlider.maximumValue = self.lengthSlider.value - self.lowersSlider.value - self.specialsSlider.value - self.numbersSlider.value;
+        
+    } else {
+        self.capitalsSlider.maximumValue = 0;
+    }
+    
+    if (self.lowerSwitch.on && self.lowersSlider.value >= 0){
+    self.lowersSlider.maximumValue = self.lengthSlider.value - self.capitalsSlider.value - self.specialsSlider.value - self.numbersSlider.value;
+    } else {
+        self.lowersSlider.maximumValue = 0;
+    }
+    
+    if (self.specialSwitch.on && self.specialsSlider.value >= 0){
+    self.specialsSlider.maximumValue = self.lengthSlider.value - self.capitalsSlider.value - self.lowersSlider.value - self.numbersSlider.value;
+    } else {
+        self.specialsSlider.maximumValue = 0;
+    }
+
+    if (self.numberSwitch.on && self.numbersSlider.value >= 0){
+    self.numbersSlider.maximumValue = self.lengthSlider.value - self.capitalsSlider.value - self.lowersSlider.value - self.specialsSlider.value;
+    } else {
+        self.numbersSlider.maximumValue = 0;
+    }
+    
+    [self updateCapitalSlider:self.lengthSlider];
+    [self updateLowerSlider:self.lengthSlider];
+    [self updateSpecialSlider:self.lengthSlider];
+    [self updateNumbersSlider:self.lengthSlider];
 }
 
 - (void)didReceiveMemoryWarning

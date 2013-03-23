@@ -45,8 +45,6 @@
 		0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4416CC45B500AC73D6 /* safe-icon2.png */; };
 		0A910BED16FBEAD700CD8655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A910BE716FBEAD700CD8655 /* InfoPlist.strings */; };
 		0A910BEE16FBEAD700CD8655 /* GeneratorTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A910BE916FBEAD700CD8655 /* GeneratorTests-Info.plist */; };
-		0A910BEF16FBEAD700CD8655 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A910BEC16FBEAD700CD8655 /* GeneratorTests.m */; };
-		0A910BF116FBF03000CD8655 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A28922916CB3F8200B23506 /* SenTestingKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A910BF116FBF03000CD8655 /* SenTestingKit.framework in Frameworks */,
 				0A0468C716CB7E9A006FDA5A /* CoreData.framework in Frameworks */,
 				0A2891F816CB3F8100B23506 /* UIKit.framework in Frameworks */,
 				0A2891FA16CB3F8100B23506 /* Foundation.framework in Frameworks */,
@@ -403,7 +400,6 @@
 				0A0468E816CC0832006FDA5A /* AddPasswordViewController.m in Sources */,
 				0A0468E916CC0832006FDA5A /* passwordDetailViewController.m in Sources */,
 				0A480F3E16CC347100AC73D6 /* GeneratorViewController.m in Sources */,
-				0A910BEF16FBEAD700CD8655 /* GeneratorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -509,9 +509,9 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-Fh-raV">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-Fh-raV">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="161" id="uDr-hD-su9"/>
+                                                        <constraint firstAttribute="width" constant="156" id="Cfc-at-xs1"/>
                                                     </constraints>
                                                     <connections>
                                                         <action selector="updateLengthSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="x7i-Af-K0N"/>
@@ -530,7 +530,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSh-EQ-iOy">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSh-EQ-iOy">
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" none="YES"/>
                                                     </accessibility>
@@ -547,12 +547,12 @@
                                         <constraints>
                                             <constraint firstItem="jXb-Fh-raV" firstAttribute="leading" secondItem="In2-Ga-gd9" secondAttribute="leading" constant="89" id="7QY-Jx-uFD"/>
                                             <constraint firstItem="WSh-EQ-iOy" firstAttribute="baseline" secondItem="ZKl-gZ-h69" secondAttribute="baseline" type="default" id="9BE-GP-9n2"/>
-                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="bottom" secondItem="WSh-EQ-iOy" secondAttribute="bottom" type="default" id="GcS-CZ-z1E"/>
-                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="centerY" secondItem="In2-Ga-gd9" secondAttribute="centerY" type="default" id="KQd-8q-pcD"/>
+                                            <constraint firstItem="jXb-Fh-raV" firstAttribute="centerY" secondItem="In2-Ga-gd9" secondAttribute="centerY" type="user" id="KQd-8q-pcD"/>
+                                            <constraint firstAttribute="trailing" secondItem="WSh-EQ-iOy" secondAttribute="trailing" constant="12" id="NvI-zH-kEW"/>
                                             <constraint firstItem="WSh-EQ-iOy" firstAttribute="leading" secondItem="0Ii-gr-XCu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="agZ-pW-o3O"/>
+                                            <constraint firstItem="WSh-EQ-iOy" firstAttribute="bottom" secondItem="jXb-Fh-raV" secondAttribute="bottom" type="default" id="bT8-9X-lsK"/>
                                             <constraint firstItem="ZKl-gZ-h69" firstAttribute="leading" secondItem="In2-Ga-gd9" secondAttribute="leading" constant="20" type="default" id="cuB-a6-ezq"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Ii-gr-XCu" secondAttribute="bottom" constant="22" id="dwO-8t-ZxQ"/>
-                                            <constraint firstItem="0Ii-gr-XCu" firstAttribute="leading" secondItem="jXb-Fh-raV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yjY-Dd-E1b"/>
+                                            <constraint firstItem="WSh-EQ-iOy" firstAttribute="centerY" secondItem="0Ii-gr-XCu" secondAttribute="centerY" type="default" id="nJd-yR-hEN"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="wVd-gL-rvm">
@@ -562,11 +562,12 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="l0s-9a-Qhs">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="l0s-9a-Qhs">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="113" id="U6W-q6-G4x"/>
                                                     </constraints>
                                                     <connections>
+                                                        <action selector="sliderAdjustment:" destination="gH3-Fd-xRR" eventType="valueChanged" id="rWu-Gc-I8h"/>
                                                         <action selector="updateCapitalSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="EWO-En-0qi"/>
                                                     </connections>
                                                 </slider>
@@ -578,25 +579,28 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B66-hz-2xl">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B66-hz-2xl">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-U2-iWn">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
+                                                    <connections>
+                                                        <action selector="setCapitalSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="cpJ-EN-1u0"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="bottom" secondItem="B66-hz-2xl" secondAttribute="bottom" type="default" id="5wh-bx-cvl"/>
-                                            <constraint firstItem="gLU-xz-clZ" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="17" id="8ld-LE-sIz"/>
-                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="top" secondItem="gLU-xz-clZ" secondAttribute="top" type="default" id="Prc-NC-qbx"/>
-                                            <constraint firstItem="B66-hz-2xl" firstAttribute="leading" secondItem="l0s-9a-Qhs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Rr6-jU-Lb6"/>
-                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="89" id="Sfq-Ly-LSH"/>
+                                            <constraint firstItem="B66-hz-2xl" firstAttribute="leading" secondItem="l0s-9a-Qhs" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="88G-SY-myP"/>
+                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="bottom" secondItem="gLU-xz-clZ" secondAttribute="bottom" type="default" id="BQx-SD-DL3"/>
+                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="89" id="DEe-AH-eeZ"/>
+                                            <constraint firstItem="l0s-9a-Qhs" firstAttribute="top" secondItem="wVd-gL-rvm" secondAttribute="top" constant="9" id="PJZ-Pt-w32"/>
+                                            <constraint firstItem="B66-hz-2xl" firstAttribute="top" secondItem="wVd-gL-rvm" secondAttribute="top" constant="11" id="Tm7-jJ-Lue"/>
+                                            <constraint firstItem="gLU-xz-clZ" firstAttribute="leading" secondItem="wVd-gL-rvm" secondAttribute="leading" constant="17" id="a0v-Bt-fuj"/>
                                             <constraint firstAttribute="trailing" secondItem="kIT-U2-iWn" secondAttribute="trailing" constant="10" id="apr-HD-d26"/>
-                                            <constraint firstItem="kIT-U2-iWn" firstAttribute="centerY" secondItem="wVd-gL-rvm" secondAttribute="centerY" type="default" id="b3u-4Z-wTL"/>
                                             <constraint firstItem="kIT-U2-iWn" firstAttribute="centerY" secondItem="B66-hz-2xl" secondAttribute="centerY" type="default" id="b5M-Fq-b4g"/>
                                         </constraints>
                                     </tableViewCell>
@@ -607,11 +611,12 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="isa-GI-H92">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="isa-GI-H92">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="111" id="oIA-mC-IKk"/>
                                                     </constraints>
                                                     <connections>
+                                                        <action selector="sliderAdjustment:" destination="gH3-Fd-xRR" eventType="valueChanged" id="ES3-5R-Tso"/>
                                                         <action selector="updateLowerSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="mL3-L7-oCI"/>
                                                     </connections>
                                                 </slider>
@@ -623,25 +628,28 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx6-lj-fKp">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx6-lj-fKp">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-OH-aCs">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
+                                                    <connections>
+                                                        <action selector="setLowerSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="zCh-bx-HwR"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kx6-lj-fKp" secondAttribute="trailing" constant="100" id="1jd-sf-abc"/>
                                             <constraint firstItem="isa-GI-H92" firstAttribute="top" secondItem="Ba8-pL-ajo" secondAttribute="top" constant="10" id="DAQ-tc-eW4"/>
+                                            <constraint firstItem="isa-GI-H92" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="86" id="HJZ-3Y-8Tg"/>
                                             <constraint firstItem="kx6-lj-fKp" firstAttribute="centerY" secondItem="Ba8-pL-ajo" secondAttribute="centerY" type="default" id="Lr1-oe-y3Y"/>
-                                            <constraint firstItem="isa-GI-H92" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="91" id="OU1-Qu-eDH"/>
                                             <constraint firstItem="Vbo-pf-BDl" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="22" id="Yy7-i5-WW9"/>
                                             <constraint firstItem="isa-GI-H92" firstAttribute="bottom" secondItem="Vbo-pf-BDl" secondAttribute="bottom" type="default" id="aLQ-k3-4Ci"/>
                                             <constraint firstItem="DIj-OH-aCs" firstAttribute="top" secondItem="kx6-lj-fKp" secondAttribute="top" type="default" id="gzn-uY-e3c"/>
-                                            <constraint firstItem="kx6-lj-fKp" firstAttribute="leading" secondItem="isa-GI-H92" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="iTO-VT-ugY"/>
                                             <constraint firstAttribute="trailing" secondItem="DIj-OH-aCs" secondAttribute="trailing" constant="10" id="r20-mi-tvH"/>
                                         </constraints>
                                     </tableViewCell>
@@ -652,11 +660,12 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="ARF-UZ-NYX">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="ARF-UZ-NYX">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="106" id="vR7-hM-3uV"/>
                                                     </constraints>
                                                     <connections>
+                                                        <action selector="sliderAdjustment:" destination="gH3-Fd-xRR" eventType="valueChanged" id="Ts1-TL-yK2"/>
                                                         <action selector="updateSpecialSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="uRi-uE-CC7"/>
                                                     </connections>
                                                 </slider>
@@ -668,7 +677,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-RX-2PL">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-RX-2PL">
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" none="YES"/>
                                                     </accessibility>
@@ -678,19 +687,22 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-WE-2fd">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
+                                                    <connections>
+                                                        <action selector="setSpecialSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="0RC-Oc-b0e"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="7HG-WE-2fd" firstAttribute="top" secondItem="cgZ-UW-56n" secondAttribute="top" constant="8" id="9oH-NV-dbK"/>
-                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="bottom" secondItem="GrZ-f3-EFT" secondAttribute="bottom" type="default" id="JCN-Rd-5ic"/>
-                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="centerY" secondItem="7HG-WE-2fd" secondAttribute="centerY" type="default" id="VJA-1d-dOP"/>
-                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="top" secondItem="ARF-UZ-NYX" secondAttribute="top" type="default" id="XB8-m8-qeD"/>
+                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="centerY" secondItem="cgZ-UW-56n" secondAttribute="centerY" type="default" id="0tm-Uj-b45"/>
+                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="top" secondItem="ARF-UZ-NYX" secondAttribute="top" type="default" id="EKR-uc-MRy"/>
+                                            <constraint firstItem="GrZ-f3-EFT" firstAttribute="bottom" secondItem="ARF-UZ-NYX" secondAttribute="bottom" type="default" id="JYP-Qy-sRT"/>
+                                            <constraint firstAttribute="trailing" secondItem="NWe-RX-2PL" secondAttribute="trailing" constant="100" id="SCR-9U-4Fe"/>
                                             <constraint firstAttribute="trailing" secondItem="7HG-WE-2fd" secondAttribute="trailing" constant="10" id="asE-Jv-YTU"/>
-                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="leading" secondItem="GrZ-f3-EFT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jAf-We-A0M"/>
-                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="leading" secondItem="ARF-UZ-NYX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="klp-41-C3k"/>
                                             <constraint firstItem="GrZ-f3-EFT" firstAttribute="leading" secondItem="cgZ-UW-56n" secondAttribute="leading" constant="19" id="mQa-yb-FIq"/>
+                                            <constraint firstItem="NWe-RX-2PL" firstAttribute="centerY" secondItem="7HG-WE-2fd" secondAttribute="centerY" type="default" id="omy-yM-gBw"/>
+                                            <constraint firstItem="ARF-UZ-NYX" firstAttribute="leading" secondItem="cgZ-UW-56n" secondAttribute="leading" constant="90" id="vBB-zx-XZN"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="ADe-86-y99">
@@ -700,11 +712,12 @@
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="32" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-ik-QL7">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-ik-QL7">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="qoP-UC-p59"/>
                                                     </constraints>
                                                     <connections>
+                                                        <action selector="sliderAdjustment:" destination="gH3-Fd-xRR" eventType="valueChanged" id="LbB-Em-EsS"/>
                                                         <action selector="updateNumbersSlider:" destination="gH3-Fd-xRR" eventType="valueChanged" id="Ue9-i8-XSf"/>
                                                     </connections>
                                                 </slider>
@@ -713,13 +726,16 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPE-bP-SIr">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPE-bP-SIr">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-80-GUQ">
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
+                                                    <connections>
+                                                        <action selector="setNumberSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="M5m-C8-W3k"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -727,7 +743,7 @@
                                         <constraints>
                                             <constraint firstItem="Lr8-ik-QL7" firstAttribute="centerY" secondItem="ADe-86-y99" secondAttribute="centerY" type="default" id="82o-jO-SKE"/>
                                             <constraint firstItem="XPE-bP-SIr" firstAttribute="centerY" secondItem="oNB-80-GUQ" secondAttribute="centerY" type="default" id="NHy-ax-0ga"/>
-                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="bottom" secondItem="Lr8-ik-QL7" secondAttribute="bottom" type="default" id="Z21-Un-bUi"/>
+                                            <constraint firstItem="oNB-80-GUQ" firstAttribute="top" secondItem="ADe-86-y99" secondAttribute="top" constant="10" id="PMT-Be-6fA"/>
                                             <constraint firstItem="Lr8-ik-QL7" firstAttribute="leading" secondItem="Z1k-p8-O3W" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Zps-8a-d8H"/>
                                             <constraint firstItem="XPE-bP-SIr" firstAttribute="baseline" secondItem="Z1k-p8-O3W" secondAttribute="baseline" type="default" id="cVX-l8-OHm"/>
                                             <constraint firstItem="XPE-bP-SIr" firstAttribute="leading" secondItem="Lr8-ik-QL7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dg3-1C-qbC"/>
@@ -756,7 +772,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGH-Oo-BOf">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGH-Oo-BOf">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="pti-NS-xq6"/>
                                                     </constraints>
@@ -797,8 +813,11 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnj-3G-TkS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="WEY-a3-W69"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                    <state key="normal" title="Create New Password">
+                                                    <state key="normal" title="New Password">
                                                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -809,9 +828,25 @@
                                                         <segue destination="f5O-SM-Uzd" kind="push" id="GG8-Ne-QrR"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzj-rV-LUf">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="hNl-Id-t4o"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Copy">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="copyToClipboard:" destination="gH3-Fd-xRR" eventType="touchUpInside" id="ur0-Zu-Tmi"/>
+                                                    </connections>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-8Z-VOk">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="aT5-x9-Nk9"/>
+                                                        <constraint firstAttribute="width" constant="100" id="Qoa-mN-Ubg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Generate">
@@ -829,14 +864,16 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="qdJ-8Z-VOk" firstAttribute="top" secondItem="tjs-W5-MKg" secondAttribute="top" constant="1" id="6jq-Ch-pgA"/>
+                                            <constraint firstItem="bzj-rV-LUf" firstAttribute="baseline" secondItem="wnj-3G-TkS" secondAttribute="baseline" type="default" id="6i0-bm-fbQ"/>
                                             <constraint firstItem="qdJ-8Z-VOk" firstAttribute="baseline" secondItem="wnj-3G-TkS" secondAttribute="baseline" type="default" id="LhJ-D8-3Wa"/>
-                                            <constraint firstItem="9M8-fK-uzX" firstAttribute="centerX" secondItem="tjs-W5-MKg" secondAttribute="centerX" type="default" id="NZX-JA-uFb"/>
-                                            <constraint firstItem="9M8-fK-uzX" firstAttribute="trailing" secondItem="qdJ-8Z-VOk" secondAttribute="trailing" type="default" id="VG6-fe-W19"/>
-                                            <constraint firstItem="6Nj-k4-pRP" firstAttribute="top" secondItem="tjs-W5-MKg" secondAttribute="top" constant="12" id="biv-Y2-tYo"/>
-                                            <constraint firstItem="qdJ-8Z-VOk" firstAttribute="top" secondItem="wnj-3G-TkS" secondAttribute="top" type="default" id="d5V-8f-OiT"/>
+                                            <constraint firstItem="qdJ-8Z-VOk" firstAttribute="top" secondItem="tjs-W5-MKg" secondAttribute="top" type="default" id="U3T-we-wGU"/>
+                                            <constraint firstItem="qdJ-8Z-VOk" firstAttribute="leading" secondItem="tjs-W5-MKg" secondAttribute="leading" constant="10" id="jVw-aX-AnC"/>
+                                            <constraint firstItem="bzj-rV-LUf" firstAttribute="top" secondItem="wnj-3G-TkS" secondAttribute="top" type="default" id="kxz-Cl-qcQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="bzj-rV-LUf" secondAttribute="trailing" constant="10" id="lNg-Ug-gH3"/>
                                             <constraint firstItem="6Nj-k4-pRP" firstAttribute="top" secondItem="9M8-fK-uzX" secondAttribute="top" type="default" id="mN0-Xx-3ky"/>
-                                            <constraint firstItem="6Nj-k4-pRP" firstAttribute="leading" secondItem="wnj-3G-TkS" secondAttribute="leading" type="default" id="r5M-5l-HAf"/>
+                                            <constraint firstItem="wnj-3G-TkS" firstAttribute="centerX" secondItem="tjs-W5-MKg" secondAttribute="centerX" type="default" id="ohV-nG-0hq"/>
+                                            <constraint firstItem="wnj-3G-TkS" firstAttribute="centerX" secondItem="6Nj-k4-pRP" secondAttribute="centerX" type="default" id="pbP-bP-o78"/>
+                                            <constraint firstItem="6Nj-k4-pRP" firstAttribute="top" secondItem="tjs-W5-MKg" secondAttribute="top" constant="12" id="uEk-Pd-KsD"/>
                                             <constraint firstItem="6Nj-k4-pRP" firstAttribute="leading" secondItem="9M8-fK-uzX" secondAttribute="leading" type="default" id="xft-lr-SqL"/>
                                         </constraints>
                                     </tableViewCell>
@@ -866,6 +903,7 @@
                         <outlet property="numberLabel" destination="XPE-bP-SIr" id="XLk-RI-oqc"/>
                         <outlet property="numberSwitch" destination="oNB-80-GUQ" id="NmY-iu-CaT"/>
                         <outlet property="numbersSlider" destination="Lr8-ik-QL7" id="FNg-ia-PkU"/>
+                        <outlet property="passwordCopyButton" destination="bzj-rV-LUf" id="gqr-iA-pE9"/>
                         <outlet property="passwordTextField" destination="UGH-Oo-BOf" id="o84-8E-vfy"/>
                         <outlet property="specialLabel" destination="NWe-RX-2PL" id="wRn-yq-5ho"/>
                         <outlet property="specialSwitch" destination="7HG-WE-2fd" id="7jy-A9-J3U"/>
@@ -1077,12 +1115,19 @@
         <class className="GeneratorViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
             <relationships>
+                <relationship kind="action" name="copyToClipboard:"/>
                 <relationship kind="action" name="generateButton:"/>
+                <relationship kind="action" name="setCapitalSliderToZero:"/>
+                <relationship kind="action" name="setLowerSliderToZero:"/>
+                <relationship kind="action" name="setNumberSliderToZero:"/>
+                <relationship kind="action" name="setSpecialSliderToZero:"/>
+                <relationship kind="action" name="sliderAdjustment:"/>
                 <relationship kind="action" name="updateCapitalSlider:"/>
                 <relationship kind="action" name="updateLengthSlider:"/>
                 <relationship kind="action" name="updateLowerSlider:"/>
                 <relationship kind="action" name="updateNumbersSlider:"/>
                 <relationship kind="action" name="updateSpecialSlider:"/>
+                <relationship kind="action" name="valueChanged::" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="capitalSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
@@ -1096,6 +1141,7 @@
                 <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="numberSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="passwordCopyButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="specialSwitch" candidateClass="UISwitch"/>

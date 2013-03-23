@@ -24,6 +24,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UIButton *generateButton;
 @property (strong, nonatomic) IBOutlet UIButton *makeNewPasswordButton;
+@property (strong, nonatomic) IBOutlet UIButton *passwordCopyButton;
 @property (strong, nonatomic) IBOutlet UISwitch *capitalSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *lowerSwitch;
 @property (strong, nonatomic) IBOutlet UISwitch *specialSwitch;
@@ -35,5 +36,12 @@
 - (IBAction)updateLowerSlider:(id)sender;
 - (IBAction)updateSpecialSlider:(id)sender;
 - (IBAction)updateNumbersSlider:(id)sender;
+- (IBAction)copyToClipboard:(id)sender;
+- (IBAction)setCapitalSliderToZero:(id)sender;
+- (IBAction)setLowerSliderToZero:(id)sender;
+- (IBAction)setSpecialSliderToZero:(id)sender;
+- (IBAction)setNumberSliderToZero:(id)sender;
+- (IBAction)sliderAdjustment:(id)sender;
+
 
 @end
