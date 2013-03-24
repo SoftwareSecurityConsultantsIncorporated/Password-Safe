@@ -50,16 +50,28 @@
 - (void)testVarious
 {
     [self setUp];
+    int actualCaps;
+    int actualLowers;
+    int actualSpecials;
+    int actualNums;
     length = 20;
-    numCaps =  arc4random_uniform(20);
-    numLowers = 0;
-    numSpecials = 0;
-    numNums = 0;
+    for (int i=0; i<=10000; i++) {
+        numCaps =  arc4random_uniform(20);
+        numLowers = arc4random_uniform(length-numCaps);
+        numSpecials = arc4random_uniform(length-numCaps-numLowers);
+        numNums = arc4random_uniform(length-numCaps-numLowers-numSpecials);
+        [password setString:[test generatePassword: length: numCaps: numLowers: numSpecials: numNums: TRUE: TRUE: TRUE: TRUE]];
+        actualCaps = [test countUpperCaseCharacters:password];
+        actualLowers = [test countLowerCaseCharacters:password];
+        actualSpecials= [test countSpecialCaseCharacters:password];
+        actualNums = [test countNumbers:password];
+        STAssertTrue((actualCaps >= numCaps), @"The caps atribute did not work");
+        STAssertTrue((actualLowers >= numLowers), @"The caps atribute did not work");
+        STAssertTrue((actualSpecials >= numSpecials), @"The caps atribute did not work");
+        STAssertTrue((actualNums >= numNums), @"The caps atribute did not work");
+    }
     
     
-    
-    [password setString:[test generatePassword: length: numCaps: numLowers: numSpecials: numNums: TRUE: TRUE: TRUE: TRUE]];
-
     [self tearDown];
 }
 
