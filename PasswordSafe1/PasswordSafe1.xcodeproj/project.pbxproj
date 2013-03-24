@@ -39,12 +39,17 @@
 		0A28922B16CB3F8200B23506 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2891F716CB3F8100B23506 /* UIKit.framework */; };
 		0A28922C16CB3F8200B23506 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2891F916CB3F8100B23506 /* Foundation.framework */; };
 		0A28923416CB3F8200B23506 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A28923216CB3F8200B23506 /* InfoPlist.strings */; };
-		0A28923716CB3F8200B23506 /* PasswordSafe1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28923616CB3F8200B23506 /* PasswordSafe1Tests.m */; };
+		0A3CDDC516FE815C00B2642A /* Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0468D316CB80AD006FDA5A /* Generator.m */; };
+		0A3CDDC616FE815F00B2642A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28920716CB3F8100B23506 /* AppDelegate.m */; };
+		0A3CDDC716FE816300B2642A /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0468D516CB80AD006FDA5A /* Note.m */; };
+		0A3CDDC816FE816700B2642A /* Password.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0468D716CB80AE006FDA5A /* Password.m */; };
+		0A3CDDC916FE816A00B2642A /* WebDAVAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0468D916CB80AE006FDA5A /* WebDAVAPI.m */; };
+		0A3CDDCA16FE816E00B2642A /* GeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */; };
 		0A480F3E16CC347100AC73D6 /* GeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */; };
 		0A480F4316CC452700AC73D6 /* safe-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4216CC452600AC73D6 /* safe-icon1.png */; };
 		0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4416CC45B500AC73D6 /* safe-icon2.png */; };
-		0A910BED16FBEAD700CD8655 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A910BE716FBEAD700CD8655 /* InfoPlist.strings */; };
-		0A910BEE16FBEAD700CD8655 /* GeneratorTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A910BE916FBEAD700CD8655 /* GeneratorTests-Info.plist */; };
+		0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB152816FE86290023FEE2 /* GeneratorTests.m */; };
+		0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0468C616CB7E9A006FDA5A /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,11 +117,8 @@
 		0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorViewController.m; sourceTree = "<group>"; };
 		0A480F4216CC452600AC73D6 /* safe-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe-icon1.png"; path = "../safe-icon1.png"; sourceTree = "<group>"; };
 		0A480F4416CC45B500AC73D6 /* safe-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe-icon2.png"; path = "../safe-icon2.png"; sourceTree = "<group>"; };
-		0A910BE816FBEAD700CD8655 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0A910BE916FBEAD700CD8655 /* GeneratorTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GeneratorTests-Info.plist"; sourceTree = "<group>"; };
-		0A910BEA16FBEAD700CD8655 /* GeneratorTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeneratorTests-Prefix.pch"; sourceTree = "<group>"; };
-		0A910BEB16FBEAD700CD8655 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
-		0A910BEC16FBEAD700CD8655 /* GeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorTests.m; sourceTree = "<group>"; };
+		0AFB152616FE861F0023FEE2 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
+		0AFB152816FE86290023FEE2 /* GeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */,
 				0A28922A16CB3F8200B23506 /* SenTestingKit.framework in Frameworks */,
 				0A28922B16CB3F8200B23506 /* UIKit.framework in Frameworks */,
 				0A28922C16CB3F8200B23506 /* Foundation.framework in Frameworks */,
@@ -236,9 +239,10 @@
 		0A28922F16CB3F8200B23506 /* PasswordSafe1Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0AFB152816FE86290023FEE2 /* GeneratorTests.m */,
+				0AFB152616FE861F0023FEE2 /* GeneratorTests.h */,
 				0A28923516CB3F8200B23506 /* PasswordSafe1Tests.h */,
 				0A28923616CB3F8200B23506 /* PasswordSafe1Tests.m */,
-				0A910BE616FBEAD700CD8655 /* GeneratorTests */,
 				0A28923016CB3F8200B23506 /* Supporting Files */,
 			);
 			path = PasswordSafe1Tests;
@@ -251,19 +255,6 @@
 				0A28923216CB3F8200B23506 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0A910BE616FBEAD700CD8655 /* GeneratorTests */ = {
-			isa = PBXGroup;
-			children = (
-				0A910BE716FBEAD700CD8655 /* InfoPlist.strings */,
-				0A910BE916FBEAD700CD8655 /* GeneratorTests-Info.plist */,
-				0A910BEA16FBEAD700CD8655 /* GeneratorTests-Prefix.pch */,
-				0A910BEB16FBEAD700CD8655 /* GeneratorTests.h */,
-				0A910BEC16FBEAD700CD8655 /* GeneratorTests.m */,
-			);
-			name = GeneratorTests;
-			path = ../PasswordSafe1/GeneratorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,8 +339,6 @@
 				0A04686A16CB5612006FDA5A /* passwords.png in Resources */,
 				0A480F4316CC452700AC73D6 /* safe-icon1.png in Resources */,
 				0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */,
-				0A910BED16FBEAD700CD8655 /* InfoPlist.strings in Resources */,
-				0A910BEE16FBEAD700CD8655 /* GeneratorTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +396,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A28923716CB3F8200B23506 /* PasswordSafe1Tests.m in Sources */,
+				0A3CDDCA16FE816E00B2642A /* GeneratorViewController.m in Sources */,
+				0A3CDDC916FE816A00B2642A /* WebDAVAPI.m in Sources */,
+				0A3CDDC816FE816700B2642A /* Password.m in Sources */,
+				0A3CDDC716FE816300B2642A /* Note.m in Sources */,
+				0A3CDDC616FE815F00B2642A /* AppDelegate.m in Sources */,
+				0A3CDDC516FE815C00B2642A /* Generator.m in Sources */,
+				0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,14 +445,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A28923316CB3F8200B23506 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0A910BE716FBEAD700CD8655 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A910BE816FBEAD700CD8655 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
