@@ -16,5 +16,6 @@
 }
 
 - (void) download;
+- (void) upload;
 
 @end

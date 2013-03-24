@@ -141,7 +141,7 @@
 
 -(void)connection: (NSURLConnection *)conn didReceiveData:(NSData *)data
 {
-    if(![[[conn originalRequest] HTTPMethod] isEqualToString:@"POST"]) {
+    if(![[[conn originalRequest] HTTPMethod] isEqualToString:@"PUT"]) {
         [receivedData appendData:data];
         NSInteger       dataLength;
         const uint8_t * dataBytes;
