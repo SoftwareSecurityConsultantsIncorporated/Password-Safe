@@ -48,6 +48,7 @@
 		0A480F3E16CC347100AC73D6 /* GeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */; };
 		0A480F4316CC452700AC73D6 /* safe-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4216CC452600AC73D6 /* safe-icon1.png */; };
 		0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4416CC45B500AC73D6 /* safe-icon2.png */; };
+		0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */; };
 		0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB152816FE86290023FEE2 /* GeneratorTests.m */; };
 		0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0468C616CB7E9A006FDA5A /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -117,6 +118,8 @@
 		0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorViewController.m; sourceTree = "<group>"; };
 		0A480F4216CC452600AC73D6 /* safe-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe-icon1.png"; path = "../safe-icon1.png"; sourceTree = "<group>"; };
 		0A480F4416CC45B500AC73D6 /* safe-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe-icon2.png"; path = "../safe-icon2.png"; sourceTree = "<group>"; };
+		0A910BF616FEE5B700CD8655 /* UploadDownloadTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDownloadTests.h; sourceTree = "<group>"; };
+		0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDownloadTests.m; sourceTree = "<group>"; };
 		0AFB152616FE861F0023FEE2 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
 		0AFB152816FE86290023FEE2 /* GeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +244,8 @@
 			children = (
 				0AFB152816FE86290023FEE2 /* GeneratorTests.m */,
 				0AFB152616FE861F0023FEE2 /* GeneratorTests.h */,
+				0A910BF616FEE5B700CD8655 /* UploadDownloadTests.h */,
+				0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */,
 				0A28923516CB3F8200B23506 /* PasswordSafe1Tests.h */,
 				0A28923616CB3F8200B23506 /* PasswordSafe1Tests.m */,
 				0A28923016CB3F8200B23506 /* Supporting Files */,
@@ -403,6 +408,7 @@
 				0A3CDDC616FE815F00B2642A /* AppDelegate.m in Sources */,
 				0A3CDDC516FE815C00B2642A /* Generator.m in Sources */,
 				0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */,
+				0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
