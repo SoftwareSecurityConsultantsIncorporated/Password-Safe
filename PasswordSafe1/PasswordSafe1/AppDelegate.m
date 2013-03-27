@@ -71,7 +71,7 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
-    //[api upload];
+    [api upload];
     //TODO syncing
     [api download];
     
@@ -180,7 +180,7 @@
 
 - (NSURL *)getServerURL
 {
-    return [NSURL URLWithString:@"https://sync.omnigroup.com/passwordsync/passwordSync/password.txt"];
+    return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.txt"];
 }
 
 @end

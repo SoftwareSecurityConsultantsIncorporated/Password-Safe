@@ -30,7 +30,6 @@
     
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     if (connection){
-        //connection();//TODO fill out this call
         NSLog(@"Connecting");
     }
     else {
@@ -41,61 +40,31 @@
 
 -(void) upload
 {
-    // TODO  Fix this method
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachesDirectory = [paths objectAtIndex:0];
     filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
     
+    NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
+    
     NSData* fileData = [[NSData alloc] initWithContentsOfFile:filepath];
-    //NSInputStream *fileStream = [NSInputStream inputStreamWithFileAtPath:filePath];
     
     NSMutableURLRequest *request= [[NSMutableURLRequest alloc] init];
-    NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
-    [request setHTTPMethod:@"PUT"];
     [request setURL:url];
+    [request setHTTPMethod:@"PUT"];
+    [request setHTTPBody:fileData];
     NSUInteger fileSize = [[[[NSFileManager defaultManager] attributesOfItemAtPath:filepath error:nil] objectForKey:NSFileSize] unsignedIntegerValue];
     [request setValue:[NSString stringWithFormat:@"%u", fileSize] forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
-    //[request setHTTPBodyStream:fileStream];
-    [request setHTTPBody:fileData];
-    
+        
     connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    [connection start];
     if (connection){
-        //connection();//TODO fill out this call
         NSLog(@"Connecting");
     }
     else {
         //connection failed
         NSLog(@"Connection failed");
     }
-    
-    
-    // One method of uploading; can't get to work
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-//    NSString *cachesDirectory = [paths objectAtIndex:0];
-//    filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
-//    NSURL* url = [NSURL URLWithString:@"https://sync.omnigroup.com/passwordsync/passwordSync/password.txt"];
-//    NSMutableURLRequest *request= [[NSMutableURLRequest alloc] init];
-//    [request setURL:url];
-//    [request setHTTPMethod:@"POST"];
-//    NSString *boundary = @"---------------------------14737809831466499882746641449";
-//    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
-//    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
-//    NSMutableData *postbody = [NSMutableData data];
-//    [postbody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [postbody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"userfile\"; filename=\"%@.jpg\"\r\n", @"password.txt"] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [postbody appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-//    NSData* fileData = [[NSData alloc] initWithContentsOfFile:filepath];
-//    [postbody appendData:[NSData dataWithData:fileData]];
-//    [postbody appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [request setHTTPBody:postbody];
-//    
-//    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
-//    assert(connection != nil);
-//    
-//    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-//    NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-//    NSLog(@"Return string: %@", returnString);
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
@@ -113,7 +82,7 @@
         fileType = [[httpResponse MIMEType] lowercaseString];
         if (fileType == nil) {
             NSLog(@"No content type");
-        } else if ([fileType isEqual:@"text/plain"]) {
+        } else if (![fileType isEqual:@"text/plain"]) {
             NSLog(@"Unsupported Content type: %@", fileType);
         } else {
             NSLog(@"Response OK");
