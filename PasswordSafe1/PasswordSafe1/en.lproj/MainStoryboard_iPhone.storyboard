@@ -510,6 +510,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-Fh-raV">
+                                                    <accessibility key="accessibilityConfiguration" label="Length Slider"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="156" id="Cfc-at-xs1"/>
                                                     </constraints>
@@ -531,7 +532,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSh-EQ-iOy">
-                                                    <accessibility key="accessibilityConfiguration">
+                                                    <accessibility key="accessibilityConfiguration" label="Length Label">
                                                         <accessibilityTraits key="traits" none="YES"/>
                                                     </accessibility>
                                                     <constraints>
@@ -563,6 +564,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="l0s-9a-Qhs">
+                                                    <accessibility key="accessibilityConfiguration" label="Capital Slider"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="113" id="U6W-q6-G4x"/>
                                                     </constraints>
@@ -580,11 +582,13 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B66-hz-2xl">
+                                                    <accessibility key="accessibilityConfiguration" label="Capital Label"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-U2-iWn">
+                                                    <accessibility key="accessibilityConfiguration" label="Capital Switch"/>
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                     <connections>
                                                         <action selector="setCapitalSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="cpJ-EN-1u0"/>
@@ -612,6 +616,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="isa-GI-H92">
+                                                    <accessibility key="accessibilityConfiguration" label="Lower Slider"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="111" id="oIA-mC-IKk"/>
                                                     </constraints>
@@ -629,11 +634,13 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx6-lj-fKp">
+                                                    <accessibility key="accessibilityConfiguration" label="Lower Label"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-OH-aCs">
+                                                    <accessibility key="accessibilityConfiguration" label="Lower Switch"/>
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                     <connections>
                                                         <action selector="setLowerSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="zCh-bx-HwR"/>
@@ -647,9 +654,9 @@
                                             <constraint firstItem="isa-GI-H92" firstAttribute="top" secondItem="Ba8-pL-ajo" secondAttribute="top" constant="10" id="DAQ-tc-eW4"/>
                                             <constraint firstItem="isa-GI-H92" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="86" id="HJZ-3Y-8Tg"/>
                                             <constraint firstItem="kx6-lj-fKp" firstAttribute="centerY" secondItem="Ba8-pL-ajo" secondAttribute="centerY" type="default" id="Lr1-oe-y3Y"/>
+                                            <constraint firstItem="DIj-OH-aCs" firstAttribute="centerY" secondItem="kx6-lj-fKp" secondAttribute="centerY" type="default" id="MKD-TL-goE"/>
                                             <constraint firstItem="Vbo-pf-BDl" firstAttribute="leading" secondItem="Ba8-pL-ajo" secondAttribute="leading" constant="22" id="Yy7-i5-WW9"/>
                                             <constraint firstItem="isa-GI-H92" firstAttribute="bottom" secondItem="Vbo-pf-BDl" secondAttribute="bottom" type="default" id="aLQ-k3-4Ci"/>
-                                            <constraint firstItem="DIj-OH-aCs" firstAttribute="top" secondItem="kx6-lj-fKp" secondAttribute="top" type="default" id="gzn-uY-e3c"/>
                                             <constraint firstAttribute="trailing" secondItem="DIj-OH-aCs" secondAttribute="trailing" constant="10" id="r20-mi-tvH"/>
                                         </constraints>
                                     </tableViewCell>
@@ -661,6 +668,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="ARF-UZ-NYX">
+                                                    <accessibility key="accessibilityConfiguration" label="Special Slider"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="106" id="vR7-hM-3uV"/>
                                                     </constraints>
@@ -678,7 +686,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-RX-2PL">
-                                                    <accessibility key="accessibilityConfiguration">
+                                                    <accessibility key="accessibilityConfiguration" label="Special Label">
                                                         <accessibilityTraits key="traits" none="YES"/>
                                                     </accessibility>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -686,6 +694,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-WE-2fd">
+                                                    <accessibility key="accessibilityConfiguration" label="Special Switch"/>
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                     <connections>
                                                         <action selector="setSpecialSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="0RC-Oc-b0e"/>
@@ -713,6 +722,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-ik-QL7">
+                                                    <accessibility key="accessibilityConfiguration" label="Number Slider"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="qoP-UC-p59"/>
                                                     </constraints>
@@ -727,11 +737,13 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPE-bP-SIr">
+                                                    <accessibility key="accessibilityConfiguration" label="Number Label"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-80-GUQ">
+                                                    <accessibility key="accessibilityConfiguration" label="Number Switch"/>
                                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.49999999999999961" height="0.49999999999999961"/>
                                                     <connections>
                                                         <action selector="setNumberSliderToZero:" destination="gH3-Fd-xRR" eventType="valueChanged" id="M5m-C8-W3k"/>
@@ -741,13 +753,13 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Lr8-ik-QL7" firstAttribute="centerY" secondItem="ADe-86-y99" secondAttribute="centerY" type="default" id="82o-jO-SKE"/>
-                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="centerY" secondItem="oNB-80-GUQ" secondAttribute="centerY" type="default" id="NHy-ax-0ga"/>
-                                            <constraint firstItem="oNB-80-GUQ" firstAttribute="top" secondItem="ADe-86-y99" secondAttribute="top" constant="10" id="PMT-Be-6fA"/>
+                                            <constraint firstItem="XPE-bP-SIr" firstAttribute="bottom" secondItem="Lr8-ik-QL7" secondAttribute="bottom" type="default" id="1rC-30-bUy"/>
                                             <constraint firstItem="Lr8-ik-QL7" firstAttribute="leading" secondItem="Z1k-p8-O3W" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Zps-8a-d8H"/>
                                             <constraint firstItem="XPE-bP-SIr" firstAttribute="baseline" secondItem="Z1k-p8-O3W" secondAttribute="baseline" type="default" id="cVX-l8-OHm"/>
                                             <constraint firstItem="XPE-bP-SIr" firstAttribute="leading" secondItem="Lr8-ik-QL7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dg3-1C-qbC"/>
+                                            <constraint firstItem="oNB-80-GUQ" firstAttribute="centerY" secondItem="ADe-86-y99" secondAttribute="centerY" type="default" id="et2-l6-b97"/>
                                             <constraint firstItem="Z1k-p8-O3W" firstAttribute="leading" secondItem="ADe-86-y99" secondAttribute="leading" constant="17" id="rrR-Tb-xR8"/>
+                                            <constraint firstItem="Z1k-p8-O3W" firstAttribute="top" secondItem="ADe-86-y99" secondAttribute="top" constant="13" id="sDn-yd-6nc"/>
                                             <constraint firstAttribute="trailing" secondItem="oNB-80-GUQ" secondAttribute="trailing" constant="10" id="shy-SM-X7i"/>
                                         </constraints>
                                     </tableViewCell>
@@ -813,6 +825,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnj-3G-TkS">
+                                                    <accessibility key="accessibilityConfiguration" label="New Password Button"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="WEY-a3-W69"/>
                                                     </constraints>
@@ -829,6 +842,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzj-rV-LUf">
+                                                    <accessibility key="accessibilityConfiguration" label="Copy Button"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="hNl-Id-t4o"/>
                                                     </constraints>
@@ -845,6 +859,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-8Z-VOk">
+                                                    <accessibility key="accessibilityConfiguration" label="Generate Button"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="Qoa-mN-Ubg"/>
                                                     </constraints>

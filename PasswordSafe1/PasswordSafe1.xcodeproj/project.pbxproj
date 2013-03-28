@@ -51,6 +51,7 @@
 		0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */; };
 		0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB152816FE86290023FEE2 /* GeneratorTests.m */; };
 		0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0468C616CB7E9A006FDA5A /* CoreData.framework */; };
+		0AFB15311702B08C0023FEE2 /* GeneratorViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB15301702B08C0023FEE2 /* GeneratorViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDownloadTests.m; sourceTree = "<group>"; };
 		0AFB152616FE861F0023FEE2 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
 		0AFB152816FE86290023FEE2 /* GeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorTests.m; sourceTree = "<group>"; };
+		0AFB152F1702B08C0023FEE2 /* GeneratorViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorViewControllerTests.h; sourceTree = "<group>"; };
+		0AFB15301702B08C0023FEE2 /* GeneratorViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +251,8 @@
 				0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */,
 				0A28923516CB3F8200B23506 /* PasswordSafe1Tests.h */,
 				0A28923616CB3F8200B23506 /* PasswordSafe1Tests.m */,
+				0AFB152F1702B08C0023FEE2 /* GeneratorViewControllerTests.h */,
+				0AFB15301702B08C0023FEE2 /* GeneratorViewControllerTests.m */,
 				0A28923016CB3F8200B23506 /* Supporting Files */,
 			);
 			path = PasswordSafe1Tests;
@@ -409,6 +414,7 @@
 				0A3CDDC516FE815C00B2642A /* Generator.m in Sources */,
 				0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */,
 				0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */,
+				0AFB15311702B08C0023FEE2 /* GeneratorViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
