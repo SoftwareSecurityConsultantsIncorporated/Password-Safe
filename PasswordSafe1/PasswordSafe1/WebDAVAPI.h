@@ -10,7 +10,6 @@
 
 @interface WebDAVAPI : NSObject{
     NSMutableData *receivedData;
-    NSString *filepath;
     NSOutputStream *fileStream;
     NSURLConnection *connection;
 }

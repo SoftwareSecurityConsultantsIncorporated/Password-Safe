@@ -15,9 +15,7 @@
 {
     receivedData = [[NSMutableData alloc] initWithLength:0];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cachesDirectory = [paths objectAtIndex:0];
-    filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
+    NSString *filepath = [[AppDelegate sharedAppDelegate] getDownloadedFilepath];
     
     fileStream = [NSOutputStream outputStreamToFileAtPath:filepath append:NO];
     assert(fileStream != nil);
@@ -40,9 +38,7 @@
 
 -(void) upload
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cachesDirectory = [paths objectAtIndex:0];
-    filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
+    NSString *filepath = [[AppDelegate sharedAppDelegate] getFilepath];
     
     NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
     
@@ -54,7 +50,7 @@
     [request setHTTPBody:fileData];
     NSUInteger fileSize = [[[[NSFileManager defaultManager] attributesOfItemAtPath:filepath error:nil] objectForKey:NSFileSize] unsignedIntegerValue];
     [request setValue:[NSString stringWithFormat:@"%u", fileSize] forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];
         
     connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [connection start];
@@ -82,7 +78,7 @@
         fileType = [[httpResponse MIMEType] lowercaseString];
         if (fileType == nil) {
             NSLog(@"No content type");
-        } else if (![fileType isEqual:@"text/plain"]) {
+        } else if (![fileType isEqual:@"application/xml"]) {
             NSLog(@"Unsupported Content type: %@", fileType);
         } else {
             NSLog(@"Response OK");
@@ -133,7 +129,7 @@
                 bytesWrittenSoFar += bytesWritten;
             }
         } while (bytesWrittenSoFar != dataLength);
-        NSString* content = [NSString stringWithContentsOfFile:filepath
+        NSString* content = [NSString stringWithContentsOfFile:[[AppDelegate sharedAppDelegate] getFilepath]
                                                       encoding:NSUTF8StringEncoding
                                                          error:NULL];
         NSLog(@"Get data: %@", content);

@@ -12,6 +12,7 @@
 #import <CoreData/CoreData.h>
 #import "PasswordViewController.h"
 #import "WebDavAPI.h"
+#import "XMLParserDelegate.h"
 
 
 @implementation AppDelegate
@@ -73,7 +74,19 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
     [api upload];
+    
     //TODO syncing
+    //NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    //NSTimeInterval downloadedTimeStamp = [[NSDate date] timeIntervalSince1970];
+    NSData* downloadedData = [[NSData alloc] initWithContentsOfFile:[self getDownloadedFilepath]];
+    NSData* localData = [[NSData alloc] initWithContentsOfFile:[self getFilepath]];
+    NSXMLParser *downloadParser = [[NSXMLParser alloc] initWithData:downloadedData];
+    NSXMLParser *localParser = [[NSXMLParser alloc] initWithData:localData];
+    
+    XMLParserDelegate *delegate = [[XMLParserDelegate alloc] init];
+    [localParser setDelegate:delegate];
+    [localParser parse];
+    
     [api download];
     
 }
@@ -181,7 +194,21 @@
 
 - (NSURL *)getServerURL
 {
-    return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.txt"];
+    return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml"];
+}
+
+- (NSString *) getFilepath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesDirectory = [paths objectAtIndex:0];
+    return [cachesDirectory stringByAppendingPathComponent:@"password.xml"];
+}
+
+- (NSString *) getDownloadedFilepath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesDirectory = [paths objectAtIndex:0];
+    return [cachesDirectory stringByAppendingPathComponent:@"passwordDownloaded.xml"];
 }
 
 @end
