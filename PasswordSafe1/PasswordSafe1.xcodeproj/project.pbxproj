@@ -48,6 +48,7 @@
 		0A480F3E16CC347100AC73D6 /* GeneratorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */; };
 		0A480F4316CC452700AC73D6 /* safe-icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4216CC452600AC73D6 /* safe-icon1.png */; };
 		0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4416CC45B500AC73D6 /* safe-icon2.png */; };
+		0A908ED11715C3960053E913 /* XMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A908ED01715C3960053E913 /* XMLParserDelegate.m */; };
 		0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */; };
 		0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB152816FE86290023FEE2 /* GeneratorTests.m */; };
 		0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0468C616CB7E9A006FDA5A /* CoreData.framework */; };
@@ -121,6 +122,8 @@
 		0A480F3D16CC347100AC73D6 /* GeneratorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorViewController.m; sourceTree = "<group>"; };
 		0A480F4216CC452600AC73D6 /* safe-icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe-icon1.png"; path = "../safe-icon1.png"; sourceTree = "<group>"; };
 		0A480F4416CC45B500AC73D6 /* safe-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe-icon2.png"; path = "../safe-icon2.png"; sourceTree = "<group>"; };
+		0A908ECF1715C3960053E913 /* XMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParserDelegate.h; sourceTree = "<group>"; };
+		0A908ED01715C3960053E913 /* XMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParserDelegate.m; sourceTree = "<group>"; };
 		0A910BF616FEE5B700CD8655 /* UploadDownloadTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDownloadTests.h; sourceTree = "<group>"; };
 		0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDownloadTests.m; sourceTree = "<group>"; };
 		0AFB152616FE861F0023FEE2 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				0A28920716CB3F8100B23506 /* AppDelegate.m */,
 				0A0468D216CB80AD006FDA5A /* Generator.h */,
 				0A0468D316CB80AD006FDA5A /* Generator.m */,
+				0A908ECF1715C3960053E913 /* XMLParserDelegate.h */,
+				0A908ED01715C3960053E913 /* XMLParserDelegate.m */,
 				0A0468D416CB80AD006FDA5A /* Note.h */,
 				0A0468D516CB80AD006FDA5A /* Note.m */,
 				0A0468D616CB80AD006FDA5A /* Password.h */,
@@ -411,6 +416,7 @@
 				0A480F3E16CC347100AC73D6 /* GeneratorViewController.m in Sources */,
 				0AFB153917053FE20023FEE2 /* LoginViewController.m in Sources */,
 				0AFB153D17054F4A0023FEE2 /* ServerViewController.m in Sources */,
+				0A908ED11715C3960053E913 /* XMLParserDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

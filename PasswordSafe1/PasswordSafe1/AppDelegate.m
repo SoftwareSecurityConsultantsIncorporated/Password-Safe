@@ -12,6 +12,8 @@
 #import <CoreData/CoreData.h>
 #import "PasswordViewController.h"
 #import "WebDavAPI.h"
+#import "XMLParserDelegate.h"
+#import "Password.h"
 
 
 @implementation AppDelegate
@@ -72,10 +74,49 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
-    [api upload];
-    //TODO syncing
-    [api download];
+    //[api download];
     
+    //TODO syncing
+    //NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    //NSLog(@"time: %f", timeStamp);
+    //NSTimeInterval downloadedTimeStamp = [[NSDate date] timeIntervalSince1970];
+    NSData* serverData = [[NSData alloc] initWithContentsOfFile:[self getDownloadedFilepath]];
+    NSData* localData = [[NSData alloc] initWithContentsOfFile:[self getFilepath]];
+    NSXMLParser *serverParser = [[NSXMLParser alloc] initWithData:serverData];
+    NSXMLParser *localParser = [[NSXMLParser alloc] initWithData:localData];
+    
+    XMLParserDelegate *serverDelegate = [[XMLParserDelegate alloc] init];
+    [serverParser setDelegate:serverDelegate];
+    [serverParser parse];
+    
+    XMLParserDelegate *localDelegate = [[XMLParserDelegate alloc] init];
+    [localParser setDelegate:localDelegate];
+    [localParser parse];
+    
+    double serverTimestamp = [serverDelegate getTimestamp];
+    double localTimestamp = [localDelegate getTimestamp];
+    
+    if(serverTimestamp > localTimestamp){
+        NSLog(@"Server more recent");
+    }else {NSLog(@"Local more recent");}
+    
+    //[api upload];
+    
+    NSManagedObjectContext *m = [self managedObjectContext];
+    NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	
+	[req setEntity:[NSEntityDescription entityForName:@"Password" inManagedObjectContext:m]];
+                    [req setIncludesPropertyValues:NO];
+    NSArray *pw = [m executeFetchRequest:req error:nil];
+    for(NSManagedObject *p in pw){
+        //NSLog(@"Password: %@", p);
+        NSDictionary *dictionary = [[p entity] attributesByName];
+        NSArray *attributes = [dictionary allKeys];
+        for(NSString *attribute in attributes){
+            NSString *a = [dictionary valueForKey:attribute];
+            NSLog(@"%@", attribute);
+        }
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -181,7 +222,21 @@
 
 - (NSURL *)getServerURL
 {
-    return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.txt"];
+    return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml"];
+}
+
+- (NSString *) getFilepath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesDirectory = [paths objectAtIndex:0];
+    return [cachesDirectory stringByAppendingPathComponent:@"password.xml"];
+}
+
+- (NSString *) getDownloadedFilepath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachesDirectory = [paths objectAtIndex:0];
+    return [cachesDirectory stringByAppendingPathComponent:@"passwordDownloaded.xml"];
 }
 
 @end

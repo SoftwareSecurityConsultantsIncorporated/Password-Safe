@@ -15,9 +15,7 @@
 {
     receivedData = [[NSMutableData alloc] initWithLength:0];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cachesDirectory = [paths objectAtIndex:0];
-    filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
+    NSString *filepath = [[AppDelegate sharedAppDelegate] getDownloadedFilepath];
     
     fileStream = [NSOutputStream outputStreamToFileAtPath:filepath append:NO];
     assert(fileStream != nil);
@@ -40,9 +38,7 @@
 
 -(void) upload
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    NSString *cachesDirectory = [paths objectAtIndex:0];
-    filepath = [cachesDirectory stringByAppendingPathComponent:@"password.txt"];
+    NSString *filepath = [[AppDelegate sharedAppDelegate] getFilepath];
     
     NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
     
@@ -54,8 +50,8 @@
     [request setHTTPBody:fileData];
     NSUInteger fileSize = [[[[NSFileManager defaultManager] attributesOfItemAtPath:filepath error:nil] objectForKey:NSFileSize] unsignedIntegerValue];
     [request setValue:[NSString stringWithFormat:@"%u", fileSize] forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
-        
+    [request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];
+    
     connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [connection start];
     if (connection){
@@ -82,7 +78,7 @@
         fileType = [[httpResponse MIMEType] lowercaseString];
         if (fileType == nil) {
             NSLog(@"No content type");
-        } else if (![fileType isEqual:@"text/plain"]) {
+        } else if (![fileType isEqual:@"application/xml"]) {
             NSLog(@"Unsupported Content type: %@", fileType);
         } else {
             NSLog(@"Response OK");
@@ -91,7 +87,7 @@
 }
 
 -(void)connection:(NSURLConnection *)connection
-    didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
+didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {
     NSLog(@"Received Authentication Challenge");
     
@@ -116,12 +112,12 @@
         const uint8_t * dataBytes;
         NSInteger       bytesWritten;
         NSInteger       bytesWrittenSoFar;
-    
+        
         assert(conn == connection);
-    
+        
         dataLength = [data length];
         dataBytes  = [data bytes];
-    
+        
         bytesWrittenSoFar = 0;
         do {
             bytesWritten = [fileStream write:&dataBytes[bytesWrittenSoFar] maxLength:dataLength - bytesWrittenSoFar];
@@ -133,18 +129,18 @@
                 bytesWrittenSoFar += bytesWritten;
             }
         } while (bytesWrittenSoFar != dataLength);
-        NSString* content = [NSString stringWithContentsOfFile:filepath
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:NULL];
-        NSLog(@"Get data: %@", content);
+        //NSString* content = [NSString stringWithContentsOfFile:[[AppDelegate sharedAppDelegate] getFilepath]
+          //                                            encoding:NSUTF8StringEncoding
+            //                                             error:NULL];
+        //NSLog(@"Get data: %@", content);
     } else {
         // TODO  Figure out what to do here if it is a post
     }
-
+    
 }
 
 - (void)connection:(NSURLConnection *)conn didFailWithError:(NSError *)error
-{    
+{
     NSLog(@"didFailWithError %@", error);
 }
 

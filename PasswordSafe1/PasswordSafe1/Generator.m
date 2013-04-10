@@ -63,22 +63,8 @@
             count++;
         }
         else if ([self finishedCharacterRequirements:Capitals lowers:Lowers specials:Specials numbers:Numbers]){
-            if ([self isCapital:ascii] && Capitals == 0){
-                [passwordArray addObject:character];
-                count++;
-            }
-            else if ([self isLower:ascii] && Lowers == 0){
-                [passwordArray addObject:character];
-                count++;
-            }
-            else if ([self isSpecial:ascii] && Specials == 0){
-                [passwordArray addObject:character];
-                count++;
-            }
-            else if ([self isNumber:ascii] && Numbers == 0){
-                [passwordArray addObject:character];
-                count++;
-            }
+            [passwordArray addObject:character];
+            count++;
         }
     }
     passwordArray = [self knuthShuffle:passwordArray :length];
@@ -101,20 +87,24 @@
 }
 
 -(Boolean)isCapital: (int)ascii{
-    return (ascii > 64 && ascii < 91);
+    //return (ascii > 64 && ascii < 91);
+    return (ascii >= 'A' && ascii <= 'Z');
 }
 
 -(Boolean)isLower:(int)ascii{
-    return (ascii > 96 && ascii < 123);
+    //return (ascii > 96 && ascii < 123);
+    return (ascii >= 'a' && ascii <= 'z');
 }
 
 -(Boolean)isSpecial: (int)ascii{
-    return (ascii == 21) || (ascii > 34 && ascii < 39) || (ascii > 39 && ascii < 47) || (ascii > 57 && ascii < 65) ||
-            (ascii > 90 && ascii < 96) || (ascii == 123) || (ascii == 125);
+    //return (ascii == 21) || (ascii > 34 && ascii < 39) || (ascii > 39 && ascii < 47) || (ascii > 57 && ascii < 65) ||
+    //  (ascii > 90 && ascii < 96) || (ascii == 123) || (ascii == 125);
+    return (ascii == 21) || (ascii >= '#' && ascii <= '&') || (ascii >= '(' && ascii < '/') || (ascii > '9' && ascii < 'A') ||
+    (ascii > 'Z' && ascii < '`') || (ascii == '{') || (ascii == '}');
 }
 
 -(Boolean)isNumber: (int)ascii{
-    return (ascii > 47 && ascii < 58);
+    return (ascii >= '0' && ascii <= '9');
 }
 -(int)countUpperCaseCharacters: (NSMutableString*)string{
     int count=0;
@@ -130,8 +120,8 @@
     int count=0;
     int i=0;
     for (i = 0; i < [string length]; i++) {
-        BOOL isUppercase = [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:[string characterAtIndex:i]];
-        if (isUppercase == YES)
+        BOOL isLowercase = [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:[string characterAtIndex:i]];
+        if (isLowercase == YES)
             count++;
     }
     return count;
@@ -163,3 +153,4 @@
 }
 
 @end
+

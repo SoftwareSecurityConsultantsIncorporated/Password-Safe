@@ -15,6 +15,6 @@
 @property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * site;
-@property (nonatomic, retain) NSString * pwDecscription;
+@property (nonatomic, retain) NSString * pwDescription;
 
 @end

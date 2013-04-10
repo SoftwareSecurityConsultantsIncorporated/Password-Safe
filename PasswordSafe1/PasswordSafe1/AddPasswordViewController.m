@@ -51,7 +51,7 @@
     password.username = __userNameTextField.text;
     password.password = __passwordTextField.text;
     password.site = __websiteTextField.text;
-    password.pwDecscription = __accountDescriptionTextField.text;
+    password.pwDescription = __accountDescriptionTextField.text;
     [self.managedObjectContext save:nil];  // write to database
     
     [self.delegate theSaveButtonOnTheAddpasswordViewControllerWasTapped:self];
