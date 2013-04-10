@@ -38,7 +38,7 @@
     self.passwordTextField.text = self.password.password;
     self.userNameTextField.text = self.password.username;
     self.websiteTextField.text = self.password.site;
-    self.accountDescriptionTextField.text = self.password.pwDescription;
+    self.accountDescriptionTextField.text = self.password.pwDecscription;
     [super viewDidLoad];
     
 }
@@ -50,7 +50,7 @@
     [self.password setPassword:__passwordTextField.text];
     [self.password setUsername:__userNameTextField.text];
     [self.password setSite:__websiteTextField.text];
-    [self.password setPwDescription:__accountDescriptionTextField.text];
+    [self.password setPwDecscription:__accountDescriptionTextField.text];
     [self.managedObjectContext save:nil];  // write to database
     
     [self.delegate theSaveButtonOnTheEditpasswordViewControllerWasTapped:self];

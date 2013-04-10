@@ -63,6 +63,41 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSMutableString *xml = [[NSMutableString alloc] init];
+    [xml appendString:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"];
+    [xml appendString:@"<content>"];
+    
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    [xml appendFormat:@"<timestamp>%f</timestamp>", timeStamp];
+    
+    NSManagedObjectContext *m = [self managedObjectContext];
+    NSFetchRequest *req = [[NSFetchRequest alloc] init];
+	
+	[req setEntity:[NSEntityDescription entityForName:@"Password" inManagedObjectContext:m]];
+    [req setIncludesPropertyValues:NO];
+    NSArray *pw = [m executeFetchRequest:req error:nil];
+    for(Password *password in pw){
+        [xml appendString:@"<passwordEntry>"];
+        [xml appendFormat:@"<title>%@</title>", password.title];
+        [xml appendFormat:@"<username>%@</username>", password.username];
+        [xml appendFormat:@"<password>%@</password>", password.password];
+        [xml appendFormat:@"<site>%@</site>", password.site];
+        [xml appendFormat:@"<description>%@</description>", password.pwDecscription];
+        [xml appendString:@"</passwordEntry>"];
+    }
+    
+    [req setEntity:[NSEntityDescription entityForName:@"Note" inManagedObjectContext:m]];
+    [req setIncludesPropertyValues:NO];
+    NSArray *notes = [m executeFetchRequest:req error:nil];
+    for(Note *note in notes){
+        [xml appendString:@"<noteEntry>"];
+        [xml appendFormat:@"<title>%@</title>", note.title];
+        [xml appendFormat:@"<content>%@</content>", note.content];
+        [xml appendString:@"</noteEntry>"];
+    }
+    
+    [xml appendString:@"</content>"];
+    NSLog(@"XML: %@", xml);
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -101,22 +136,6 @@
     }else {NSLog(@"Local more recent");}
     
     //[api upload];
-    
-    NSManagedObjectContext *m = [self managedObjectContext];
-    NSFetchRequest *req = [[NSFetchRequest alloc] init];
-	
-	[req setEntity:[NSEntityDescription entityForName:@"Password" inManagedObjectContext:m]];
-                    [req setIncludesPropertyValues:NO];
-    NSArray *pw = [m executeFetchRequest:req error:nil];
-    for(NSManagedObject *p in pw){
-        //NSLog(@"Password: %@", p);
-        NSDictionary *dictionary = [[p entity] attributesByName];
-        NSArray *attributes = [dictionary allKeys];
-        for(NSString *attribute in attributes){
-            NSString *a = [dictionary valueForKey:attribute];
-            NSLog(@"%@", attribute);
-        }
-    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

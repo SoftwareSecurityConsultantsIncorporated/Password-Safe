@@ -16,12 +16,7 @@
 @dynamic username;
 @dynamic password;
 @dynamic site;
-@dynamic pwDescription;
-
-//- (NSString*) description{
-//    //return @"Title: " + title + @" Username: " username + @" Password: " password + @" Site: " + site + @" Description: " + pwDescription;
-//    return [NSString stringWithFormat:@"Title: %@ Username: %@ Password: %@ Site: %@ Description: %@", title, username, password, site, pwDescription];
-//}
+@dynamic pwDecscription;
 
 
 @end
