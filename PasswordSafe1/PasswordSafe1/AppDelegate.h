@@ -20,7 +20,5 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (NSURL *)getServerURL;
-- (NSString *) getFilepath;
-- (NSString *) getDownloadedFilepath;
 
 @end
