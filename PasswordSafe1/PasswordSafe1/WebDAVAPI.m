@@ -12,7 +12,7 @@
 @implementation WebDAVAPI
 
 -(void) download
-{
+{    
     receivedData = [[NSMutableData alloc] initWithLength:0];
     
     NSString *filepath = [[AppDelegate sharedAppDelegate] getDownloadedFilepath];
@@ -27,6 +27,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.];
     
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];
     if (connection){
         NSLog(@"Connecting");
     }
@@ -113,7 +114,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
         NSInteger       bytesWritten;
         NSInteger       bytesWrittenSoFar;
         
-        assert(conn == connection);
+        //assert(conn == connection);
         
         dataLength = [data length];
         dataBytes  = [data bytes];
@@ -129,6 +130,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
                 bytesWrittenSoFar += bytesWritten;
             }
         } while (bytesWrittenSoFar != dataLength);
+        [[AppDelegate sharedAppDelegate] downloadDone];
         //NSString* content = [NSString stringWithContentsOfFile:[[AppDelegate sharedAppDelegate] getFilepath]
           //                                            encoding:NSUTF8StringEncoding
             //                                             error:NULL];

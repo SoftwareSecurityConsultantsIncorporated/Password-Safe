@@ -97,7 +97,8 @@
     }
     
     [xml appendString:@"</content>"];
-    NSLog(@"XML: %@", xml);
+    //NSLog(@"XML: %@", xml);
+    [xml writeToFile:[self getFilepath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -109,8 +110,11 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
-    //[api download];
-    
+    downloadDone = FALSE;
+    [api download];
+    NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+    while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    //while(!downloadDone){/* wait */}
     //TODO syncing
     //NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
     //NSLog(@"time: %f", timeStamp);
@@ -135,7 +139,7 @@
         NSLog(@"Server more recent");
     }else {NSLog(@"Local more recent");}
     
-    //[api upload];
+    [api upload];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -256,6 +260,11 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachesDirectory = [paths objectAtIndex:0];
     return [cachesDirectory stringByAppendingPathComponent:@"passwordDownloaded.xml"];
+}
+
+- (void) downloadDone
+{
+    downloadDone = TRUE;
 }
 
 @end

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    BOOL downloadDone;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -22,6 +24,7 @@
 - (NSURL *)getServerURL;
 - (NSString *) getFilepath;
 - (NSString *) getDownloadedFilepath;
+- (void) downloadDone;
 
 
 @end
