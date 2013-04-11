@@ -97,7 +97,6 @@
     }
     
     [xml appendString:@"</content>"];
-    //NSLog(@"XML: %@", xml);
     [xml writeToFile:[self getFilepath] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
@@ -114,11 +113,7 @@
     [api download];
     NSRunLoop *theRL = [NSRunLoop currentRunLoop];
     while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
-    //while(!downloadDone){/* wait */}
-    //TODO syncing
-    //NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
-    //NSLog(@"time: %f", timeStamp);
-    //NSTimeInterval downloadedTimeStamp = [[NSDate date] timeIntervalSince1970];
+    
     NSData* serverData = [[NSData alloc] initWithContentsOfFile:[self getDownloadedFilepath]];
     NSData* localData = [[NSData alloc] initWithContentsOfFile:[self getFilepath]];
     NSXMLParser *serverParser = [[NSXMLParser alloc] initWithData:serverData];
@@ -137,6 +132,7 @@
     
     if(serverTimestamp > localTimestamp){
         NSLog(@"Server more recent");
+        [serverData writeToFile:[self getFilepath] atomically:YES];
     }else {NSLog(@"Local more recent");}
     
     [api upload];
