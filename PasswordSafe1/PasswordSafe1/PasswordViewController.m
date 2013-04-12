@@ -100,15 +100,12 @@
 	}
     else if ([segue.identifier isEqualToString:@"Edit Password Segue"])
     {
-        NSLog(@"Setting PasswordViewController as a delegate of passwordDetailViewController");
         passwordDetailViewController *passwordDetailController = segue.destinationViewController;
         passwordDetailController.delegate = self;
         passwordDetailController.managedObjectContext = self.managedObjectContext;
         
-        //Store the selected password in selectedpassword Property
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         self.selectedPassword = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        NSLog(@"Passing selected password (%@) to passwordDetailViewController", self.selectedPassword.title);
         passwordDetailController.password = self.selectedPassword;
     }
     else{

@@ -110,36 +110,45 @@
 }
 
 - (IBAction)sliderAdjustment:(id)sender{
-
-    if (self.capitalSwitch.on && self.capitalsSlider.value >= 0){
-    self.capitalsSlider.maximumValue = self.lengthSlider.value - self.lowersSlider.value - self.specialsSlider.value - self.numbersSlider.value;
-        
-    } else {
-        self.capitalsSlider.maximumValue = 0;
-    }
     
-    if (self.lowerSwitch.on && self.lowersSlider.value >= 0){
-    self.lowersSlider.maximumValue = self.lengthSlider.value - self.capitalsSlider.value - self.specialsSlider.value - self.numbersSlider.value;
-    } else {
-        self.lowersSlider.maximumValue = 0;
-    }
+    NSArray *sliders = [NSArray arrayWithObjects:self.capitalsSlider, self.lowersSlider, self.specialsSlider, self.numbersSlider, nil];
     
-    if (self.specialSwitch.on && self.specialsSlider.value >= 0){
-    self.specialsSlider.maximumValue = self.lengthSlider.value - self.capitalsSlider.value - self.lowersSlider.value - self.numbersSlider.value;
-    } else {
-        self.specialsSlider.maximumValue = 0;
-    }
-
-    if (self.numberSwitch.on && self.numbersSlider.value >= 0){
-    self.numbersSlider.maximumValue = self.lengthSlider.value - self.capitalsSlider.value - self.lowersSlider.value - self.specialsSlider.value;
-    } else {
-        self.numbersSlider.maximumValue = 0;
-    }
+    self.capitalsSlider.maximumValue = [self getMaxValue:self.capitalsSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.capitalSwitch];
+    
+    self.lowersSlider.maximumValue = [self getMaxValue:self.lowersSlider withSliders:[self filter:sliders withSlider:self.lowersSlider] withSwitch:self.lowerSwitch];
+    
+    self.specialsSlider.maximumValue = [self getMaxValue:self.specialsSlider withSliders:[self filter:sliders withSlider:self.specialsSlider] withSwitch:self.specialSwitch];
+    
+    self.numbersSlider.maximumValue = [self getMaxValue:self.numbersSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.numberSwitch];
     
     [self updateCapitalSlider:self.lengthSlider];
     [self updateLowerSlider:self.lengthSlider];
     [self updateSpecialSlider:self.lengthSlider];
     [self updateNumbersSlider:self.lengthSlider];
+}
+
+- (int) getMaxValue:(UISlider *)slider withSliders:(NSArray *)sliders withSwitch:(UISwitch *)sw {
+    if (sw.on && slider.value >= 0 ) {
+        int value = self.lengthSlider.value;
+        for (UISlider *sl in sliders) {
+            value -= sl.value;
+        }
+        return value;
+    } else {
+        return 0;
+    }
+}
+
+- (NSArray *) filter:(NSArray *)sliders withSlider:(UISlider *)slider {
+    NSMutableArray *newArray = [NSMutableArray array];
+    
+    for (UISlider *sl in sliders) {
+        if (sl != slider) {
+            [newArray addObject:sl];
+        }
+    }
+    
+    return [newArray copy];
 }
 
 - (void)didReceiveMemoryWarning

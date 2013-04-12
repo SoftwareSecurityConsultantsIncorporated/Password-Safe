@@ -91,23 +91,18 @@
 {
 	if ([segue.identifier isEqualToString:@"Add Note Segue"])
 	{
-        NSLog(@"Setting NoteViewController as a delegate of AddNoteViewController");
-        
         AddNoteViewController *addNoteViewController = segue.destinationViewController;
         addNoteViewController.delegate = self;
         addNoteViewController.managedObjectContext = self.managedObjectContext;
 	}
     else if ([segue.identifier isEqualToString:@"Edit Note Segue"])
     {
-        NSLog(@"Setting NoteViewCntroller as a delegate of noteDetailViewController");
         noteDetailViewController *noteDetailController = segue.destinationViewController;
         noteDetailController.delegate = self;
         noteDetailController.managedObjectContext = self.managedObjectContext;
         
-        //Store the selected Note in selectedNote Property
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         self.selectedNote = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        NSLog(@"Passing selected note (%@) to noteDetailViewController", self.selectedNote.title);
         noteDetailController.note = self.selectedNote;
     }
     else{
