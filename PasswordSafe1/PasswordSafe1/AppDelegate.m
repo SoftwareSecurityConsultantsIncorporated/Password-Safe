@@ -150,7 +150,8 @@
         }
         [self.managedObjectContext save:nil];
         
-        NSXMLParser *updatedParser = [[NSXMLParser alloc] initWithData:localData];
+        NSData* newLocalData = [[NSData alloc] initWithContentsOfFile:[self getFilepath]];
+        NSXMLParser *updatedParser = [[NSXMLParser alloc] initWithData:newLocalData];
         XMLParserDelegate *updatedDelegate = [[XMLParserDelegate alloc] init];
         [updatedParser setDelegate:updatedDelegate];
         [updatedParser parse];
