@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="Notes" id="gUe-sA-gFK">
                         <barButtonItem key="leftBarButtonItem" title="Server" id="Aar-yP-v9y">
                             <connections>
-                                <segue destination="ebz-c9-oYH" kind="push" id="p6G-XQ-ZGL"/>
+                                <segue destination="Xcn-C2-X6o" kind="push" id="1kq-G1-zJb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0NR-Kq-tPz">
@@ -47,6 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdX-Ec-pil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1253" y="-126"/>
         </scene>
         <!--Server View Controller - Server Settings-->
@@ -183,6 +184,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee5-nf-Wqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1787" y="561"/>
+=======
+            <point key="canvasLocation" x="1247" y="-148"/>
+>>>>>>> Added Server Settings screen
         </scene>
         <!--Add Note View Controller - New Note-->
         <scene sceneID="W8M-XA-pon">
@@ -368,7 +372,85 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ym-Kw-FMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="-126"/>
+            <point key="canvasLocation" x="1793" y="-148"/>
+        </scene>
+        <!--Server View Controller - Server Settings-->
+        <scene sceneID="qdn-YM-A9W">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCT-lJ-vQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Xcn-C2-X6o" customClass="ServerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WqB-nf-uKj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aaD-7i-RUG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="1og-5N-J3P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Get-qQ-uQu">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ODr-gA-39A">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKY-bQ-WM7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="9hH-hg-qdd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sD-Xb-5Qm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-3y-zKm">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.55030599442773653" green="0.59448246481528977" blue="0.64980769230769231" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ODr-gA-39A" firstAttribute="trailing" secondItem="Get-qQ-uQu" secondAttribute="trailing" type="default" id="5Tp-t3-Zhg"/>
+                            <constraint firstItem="H3H-3y-zKm" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Xg-d4-Fu3"/>
+                            <constraint firstItem="Get-qQ-uQu" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="150" id="BlL-Gz-zsw"/>
+                            <constraint firstItem="0sD-Xb-5Qm" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OCy-CH-2k5"/>
+                            <constraint firstItem="AKY-bQ-WM7" firstAttribute="centerX" secondItem="0sD-Xb-5Qm" secondAttribute="centerX" type="default" id="OGm-mm-ciW"/>
+                            <constraint firstItem="ODr-gA-39A" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="197" id="PHH-AJ-GWW"/>
+                            <constraint firstItem="Get-qQ-uQu" firstAttribute="trailing" secondItem="aaD-7i-RUG" secondAttribute="trailing" type="default" id="Q0f-hm-UK8"/>
+                            <constraint firstItem="ODr-gA-39A" firstAttribute="leading" secondItem="Get-qQ-uQu" secondAttribute="leading" type="default" id="TkD-WA-vB5"/>
+                            <constraint firstItem="0sD-Xb-5Qm" firstAttribute="baseline" secondItem="Get-qQ-uQu" secondAttribute="baseline" type="default" id="WCm-Nc-7NU"/>
+                            <constraint firstItem="aaD-7i-RUG" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="106" id="YM0-dJ-ZcT"/>
+                            <constraint firstItem="aaD-7i-RUG" firstAttribute="baseline" secondItem="AKY-bQ-WM7" secondAttribute="baseline" type="default" id="daT-dW-AS1"/>
+                            <constraint firstItem="H3H-3y-zKm" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="201" id="kyL-NK-AwB"/>
+                            <constraint firstItem="aaD-7i-RUG" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="122" id="lIP-q9-jPF"/>
+                            <constraint firstItem="Get-qQ-uQu" firstAttribute="leading" secondItem="aaD-7i-RUG" secondAttribute="leading" type="default" id="vwv-qC-rX6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Ay6-ZY-Gtr"/>
+                    <navigationItem key="navigationItem" title="Server Settings" id="xtY-sR-nqH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zc7-Iq-pao">
+                            <connections>
+                                <action selector="saveData:" destination="Xcn-C2-X6o" id="wYS-t3-77N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="PasswordTextField" destination="ODr-gA-39A" id="Ni7-6d-zTy"/>
+                        <outlet property="URLTextField" destination="aaD-7i-RUG" id="ssd-Mb-Qha"/>
+                        <outlet property="UsernameTextField" destination="Get-qQ-uQu" id="vaV-HY-LE1"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1793" y="575"/>
         </scene>
         <!--Password View Controller - Passwords-->
         <scene sceneID="gwH-8Y-CUu">
@@ -401,7 +483,7 @@
                     <navigationItem key="navigationItem" title="Passwords" id="GtZ-L8-1ry">
                         <barButtonItem key="leftBarButtonItem" title="Server" id="fin-d7-5Dt">
                             <connections>
-                                <segue destination="ebz-c9-oYH" kind="push" id="vuv-yv-CUP"/>
+                                <segue destination="Xcn-C2-X6o" kind="push" id="pCD-x8-pd2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ob5-38-XC4">
@@ -1295,24 +1377,6 @@
             </objects>
             <point key="canvasLocation" x="1793" y="2060"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="I0A-8g-hdp">
-            <objects>
-                <navigationController id="935-f8-2l9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jzz-kq-q6g">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ebz-c9-oYH" kind="relationship" relationship="rootViewController" id="6NA-7w-4QZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FnB-BI-nqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1253" y="561"/>
-        </scene>
         <!--Addpassword View Controller - New Password-->
         <scene sceneID="nid-KK-TgE">
             <objects>
@@ -1488,13 +1552,118 @@
         <image name="notes.png" width="30" height="30"/>
         <image name="passwords.png" width="32" height="32"/>
     </resources>
+    <classes>
+        <class className="AddNoteViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddNoteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddpasswordViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddpasswordViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="GeneratorViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="copyToClipboard:"/>
+                <relationship kind="action" name="generateButton:"/>
+                <relationship kind="action" name="setCapitalSliderToZero:"/>
+                <relationship kind="action" name="setLowerSliderToZero:"/>
+                <relationship kind="action" name="setNumberSliderToZero:"/>
+                <relationship kind="action" name="setSpecialSliderToZero:"/>
+                <relationship kind="action" name="sliderAdjustment:"/>
+                <relationship kind="action" name="updateCapitalSlider:"/>
+                <relationship kind="action" name="updateLengthSlider:"/>
+                <relationship kind="action" name="updateLowerSlider:"/>
+                <relationship kind="action" name="updateNumbersSlider:"/>
+                <relationship kind="action" name="updateSpecialSlider:"/>
+                <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="capitalSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="generateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lengthLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lengthSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="lowerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowerSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="lowersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="makeNewPasswordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="passwordCopyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="specialSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="specialsSlider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NoteViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
+        </class>
+        <class className="PasswordViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PasswordViewController.h"/>
+        </class>
+        <class className="ServerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="checkSaveIsValid:"/>
+                <relationship kind="action" name="saveData:"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="URLTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="UsernameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ipAddressField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="noteDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/noteDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="passwordDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/passwordDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="6NA-7w-4QZ"/>
         <segue reference="GG8-Ne-QrR"/>
+=======
+        <segue reference="pCD-x8-pd2"/>
+        <segue reference="lyK-HN-099"/>
+>>>>>>> Added Server Settings screen
     </inferredMetricsTieBreakers>
 </document>

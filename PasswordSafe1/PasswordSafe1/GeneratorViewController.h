@@ -10,6 +10,8 @@
 #import "Generator.h"
 @interface GeneratorViewController : UITableViewController {
     Generator *generator;
+    NSMutableArray *sliders;
+    NSMutableDictionary *switches;
 }
 @property (strong, nonatomic) IBOutlet UISlider *lengthSlider;
 @property (strong, nonatomic) IBOutlet UISlider *capitalsSlider;

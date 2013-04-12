@@ -10,6 +10,9 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     BOOL downloadDone;
+    NSString *url;
+    NSString *username;
+    NSString *password;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -22,6 +25,11 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 - (NSURL *)getServerURL;
+- (void)setServerURL: (NSString *) input;
+- (NSString *)getUsername;
+- (void)setUsername: (NSString *) input;
+- (NSString *)getPassword;
+- (void)setPassword: (NSString *) input;
 - (NSString *) getFilepath;
 - (NSString *) getDownloadedFilepath;
 - (void) downloadDone;

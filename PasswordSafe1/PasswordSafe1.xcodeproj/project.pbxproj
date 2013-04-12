@@ -50,11 +50,11 @@
 		0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4416CC45B500AC73D6 /* safe-icon2.png */; };
 		0A908ED11715C3960053E913 /* XMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A908ED01715C3960053E913 /* XMLParserDelegate.m */; };
 		0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */; };
+		0AE0630A1717DA1C002C8814 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE063091717DA1C002C8814 /* ServerViewController.m */; };
 		0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB152816FE86290023FEE2 /* GeneratorTests.m */; };
 		0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0468C616CB7E9A006FDA5A /* CoreData.framework */; };
 		0AFB15311702B08C0023FEE2 /* GeneratorViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB15301702B08C0023FEE2 /* GeneratorViewControllerTests.m */; };
 		0AFB153917053FE20023FEE2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB153817053FE20023FEE2 /* LoginViewController.m */; };
-		0AFB153D17054F4A0023FEE2 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB153C17054F4A0023FEE2 /* ServerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,14 +126,14 @@
 		0A908ED01715C3960053E913 /* XMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParserDelegate.m; sourceTree = "<group>"; };
 		0A910BF616FEE5B700CD8655 /* UploadDownloadTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDownloadTests.h; sourceTree = "<group>"; };
 		0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDownloadTests.m; sourceTree = "<group>"; };
+		0AE063081717DA1C002C8814 /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerViewController.h; path = ../ServerViewController.h; sourceTree = "<group>"; };
+		0AE063091717DA1C002C8814 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerViewController.m; path = ../ServerViewController.m; sourceTree = "<group>"; };
 		0AFB152616FE861F0023FEE2 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
 		0AFB152816FE86290023FEE2 /* GeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorTests.m; sourceTree = "<group>"; };
 		0AFB152F1702B08C0023FEE2 /* GeneratorViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorViewControllerTests.h; sourceTree = "<group>"; };
 		0AFB15301702B08C0023FEE2 /* GeneratorViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratorViewControllerTests.m; sourceTree = "<group>"; };
 		0AFB153717053FE20023FEE2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0AFB153817053FE20023FEE2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		0AFB153B17054F490023FEE2 /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
-		0AFB153C17054F4A0023FEE2 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,9 +208,9 @@
 				0A0468D716CB80AE006FDA5A /* Password.m */,
 				0A0468D816CB80AE006FDA5A /* WebDAVAPI.h */,
 				0A0468D916CB80AE006FDA5A /* WebDAVAPI.m */,
+				0AE063081717DA1C002C8814 /* ServerViewController.h */,
+				0AE063091717DA1C002C8814 /* ServerViewController.m */,
 				0A28920F16CB3F8100B23506 /* MainStoryboard_iPhone.storyboard */,
-				0AFB153B17054F490023FEE2 /* ServerViewController.h */,
-				0AFB153C17054F4A0023FEE2 /* ServerViewController.m */,
 				0AFB153717053FE20023FEE2 /* LoginViewController.h */,
 				0AFB153817053FE20023FEE2 /* LoginViewController.m */,
 				0A480F3C16CC347100AC73D6 /* GeneratorViewController.h */,
@@ -224,8 +224,8 @@
 				0A28921C16CB3F8100B23506 /* PasswordViewController.h */,
 				0A28921D16CB3F8100B23506 /* PasswordViewController.m */,
 				0A04686816CB5612006FDA5A /* passwords.png */,
-				0A04686416CB5290006FDA5A /* NoteViewController.h */,
 				0A04686516CB5290006FDA5A /* NoteViewController.m */,
+				0A04686416CB5290006FDA5A /* NoteViewController.h */,
 				0A04686116CB51D1006FDA5A /* AddNoteViewController.h */,
 				0A04686216CB51D1006FDA5A /* AddNoteViewController.m */,
 				0A04685F16CB511D006FDA5A /* notes.png */,
@@ -415,8 +415,8 @@
 				0A0468E916CC0832006FDA5A /* passwordDetailViewController.m in Sources */,
 				0A480F3E16CC347100AC73D6 /* GeneratorViewController.m in Sources */,
 				0AFB153917053FE20023FEE2 /* LoginViewController.m in Sources */,
-				0AFB153D17054F4A0023FEE2 /* ServerViewController.m in Sources */,
 				0A908ED11715C3960053E913 /* XMLParserDelegate.m in Sources */,
+				0AE0630A1717DA1C002C8814 /* ServerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

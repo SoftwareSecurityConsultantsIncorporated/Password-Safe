@@ -93,14 +93,15 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
     NSLog(@"Received Authentication Challenge");
     
     if([challenge previousFailureCount] == 0){
-        NSURLCredential *credential = [NSURLCredential credentialWithUser:@"passwordsync"
-                                                                 password:@"password"
+        NSURLCredential *credential = [NSURLCredential credentialWithUser:[[AppDelegate sharedAppDelegate] getUsername]
+                                                                 password:[[AppDelegate sharedAppDelegate] getPassword]
                                                               persistence:NSURLCredentialPersistenceNone];
         
         [[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
     }else{
         [[challenge sender] cancelAuthenticationChallenge:challenge];
         // Display error message: incorrect credentials
+        invalidCredentials = TRUE;
         NSLog(@"Authentication failed");
     }
 }
@@ -149,6 +150,18 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 - (void)connectionDidFinishLoading:(NSURLConnection *)conn
 {
     NSLog(@"connectionDidFinishLoading");
+}
+
+- (BOOL) validCredentials
+{
+    invalidCredentials = FALSE;
+    NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.];
+    
+    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];
+    sleep(1);
+    return !invalidCredentials;
 }
 
 @end

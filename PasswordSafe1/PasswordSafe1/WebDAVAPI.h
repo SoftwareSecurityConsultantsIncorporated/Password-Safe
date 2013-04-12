@@ -12,9 +12,11 @@
     NSMutableData *receivedData;
     NSOutputStream *fileStream;
     NSURLConnection *connection;
+    BOOL invalidCredentials;
 }
 
 - (void) download;
 - (void) upload;
+- (BOOL) validCredentials;
 
 @end

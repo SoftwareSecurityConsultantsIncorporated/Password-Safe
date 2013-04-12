@@ -75,14 +75,14 @@
 	
 	[req setEntity:[NSEntityDescription entityForName:@"Password" inManagedObjectContext:m]];
     [req setIncludesPropertyValues:NO];
-    NSArray *pw = [m executeFetchRequest:req error:nil];
-    for(Password *password in pw){
+    NSArray *pws = [m executeFetchRequest:req error:nil];
+    for(Password *pw in pws){
         [xml appendString:@"<passwordEntry>"];
-        [xml appendFormat:@"<passwordTitle>%@</passwordTitle>", password.title];
-        [xml appendFormat:@"<username>%@</username>", password.username];
-        [xml appendFormat:@"<password>%@</password>", password.password];
-        [xml appendFormat:@"<site>%@</site>", password.site];
-        [xml appendFormat:@"<description>%@</description>", password.pwDecscription];
+        [xml appendFormat:@"<passwordTitle>%@</passwordTitle>", pw.title];
+        [xml appendFormat:@"<username>%@</username>", pw.username];
+        [xml appendFormat:@"<password>%@</password>", pw.password];
+        [xml appendFormat:@"<site>%@</site>", pw.site];
+        [xml appendFormat:@"<description>%@</description>", pw.pwDecscription];
         [xml appendString:@"</passwordEntry>"];
     }
     
@@ -110,9 +110,14 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
     downloadDone = FALSE;
-    [api download];
-    NSRunLoop *theRL = [NSRunLoop currentRunLoop];
-    while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    url = @"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml";
+    username = @"passwordsync";
+    password = @"password";
+    if([api validCredentials]){
+        [api download];
+        NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+        while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    }
     
     NSData* serverData = [[NSData alloc] initWithContentsOfFile:[self getDownloadedFilepath]];
     NSData* localData = [[NSData alloc] initWithContentsOfFile:[self getFilepath]];
@@ -265,7 +270,32 @@
 
 - (NSURL *)getServerURL
 {
-    return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml"];
+   // return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml"];
+    return [NSURL URLWithString:url];
+}
+
+- (void)setServerURL: (NSString *) input
+{
+    url = input;
+}
+
+- (NSString *)getUsername
+{
+    return username;
+}
+
+- (void)setUsername: (NSString *) input
+{
+    username = input;
+}
+
+- (NSString *)getPassword
+{
+    return password;
+}
+- (void)setPassword: (NSString *) input
+{
+    password = input;
 }
 
 - (NSString *) getFilepath

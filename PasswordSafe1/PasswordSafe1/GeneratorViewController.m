@@ -49,6 +49,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
 }
 
@@ -62,6 +63,7 @@
 }
 
 -(IBAction)updateLengthSlider:(id)sender{
+    
     self.lengthLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.lengthSlider.value];
     [self sliderAdjustment:self.lengthSlider];
     [self updateCapitalSlider:self.lengthSlider];
@@ -70,16 +72,16 @@
     [self updateNumbersSlider:self.lengthSlider];
 }
 - (IBAction)updateCapitalSlider:(id)sender{
-    self.capitalLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.capitalsSlider.value];
+    self.capitalLabel.text = [[NSString alloc] initWithFormat:@"%f",self.capitalsSlider.value];
 }
 - (IBAction)updateLowerSlider:(id)sender{
-     self.lowerLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.lowersSlider.value];
+     self.lowerLabel.text = [[NSString alloc] initWithFormat:@"%f", self.lowersSlider.value];
 }
 - (IBAction)updateSpecialSlider:(id)sender{
-     self.specialLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.specialsSlider.value];
+     self.specialLabel.text = [[NSString alloc] initWithFormat:@"%f",self.specialsSlider.value];
 }
 - (IBAction)updateNumbersSlider:(id)sender{
-     self.numberLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.numbersSlider.value];
+     self.numberLabel.text = [[NSString alloc] initWithFormat:@"%f",self.numbersSlider.value];
 }
 
 - (IBAction)copyToClipboard:(id)sender{

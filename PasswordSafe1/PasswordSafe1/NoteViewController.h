@@ -11,6 +11,7 @@
 #import "CoreDataTableViewController.h"
 #import "Note.h"
 #import "noteDetailViewController.h"
+
 @interface NoteViewController : CoreDataTableViewController <AddNoteControllerDelegate, noteDetailViewControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
