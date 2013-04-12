@@ -88,15 +88,9 @@
             [currentArray addObject:character];
             count++;
         }
-<<<<<<< HEAD
-        else if ([self finishedCharacterRequirements:Capitals lowers:Lowers specials:Specials numbers:Numbers]){
-            [passwordArray addObject:character];
-            count++;
-        }
-=======
->>>>>>> Reactored Generator
     }
 }
+
 
 -(void)addOthers: (int) amount: (NSMutableArray*) currentArray{
     int count = 0;
@@ -148,7 +142,6 @@
 -(Boolean)isNumber: (int)ascii{
     return (ascii >= '0' && ascii <= '9');
 }
-<<<<<<< HEAD
 -(int)countUpperCaseCharacters: (NSMutableString*)string{
     int count=0;
     int i=0;
@@ -190,8 +183,6 @@
     }
     return count;
 }
-=======
->>>>>>> Reactored Generator
 
 -(Boolean)finishedCharacterRequirements: (int)Capitals lowers:(int)Lowers specials:(int)Specials numbers:(int)Numbers{
     return (Capitals <= 0) && (Lowers <= 0) && (Specials <= 0) && (Numbers <= 0);
