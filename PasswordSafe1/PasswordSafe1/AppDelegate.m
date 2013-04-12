@@ -78,7 +78,7 @@
     NSArray *pw = [m executeFetchRequest:req error:nil];
     for(Password *password in pw){
         [xml appendString:@"<passwordEntry>"];
-        [xml appendFormat:@"<title>%@</title>", password.title];
+        [xml appendFormat:@"<passwordTitle>%@</passwordTitle>", password.title];
         [xml appendFormat:@"<username>%@</username>", password.username];
         [xml appendFormat:@"<password>%@</password>", password.password];
         [xml appendFormat:@"<site>%@</site>", password.site];
@@ -91,7 +91,7 @@
     NSArray *notes = [m executeFetchRequest:req error:nil];
     for(Note *note in notes){
         [xml appendString:@"<noteEntry>"];
-        [xml appendFormat:@"<title>%@</title>", note.title];
+        [xml appendFormat:@"<noteTitle>%@</noteTitle>", note.title];
         [xml appendFormat:@"<content>%@</content>", note.content];
         [xml appendString:@"</noteEntry>"];
     }
@@ -120,19 +120,42 @@
     NSXMLParser *localParser = [[NSXMLParser alloc] initWithData:localData];
     
     XMLParserDelegate *serverDelegate = [[XMLParserDelegate alloc] init];
+    [serverDelegate setJustNeedTimestamp];
     [serverParser setDelegate:serverDelegate];
     [serverParser parse];
     
     XMLParserDelegate *localDelegate = [[XMLParserDelegate alloc] init];
+    [localDelegate setJustNeedTimestamp];
     [localParser setDelegate:localDelegate];
     [localParser parse];
     
     double serverTimestamp = [serverDelegate getTimestamp];
     double localTimestamp = [localDelegate getTimestamp];
     
-    if(serverTimestamp > localTimestamp){
+    if(serverTimestamp >= localTimestamp){
         NSLog(@"Server more recent");
         [serverData writeToFile:[self getFilepath] atomically:YES];
+        
+        NSFetchRequest *fetchPasswords = [[NSFetchRequest alloc] init];
+        [fetchPasswords setEntity:[NSEntityDescription entityForName:@"Password" inManagedObjectContext:self.managedObjectContext]];
+        NSArray *passwordsToDelete = [self.managedObjectContext executeFetchRequest:fetchPasswords error:nil];
+        for(Password *passwordToDelete in passwordsToDelete){
+            [self.managedObjectContext deleteObject:passwordToDelete];
+        }
+        NSFetchRequest *fetchNotes = [[NSFetchRequest alloc] init];
+        [fetchNotes setEntity:[NSEntityDescription entityForName:@"Note" inManagedObjectContext:self.managedObjectContext]];
+        NSArray *notesToDelete = [self.managedObjectContext executeFetchRequest:fetchNotes error:nil];
+        for(Note *noteToDelete in notesToDelete){
+            [self.managedObjectContext deleteObject:noteToDelete];
+        }
+        [self.managedObjectContext save:nil];
+        
+        NSXMLParser *updatedParser = [[NSXMLParser alloc] initWithData:localData];
+        XMLParserDelegate *updatedDelegate = [[XMLParserDelegate alloc] init];
+        [updatedParser setDelegate:updatedDelegate];
+        [updatedParser parse];
+        
+        [self.managedObjectContext save:nil];
     }else {NSLog(@"Local more recent");}
     
     [api upload];

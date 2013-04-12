@@ -11,8 +11,12 @@
 @interface XMLParserDelegate : NSObject <NSXMLParserDelegate> {
     NSString *currentElement;
     NSString *timestamp;
+    NSMutableArray *passwords;
+    NSMutableArray *notes;
+    BOOL justNeedTimestamp;
 }
 
 - (double) getTimestamp;
+- (void) setJustNeedTimestamp;
 
 @end
