@@ -24,4 +24,10 @@
     NSMutableString *password;
 }
 
+-(int)countUpperCaseCharacters: (NSMutableString*)string: (Generator*) gen;
+-(int)countLowerCaseCharacters: (NSMutableString*)string: (Generator*) gen;
+-(int)countSpecialCaseCharacters: (NSMutableString*)string: (Generator*) gen;
+-(int)countNumbers: (NSMutableString*)string: (Generator*) gen;
+
+
 @end

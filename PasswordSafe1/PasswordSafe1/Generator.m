@@ -18,61 +18,103 @@
     return self;
 }
 
-
 -(NSMutableString*)generatePassword: (int)length: (int)numCaps: (int)numLowers: (int)numSpecials: (int)numNums:
 (Boolean)caps: (Boolean)lowers: (Boolean)specs: (Boolean)nums{
-    if ((numCaps + numLowers + numSpecials + numNums) > length){
-        NSLog(@"Length not set high enough");
-    }
-    // TODO error checking
-    int Capitals = -1;
-    int Lowers = -1;
-    int Specials = -1;
-    int Numbers = -1;
     
-    if (nums)Numbers = numNums;
-    if (lowers) Lowers = numLowers;
-    if (caps) Capitals = numCaps;
-    if (specs) Specials = numSpecials;
-    
-    NSMutableArray *passwordArray = [[NSMutableArray alloc] init];
     NSMutableString *password = [[NSMutableString alloc] init];
-    int count = 0;
-    while (count < length){
-        int pos = arc4random_uniform([charPool count]);
-        NSString* character = [charPool objectAtIndex:pos];
-        int ascii = [character characterAtIndex:0];
-        if ([self isCapital:ascii] && Capitals > 0){
-            [passwordArray addObject:character];
-            Capitals--;
-            count++;
-        }
-        else if ([self isLower:ascii] && Lowers > 0){
-            [passwordArray addObject:character];
-            Lowers--;
-            count++;
-        }
-        else if ([self isSpecial:ascii] && (Specials > 0)){
-            [passwordArray addObject:character];
-            Specials--;
-            count++;
-        }
-        else if ([self isNumber:ascii] && Numbers > 0){
-            [passwordArray addObject:character];
-            Numbers--;
-            count++;
-        }
-        else if ([self finishedCharacterRequirements:Capitals lowers:Lowers specials:Specials numbers:Numbers]){
-            [passwordArray addObject:character];
-            count++;
-        }
-    }
+    NSMutableArray *passwordArray = [[NSMutableArray alloc] init];
+    
+    [self addCaptials: numCaps: passwordArray];
+    [self addLowers: numLowers: passwordArray];
+    [self addSpecials: numSpecials: passwordArray];
+    [self addNumbers: numNums: passwordArray];
+    [self addOthers: length - numCaps - numLowers - numSpecials - numNums: passwordArray];
+    
     passwordArray = [self knuthShuffle:passwordArray :length];
     
     for (int i = 0; i < length; i++) {
         [password appendString: [passwordArray objectAtIndex:i]];
     }
+    
     return password;
+}
+
+-(void)addCaptials: (int) amount: (NSMutableArray*) currentArray{
+    int count = 0;
+    while (count < amount){
+        NSString *character;
+        int ascii;
+        [self chooseRandomCharacter:&character ascii_p:&ascii];
+        if ([self isCapital:ascii]){
+            [currentArray addObject:character];
+            count++;
+        }
+    }
+}
+
+-(void)addLowers: (int) amount: (NSMutableArray*) currentArray{
+    int count = 0;
+    while (count < amount){
+        NSString *character;
+        int ascii;
+        [self chooseRandomCharacter:&character ascii_p:&ascii];
+        if ([self isLower:ascii]){
+            [currentArray addObject:character];
+            count++;
+        }
+    }
+}
+
+-(void)addSpecials: (int) amount: (NSMutableArray*) currentArray{
+    int count = 0;
+    while (count < amount){
+        NSString *character;
+        int ascii;
+        [self chooseRandomCharacter:&character ascii_p:&ascii];
+        if ([self isSpecial:ascii]){
+            [currentArray addObject:character];
+            count++;
+        }
+    }
+}
+
+-(void)addNumbers: (int) amount: (NSMutableArray*) currentArray{
+    int count = 0;
+    while (count < amount){
+        NSString *character;
+        int ascii;
+        [self chooseRandomCharacter:&character ascii_p:&ascii];
+        if ([self isNumber:ascii]){
+            [currentArray addObject:character];
+            count++;
+        }
+<<<<<<< HEAD
+        else if ([self finishedCharacterRequirements:Capitals lowers:Lowers specials:Specials numbers:Numbers]){
+            [passwordArray addObject:character];
+            count++;
+        }
+=======
+>>>>>>> Reactored Generator
+    }
+}
+
+-(void)addOthers: (int) amount: (NSMutableArray*) currentArray{
+    int count = 0;
+    while (count < amount){
+        NSString *character;
+        int ascii;
+        [self chooseRandomCharacter:&character ascii_p:&ascii];
+        [currentArray addObject:character];
+        count++;
+    }
+}
+
+
+- (void)chooseRandomCharacter:(NSString **)character_p ascii_p:(int *)ascii_p
+{
+    int pos = arc4random_uniform([charPool count]);
+    *character_p = [charPool objectAtIndex:pos];
+    *ascii_p = [*character_p characterAtIndex:0];
 }
 
 -(NSMutableArray*)knuthShuffle: (NSMutableArray *)password: (int)length{
@@ -106,6 +148,7 @@
 -(Boolean)isNumber: (int)ascii{
     return (ascii >= '0' && ascii <= '9');
 }
+<<<<<<< HEAD
 -(int)countUpperCaseCharacters: (NSMutableString*)string{
     int count=0;
     int i=0;
@@ -147,10 +190,13 @@
     }
     return count;
 }
+=======
+>>>>>>> Reactored Generator
 
 -(Boolean)finishedCharacterRequirements: (int)Capitals lowers:(int)Lowers specials:(int)Specials numbers:(int)Numbers{
     return (Capitals <= 0) && (Lowers <= 0) && (Specials <= 0) && (Numbers <= 0);
 }
+
 
 @end
 
