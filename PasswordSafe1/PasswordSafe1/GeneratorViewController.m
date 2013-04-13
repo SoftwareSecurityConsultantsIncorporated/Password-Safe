@@ -114,14 +114,27 @@
 - (IBAction)sliderAdjustment:(id)sender{
     
     NSArray *sliders = [NSArray arrayWithObjects:self.capitalsSlider, self.lowersSlider, self.specialsSlider, self.numbersSlider, nil];
+    NSArray *switches = [NSArray arrayWithObjects:self.capitalSwitch, self.lowerSwitch, self.specialSwitch, self.numberSwitch, nil];
+    int maxVals[4] = {0, 0, 0, 0};
+
+    for (int i = 0; i < [sliders count]; i++) {
+        UISlider *slider = ((UISlider *) [sliders objectAtIndex:i]);
+        UISwitch *sw = ((UISwitch *) [switches objectAtIndex:i]);
+        maxVals[i] = [self getMaxValue:slider withSliders: [self filter:sliders withSlider:slider] withSwitch:sw];
+    }
     
-    self.capitalsSlider.maximumValue = [self getMaxValue:self.capitalsSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.capitalSwitch];
+    self.capitalsSlider.maximumValue = maxVals[0];
+   self.lowersSlider.maximumValue = maxVals[1];
+    self.specialsSlider.maximumValue = maxVals[2];
+    self.numbersSlider.maximumValue = maxVals[3];
+    
+    /*self.capitalsSlider.maximumValue = [self getMaxValue:self.capitalsSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.capitalSwitch];
     
     self.lowersSlider.maximumValue = [self getMaxValue:self.lowersSlider withSliders:[self filter:sliders withSlider:self.lowersSlider] withSwitch:self.lowerSwitch];
     
     self.specialsSlider.maximumValue = [self getMaxValue:self.specialsSlider withSliders:[self filter:sliders withSlider:self.specialsSlider] withSwitch:self.specialSwitch];
     
-    self.numbersSlider.maximumValue = [self getMaxValue:self.numbersSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.numberSwitch];
+    self.numbersSlider.maximumValue = [self getMaxValue:self.numbersSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.numberSwitch];*/
     
     [self updateCapitalSlider:self.lengthSlider];
     [self updateLowerSlider:self.lengthSlider];

@@ -110,6 +110,10 @@
     }
 }
 
+- (void)prepareForSegueWithControllers:(UIStoryboardSegue *)segue {
+    //foo
+}
+
 - (void)theSaveButtonOnTheAddNoteViewControllerWasTapped:(AddNoteViewController *)controller
 {
     // do something here like refreshing the table or whatever
