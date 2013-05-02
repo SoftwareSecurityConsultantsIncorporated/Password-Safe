@@ -63,7 +63,7 @@
 }
 
 -(IBAction)updateLengthSlider:(id)sender{
-    
+    [self makeSliderValueAnInt:self.lengthSlider];
     self.lengthLabel.text = [[NSString alloc] initWithFormat:@"%i",(int) self.lengthSlider.value];
     [self sliderAdjustment:self.lengthSlider];
     [self updateCapitalSlider:self.lengthSlider];
@@ -124,7 +124,7 @@
     }
     
     self.capitalsSlider.maximumValue = maxVals[0];
-   self.lowersSlider.maximumValue = maxVals[1];
+    self.lowersSlider.maximumValue = maxVals[1];
     self.specialsSlider.maximumValue = maxVals[2];
     self.numbersSlider.maximumValue = maxVals[3];
     
@@ -146,7 +146,10 @@
     if (sw.on && slider.value >= 0 ) {
         int value = self.lengthSlider.value;
         for (UISlider *sl in sliders) {
-            value -= sl.value;
+            [self makeSliderValueAnInt:sl];
+            if(sl.value <= value){
+                value -= sl.value;
+            }
         }
         return value;
     } else {
@@ -172,6 +175,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)makeSliderValueAnInt:(UISlider *)slider
+{
+    int sliderValue;
+    sliderValue = lroundf(slider.value);
+    [slider setValue:sliderValue animated:FALSE];
+}
 
 
 

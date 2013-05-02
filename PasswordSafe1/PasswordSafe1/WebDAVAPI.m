@@ -123,7 +123,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
         bytesWrittenSoFar = 0;
         do {
             bytesWritten = [fileStream write:&dataBytes[bytesWrittenSoFar] maxLength:dataLength - bytesWrittenSoFar];
-            assert(bytesWritten != 0);
+            //assert(bytesWritten != 0);
             if (bytesWritten == -1) {
                 NSLog(@"File write error");
                 break;
@@ -132,6 +132,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
             }
         } while (bytesWrittenSoFar != dataLength);
         [[AppDelegate sharedAppDelegate] downloadDone];
+        connectionDone = true;
         //NSString* content = [NSString stringWithContentsOfFile:[[AppDelegate sharedAppDelegate] getFilepath]
           //                                            encoding:NSUTF8StringEncoding
             //                                             error:NULL];
@@ -144,23 +145,30 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 
 - (void)connection:(NSURLConnection *)conn didFailWithError:(NSError *)error
 {
+    invalidCredentials = TRUE;
+    connectionDone = TRUE;
     NSLog(@"didFailWithError %@", error);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)conn
 {
+    connectionDone = TRUE;
     NSLog(@"connectionDidFinishLoading");
 }
 
 - (BOOL) validCredentials
 {
     invalidCredentials = FALSE;
+    connectionDone = FALSE;
     NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3];
     
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [connection start];
-    sleep(1);
+    
+    NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+    while (!connectionDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    
     return !invalidCredentials;
 }
 

@@ -13,6 +13,7 @@
     NSOutputStream *fileStream;
     NSURLConnection *connection;
     BOOL invalidCredentials;
+    BOOL connectionDone;
 }
 
 - (void) download;

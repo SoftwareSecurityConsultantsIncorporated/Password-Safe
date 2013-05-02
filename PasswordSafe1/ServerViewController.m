@@ -64,7 +64,7 @@
 
 - (void)SaveIsInvalidPopup{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection was Unsuccessful"
-                                                    message:@"Settings have been saved"
+                                                    message:@"Settings have not been saved"
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
