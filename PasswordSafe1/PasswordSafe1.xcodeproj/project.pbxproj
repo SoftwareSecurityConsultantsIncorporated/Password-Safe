@@ -50,6 +50,8 @@
 		0A480F4516CC45B500AC73D6 /* safe-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A480F4416CC45B500AC73D6 /* safe-icon2.png */; };
 		0A908ED11715C3960053E913 /* XMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A908ED01715C3960053E913 /* XMLParserDelegate.m */; };
 		0A910BF816FEE5B700CD8655 /* UploadDownloadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */; };
+		0A93392817319EB200B5E465 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A93392717319EB200B5E465 /* User.m */; };
+		0A93392C1731A4BB00B5E465 /* AddLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A93392B1731A4BB00B5E465 /* AddLoginViewController.m */; };
 		0AE0630A1717DA1C002C8814 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE063091717DA1C002C8814 /* ServerViewController.m */; };
 		0AFB152916FE86290023FEE2 /* GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB152816FE86290023FEE2 /* GeneratorTests.m */; };
 		0AFB152A16FE872E0023FEE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0468C616CB7E9A006FDA5A /* CoreData.framework */; };
@@ -126,6 +128,10 @@
 		0A908ED01715C3960053E913 /* XMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParserDelegate.m; sourceTree = "<group>"; };
 		0A910BF616FEE5B700CD8655 /* UploadDownloadTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDownloadTests.h; sourceTree = "<group>"; };
 		0A910BF716FEE5B700CD8655 /* UploadDownloadTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDownloadTests.m; sourceTree = "<group>"; };
+		0A93392617319EB200B5E465 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0A93392717319EB200B5E465 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0A93392A1731A4BB00B5E465 /* AddLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLoginViewController.h; sourceTree = "<group>"; };
+		0A93392B1731A4BB00B5E465 /* AddLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLoginViewController.m; sourceTree = "<group>"; };
 		0AE063081717DA1C002C8814 /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerViewController.h; path = ../ServerViewController.h; sourceTree = "<group>"; };
 		0AE063091717DA1C002C8814 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerViewController.m; path = ../ServerViewController.m; sourceTree = "<group>"; };
 		0AFB152616FE861F0023FEE2 /* GeneratorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratorTests.h; sourceTree = "<group>"; };
@@ -206,11 +212,15 @@
 				0A0468D516CB80AD006FDA5A /* Note.m */,
 				0A0468D616CB80AD006FDA5A /* Password.h */,
 				0A0468D716CB80AE006FDA5A /* Password.m */,
+				0A93392617319EB200B5E465 /* User.h */,
+				0A93392717319EB200B5E465 /* User.m */,
 				0A0468D816CB80AE006FDA5A /* WebDAVAPI.h */,
 				0A0468D916CB80AE006FDA5A /* WebDAVAPI.m */,
 				0AE063081717DA1C002C8814 /* ServerViewController.h */,
 				0AE063091717DA1C002C8814 /* ServerViewController.m */,
 				0A28920F16CB3F8100B23506 /* MainStoryboard_iPhone.storyboard */,
+				0A93392A1731A4BB00B5E465 /* AddLoginViewController.h */,
+				0A93392B1731A4BB00B5E465 /* AddLoginViewController.m */,
 				0AFB153717053FE20023FEE2 /* LoginViewController.h */,
 				0AFB153817053FE20023FEE2 /* LoginViewController.m */,
 				0A480F3C16CC347100AC73D6 /* GeneratorViewController.h */,
@@ -417,6 +427,8 @@
 				0AFB153917053FE20023FEE2 /* LoginViewController.m in Sources */,
 				0A908ED11715C3960053E913 /* XMLParserDelegate.m in Sources */,
 				0AE0630A1717DA1C002C8814 /* ServerViewController.m in Sources */,
+				0A93392817319EB200B5E465 /* User.m in Sources */,
+				0A93392C1731A4BB00B5E465 /* AddLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +548,8 @@
 		0A28923B16CB3F8200B23506 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -544,6 +558,8 @@
 				GCC_PREFIX_HEADER = "PasswordSafe1/PasswordSafe1-Prefix.pch";
 				INFOPLIST_FILE = "PasswordSafe1/PasswordSafe1-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,6 +567,8 @@
 		0A28923C16CB3F8200B23506 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -559,6 +577,8 @@
 				GCC_PREFIX_HEADER = "PasswordSafe1/PasswordSafe1-Prefix.pch";
 				INFOPLIST_FILE = "PasswordSafe1/PasswordSafe1-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

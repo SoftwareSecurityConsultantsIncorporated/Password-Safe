@@ -20,6 +20,7 @@
 @synthesize passwordTextField = __passwordTextField;
 @synthesize websiteTextField = __websiteTextField;
 @synthesize accountDescriptionTextField = __accountDescriptionTextField;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -62,8 +63,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 
 @end

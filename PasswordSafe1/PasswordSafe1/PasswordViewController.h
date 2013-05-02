@@ -11,7 +11,9 @@
 #import "CoreDataTableViewController.h"
 #import "Password.h"
 #import "passwordDetailViewController.h"
+
 @interface PasswordViewController : CoreDataTableViewController <AddpasswordControllerDelegate, passwordDetailViewControllerDelegate>
+
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Password *selectedPassword;

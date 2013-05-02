@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B2080" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Note View Controller - Notes-->
@@ -491,7 +491,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBR-eD-84t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="1254"/>
+            <point key="canvasLocation" x="1791" y="1254"/>
         </scene>
         <!--Addpassword View Controller - New Password-->
         <scene sceneID="gTS-7m-IwC">
@@ -660,12 +660,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uui-Nw-XKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="1254"/>
+            <point key="canvasLocation" x="2319" y="1254"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="F2N-eN-Ude">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="fVs-Az-vNv" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="fVs-Az-vNv" customClass="TabBarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0Rw-OP-XMb"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4a1-Z8-w05">
@@ -683,12 +683,12 @@
             </objects>
             <point key="canvasLocation" x="212" y="567"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="znb-1w-aDI">
             <objects>
-                <viewController id="oxw-lJ-O25" sceneMemberID="viewController">
+                <viewController id="oxw-lJ-O25" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ap6-Aw-Lai">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrR-z7-Ps2">
@@ -697,7 +697,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-5h-ThQ">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="2N4-tF-Gtk"/>
+                                    <constraint firstAttribute="width" constant="73" id="OKE-Vd-Ap6"/>
                                     <constraint firstAttribute="height" constant="27" id="fqh-Lg-wtC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -711,28 +711,70 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4M-EM-lva">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="nYQ-bL-BxZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="fae-fF-v17"/>
+                                    <constraint firstAttribute="width" constant="135" id="yLs-DJ-3as"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmA-75-gaZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="4bK-2K-JHo"/>
+                                    <constraint firstAttribute="height" constant="30" id="LLl-6v-HI4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="New User">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-d3-WrH">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fum-9y-Dev">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="J4M-EM-lva" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="190" id="7iV-GX-HdH"/>
-                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="233" id="HCY-4y-def"/>
-                            <constraint firstItem="ld7-5h-ThQ" firstAttribute="top" secondItem="IrR-z7-Ps2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OS6-QJ-kHp"/>
-                            <constraint firstItem="J4M-EM-lva" firstAttribute="centerX" secondItem="ap6-Aw-Lai" secondAttribute="centerX" type="default" id="ZFA-0M-tZj"/>
-                            <constraint firstItem="J4M-EM-lva" firstAttribute="trailing" secondItem="IrR-z7-Ps2" secondAttribute="trailing" type="default" id="hcq-lS-A3c"/>
-                            <constraint firstItem="ld7-5h-ThQ" firstAttribute="centerX" secondItem="IrR-z7-Ps2" secondAttribute="centerX" type="default" id="ikO-AW-Z4w"/>
-                            <constraint firstItem="J4M-EM-lva" firstAttribute="leading" secondItem="IrR-z7-Ps2" secondAttribute="leading" type="default" id="vXL-aD-OyM"/>
+                            <constraint firstItem="J4M-EM-lva" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="186" id="4p8-G3-eUw"/>
+                            <constraint firstItem="kmA-75-gaZ" firstAttribute="leading" secondItem="ap6-Aw-Lai" secondAttribute="leading" constant="125" id="IcB-sV-m4e"/>
+                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="trailing" secondItem="J4M-EM-lva" secondAttribute="trailing" type="default" id="IlP-bY-Ksq"/>
+                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="leading" secondItem="ld7-5h-ThQ" secondAttribute="leading" type="default" id="QEU-AR-5cD"/>
+                            <constraint firstAttribute="bottom" secondItem="ld7-5h-ThQ" secondAttribute="bottom" constant="204" id="Z6B-z3-jRh"/>
+                            <constraint firstItem="ld7-5h-ThQ" firstAttribute="centerX" secondItem="ap6-Aw-Lai" secondAttribute="centerX" type="default" id="Zba-K1-aHE"/>
+                            <constraint firstItem="KBY-d3-WrH" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="190" id="Zzs-eH-egt"/>
+                            <constraint firstItem="KBY-d3-WrH" firstAttribute="leading" secondItem="ap6-Aw-Lai" secondAttribute="leading" constant="29" id="bTY-MB-ToQ"/>
+                            <constraint firstItem="fum-9y-Dev" firstAttribute="leading" secondItem="KBY-d3-WrH" secondAttribute="leading" type="default" id="e4F-WC-PKf"/>
+                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="leading" secondItem="J4M-EM-lva" secondAttribute="leading" type="default" id="kV1-md-t7k"/>
+                            <constraint firstAttribute="bottom" secondItem="kmA-75-gaZ" secondAttribute="bottom" constant="165" id="lIN-XE-1AW"/>
+                            <constraint firstItem="KBY-d3-WrH" firstAttribute="baseline" secondItem="J4M-EM-lva" secondAttribute="baseline" type="default" id="wHC-Yb-lbj"/>
+                            <constraint firstItem="fum-9y-Dev" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="225" id="xXv-kn-oKm"/>
+                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="top" secondItem="J4M-EM-lva" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zfh-k7-OXT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jmo-kt-wKQ"/>
+                    <navigationItem key="navigationItem" id="jmo-kt-wKQ">
+                        <barButtonItem key="rightBarButtonItem" title="New User" id="au3-kl-odm">
+                            <connections>
+                                <segue destination="Xp1-pI-96O" kind="push" identifier="New User Segue" id="btr-s3-nsS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordField" destination="IrR-z7-Ps2" id="MfA-c2-nXQ"/>
+                        <outlet property="usernameField" destination="J4M-EM-lva" id="caF-1A-B0o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uK4-75-RCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203" y="1343"/>
+            <point key="canvasLocation" x="212" y="1241"/>
         </scene>
         <!--Navigation Controller - Passwords-->
         <scene sceneID="R1j-nl-hOF">
@@ -748,7 +790,90 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKr-I3-lBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="1254"/>
+            <point key="canvasLocation" x="1267" y="1254"/>
+        </scene>
+        <!--Add Login View Controller-->
+        <scene sceneID="2Ji-L4-OZp">
+            <objects>
+                <viewController id="Xp1-pI-96O" customClass="AddLoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="85g-qy-BbK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zga-Vs-w0f">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xA6-Fj-am0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="Q9B-JE-1jA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN4-E5-HgF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxV-zY-Y2F">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rji-EA-jCI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jAX-Rw-MHh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Re-enter Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-yf-6HR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="5s5-aV-Cwm"/>
+                                    <constraint firstAttribute="width" constant="107" id="wqp-i4-EXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WxV-zY-Y2F" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="199" id="31h-z8-x7F"/>
+                            <constraint firstItem="gWa-yf-6HR" firstAttribute="leading" secondItem="85g-qy-BbK" secondAttribute="leading" constant="25" id="5w8-Gj-h19"/>
+                            <constraint firstItem="eN4-E5-HgF" firstAttribute="leading" secondItem="WxV-zY-Y2F" secondAttribute="leading" type="default" id="7BZ-VL-W88"/>
+                            <constraint firstItem="rji-EA-jCI" firstAttribute="trailing" secondItem="Zga-Vs-w0f" secondAttribute="trailing" type="default" id="8Jw-Un-QP0"/>
+                            <constraint firstItem="gWa-yf-6HR" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="237" id="8w5-wq-w60"/>
+                            <constraint firstItem="rji-EA-jCI" firstAttribute="baseline" secondItem="gWa-yf-6HR" secondAttribute="baseline" type="default" id="CCQ-QQ-IJB"/>
+                            <constraint firstItem="xA6-Fj-am0" firstAttribute="baseline" secondItem="eN4-E5-HgF" secondAttribute="baseline" type="default" id="EMF-cQ-807"/>
+                            <constraint firstItem="Zga-Vs-w0f" firstAttribute="trailing" secondItem="xA6-Fj-am0" secondAttribute="trailing" type="default" id="PHX-UG-7ER"/>
+                            <constraint firstItem="eN4-E5-HgF" firstAttribute="leading" secondItem="85g-qy-BbK" secondAttribute="leading" constant="45" id="QLb-YR-uTA"/>
+                            <constraint firstItem="Zga-Vs-w0f" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="198" id="XVl-7W-tye"/>
+                            <constraint firstItem="rji-EA-jCI" firstAttribute="leading" secondItem="Zga-Vs-w0f" secondAttribute="leading" type="default" id="Ysd-En-Fmi"/>
+                            <constraint firstItem="Zga-Vs-w0f" firstAttribute="leading" secondItem="xA6-Fj-am0" secondAttribute="leading" type="default" id="gGJ-Dq-ypy"/>
+                            <constraint firstItem="rji-EA-jCI" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="243" id="gWy-5T-KEB"/>
+                            <constraint firstItem="xA6-Fj-am0" firstAttribute="centerY" secondItem="eN4-E5-HgF" secondAttribute="centerY" type="default" id="mTg-K2-CzX"/>
+                            <constraint firstItem="xA6-Fj-am0" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="159" id="qNz-sd-DYp"/>
+                            <constraint firstItem="rji-EA-jCI" firstAttribute="leading" secondItem="gWa-yf-6HR" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xKe-LD-CGL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6pa-fY-SIO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9LC-yZ-ukh">
+                            <connections>
+                                <segue destination="oxw-lJ-O25" kind="push" id="BAn-Cb-cQs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordCheckTextField" destination="rji-EA-jCI" id="8ma-ja-Xsf"/>
+                        <outlet property="passwordTextField" destination="Zga-Vs-w0f" id="7Mt-c2-D9m"/>
+                        <outlet property="usernameTextField" destination="xA6-Fj-am0" id="zfN-gn-1ob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndK-7S-y0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="1933"/>
         </scene>
         <!--Navigation Controller - Generator-->
         <scene sceneID="MAw-dJ-r4z">
@@ -1540,7 +1665,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noK-lk-o3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="1254"/>
+            <point key="canvasLocation" x="2319" y="1254"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="b2Z-cR-88B">
+            <objects>
+                <navigationController id="i2W-1V-SxK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tz3-aS-r8j"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Zf6-d8-ZLg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F1T-iz-QgA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oxw-lJ-O25" kind="relationship" relationship="rootViewController" id="M2K-DT-dlB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pf-3M-JD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-347" y="1241"/>
         </scene>
     </scenes>
     <resources>
@@ -1548,13 +1693,129 @@
         <image name="notes.png" width="30" height="30"/>
         <image name="passwords.png" width="32" height="32"/>
     </resources>
+    <classes>
+        <class className="AddLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="passwordCheckTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddNoteViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddNoteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddpasswordViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddpasswordViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="GeneratorViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="copyToClipboard:"/>
+                <relationship kind="action" name="generateButton:"/>
+                <relationship kind="action" name="setCapitalSliderToZero:"/>
+                <relationship kind="action" name="setLowerSliderToZero:"/>
+                <relationship kind="action" name="setNumberSliderToZero:"/>
+                <relationship kind="action" name="setSpecialSliderToZero:"/>
+                <relationship kind="action" name="sliderAdjustment:"/>
+                <relationship kind="action" name="updateCapitalSlider:"/>
+                <relationship kind="action" name="updateLengthSlider:"/>
+                <relationship kind="action" name="updateLowerSlider:"/>
+                <relationship kind="action" name="updateNumbersSlider:"/>
+                <relationship kind="action" name="updateSpecialSlider:"/>
+                <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="capitalSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="generateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lengthLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lengthSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="lowerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowerSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="lowersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="makeNewPasswordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="passwordCopyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="specialSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="specialsSlider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NoteViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
+        </class>
+        <class className="PasswordViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PasswordViewController.h"/>
+        </class>
+        <class className="ServerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveData:"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="URLTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="UsernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="TabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>
+        </class>
+        <class className="noteDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/noteDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="passwordDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/passwordDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="pCD-x8-pd2"/>
         <segue reference="lyK-HN-099"/>
-        <segue reference="1kq-G1-zJb"/>
+        <segue reference="M2K-DT-dlB"/>
     </inferredMetricsTieBreakers>
 </document>

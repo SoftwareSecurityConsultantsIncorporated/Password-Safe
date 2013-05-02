@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddLoginViewController.h"
+@class LoginViewController;
 
-@interface LoginViewController : UIViewController
+@protocol LoginControllerDelegate
 
+- (void)loginWasSuccessful:(LoginViewController *)controller;
+
+@end
+
+@interface LoginViewController : UIViewController <AddLoginControllerDelegate>
+
+@property (nonatomic, weak) id <LoginControllerDelegate> delegate;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UITextField *usernameField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;

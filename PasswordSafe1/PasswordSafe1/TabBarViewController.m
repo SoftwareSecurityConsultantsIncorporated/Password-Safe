@@ -7,6 +7,7 @@
 //
 
 #import "TabBarViewController.h"
+#import "LoginViewController.h"
 
 @interface TabBarViewController ()
 
@@ -26,7 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +40,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)loginWasSuccessful:(LoginViewController *)controller{
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
+-(void)LoginScreePopUp{
+    LoginViewController *LoginScreen = [[LoginViewController alloc] init];
+    LoginScreen.delegate = self;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:LoginScreen];
+    [self presentViewController:navigationController animated:TRUE completion:nil];
+}
 @end

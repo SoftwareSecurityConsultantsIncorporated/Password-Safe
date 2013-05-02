@@ -14,7 +14,8 @@
 #import "WebDavAPI.h"
 #import "XMLParserDelegate.h"
 #import "Password.h"
-
+#import "LoginViewController.h"
+#import "TabBarViewController.h"
 
 @implementation AppDelegate
 
@@ -30,7 +31,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // The Tab Bar
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    TabBarViewController *tabBarController = (TabBarViewController *)self.window.rootViewController;
     
     // The Two Navigation Controllers attached to the Tab Bar (At Tab Bar Indexes 0 and 1)
     UINavigationController *notesTVCnav = [[tabBarController viewControllers] objectAtIndex:0];
@@ -43,6 +44,8 @@
     // The Roles Table View Controller (Second Nav Controller Index 0)
     PasswordViewController *passwordTVC = [[passwordsTVCnav viewControllers] objectAtIndex:0];
     passwordTVC.managedObjectContext = self.managedObjectContext;
+    
+    [tabBarController LoginScreePopUp];
     
     //NOTE: Be very careful to change these indexes if you change the tab order
     

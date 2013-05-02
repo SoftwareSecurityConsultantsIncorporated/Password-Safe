@@ -14,6 +14,9 @@
 
 @implementation LoginViewController
 
+@synthesize usernameField = __usernameField;
+@synthesize passwordField = __passwordField;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,5 +37,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)theCreateButtonOnTheAddLoginViewControllerWasTapped:(AddLoginViewController *)controller{
+    [controller.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 @end

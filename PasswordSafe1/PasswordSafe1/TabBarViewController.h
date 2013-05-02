@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
-@interface TabBarViewController : UITabBarController
+@interface TabBarViewController : UITabBarController <LoginControllerDelegate>
+
+-(void)LoginScreePopUp;
 
 @end

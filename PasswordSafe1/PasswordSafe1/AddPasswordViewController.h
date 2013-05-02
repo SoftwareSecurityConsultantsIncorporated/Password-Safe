@@ -17,6 +17,7 @@
 @end
 
 @interface AddpasswordViewController : UITableViewController
+
 @property (nonatomic, weak) id <AddpasswordControllerDelegate> delegate;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UITextField *accountTitleTextField;
