@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "password.h"
+#import "AppDelegate.h"
 @class AddpasswordViewController;
 
 @protocol AddpasswordControllerDelegate

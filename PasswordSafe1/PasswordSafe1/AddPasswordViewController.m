@@ -41,7 +41,7 @@
     NSLog(@"Telling the AddPassword Delegate that Save was tapped on the AddPassword");
     
     Password *password = [NSEntityDescription insertNewObjectForEntityForName:@"Password"
-                                               inManagedObjectContext:self.managedObjectContext];
+                                               inManagedObjectContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
     
     password.title = __accountTitleTextField.text;
     password.username = __userNameTextField.text;
