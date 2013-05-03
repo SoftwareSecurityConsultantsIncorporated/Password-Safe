@@ -24,7 +24,6 @@
     
     [fileStream open];
     
-    //Create the request
     NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.];
     
@@ -34,7 +33,6 @@
         NSLog(@"Connecting");
     }
     else {
-        //connection failed
         NSLog(@"Connection failed");
     }
 }
@@ -61,7 +59,6 @@
         NSLog(@"Connecting");
     }
     else {
-        //connection failed
         NSLog(@"Connection failed");
     }
 }
@@ -102,7 +99,6 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
         [[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
     }else{
         [[challenge sender] cancelAuthenticationChallenge:challenge];
-        // Display error message: incorrect credentials
         invalidCredentials = TRUE;
         NSLog(@"Authentication failed");
     }
@@ -116,16 +112,12 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
         const uint8_t * dataBytes;
         NSInteger       bytesWritten;
         NSInteger       bytesWrittenSoFar;
-        
-        //assert(conn == connection);
-        
         dataLength = [data length];
         dataBytes  = [data bytes];
         
         bytesWrittenSoFar = 0;
         do {
             bytesWritten = [fileStream write:&dataBytes[bytesWrittenSoFar] maxLength:dataLength - bytesWrittenSoFar];
-            //assert(bytesWritten != 0);
             if (bytesWritten == -1) {
                 NSLog(@"File write error");
                 break;
@@ -134,14 +126,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
             }
         } while (bytesWrittenSoFar != dataLength);
         [[AppDelegate sharedAppDelegate] downloadDone];
-        connectionDone = true;
-        //NSString* content = [NSString stringWithContentsOfFile:[[AppDelegate sharedAppDelegate] getFilepath]
-          //                                            encoding:NSUTF8StringEncoding
-            //                                             error:NULL];
-        //NSLog(@"Get data: %@", content);
-    } else {
-        // TODO  Figure out what to do here if it is a post
-    }
+    } 
     
 }
 
@@ -160,13 +145,6 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 
 - (BOOL) validCredentials
 {
-//    invalidCredentials = FALSE;
-//    connectionDone = FALSE;
-//    NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3];
-//    
-//    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//    [connection start];
     
     return !invalidCredentials;
 }

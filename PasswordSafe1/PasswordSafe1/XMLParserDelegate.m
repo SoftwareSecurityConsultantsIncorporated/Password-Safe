@@ -74,7 +74,6 @@
     }
 }
 
-// error handling
 -(void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
     NSLog(@"XMLParser error: %@", [parseError localizedDescription]);
 }

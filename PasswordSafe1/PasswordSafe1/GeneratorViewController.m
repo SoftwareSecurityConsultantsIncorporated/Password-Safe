@@ -38,7 +38,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -128,13 +127,6 @@
     self.specialsSlider.maximumValue = maxVals[2];
     self.numbersSlider.maximumValue = maxVals[3];
     
-    /*self.capitalsSlider.maximumValue = [self getMaxValue:self.capitalsSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.capitalSwitch];
-    
-    self.lowersSlider.maximumValue = [self getMaxValue:self.lowersSlider withSliders:[self filter:sliders withSlider:self.lowersSlider] withSwitch:self.lowerSwitch];
-    
-    self.specialsSlider.maximumValue = [self getMaxValue:self.specialsSlider withSliders:[self filter:sliders withSlider:self.specialsSlider] withSwitch:self.specialSwitch];
-    
-    self.numbersSlider.maximumValue = [self getMaxValue:self.numbersSlider withSliders:[self filter:sliders withSlider:self.capitalsSlider] withSwitch:self.numberSwitch];*/
     
     [self updateCapitalSlider:self.lengthSlider];
     [self updateLowerSlider:self.lengthSlider];
@@ -182,7 +174,13 @@
     [slider setValue:sliderValue animated:FALSE];
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"savePassword"])
+    {
+        [(AddpasswordViewController *)segue.destinationViewController setPassword:__passwordTextField.text];
+    }    
+}
 
 
 @end

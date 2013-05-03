@@ -518,7 +518,7 @@
                     <connections>
                         <outlet property="accountDescriptionTextField" destination="Seh-aJ-4TU" id="I78-YV-7TC"/>
                         <outlet property="accountTitleTextField" destination="bYL-8Y-d5D" id="rqC-OX-XOq"/>
-                        <outlet property="passwordTextField" destination="wFt-Qs-dIu" id="Otg-dm-qCC"/>
+                        <outlet property="passwordTextField" destination="N5O-iS-r3o" id="bov-Xf-Urp"/>
                         <outlet property="userNameTextField" destination="o5D-Ii-Sow" id="MV3-JQ-2Tr"/>
                         <outlet property="websiteTextField" destination="wFt-Qs-dIu" id="0vd-Pd-gwR"/>
                     </connections>
@@ -1091,7 +1091,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="f5O-SM-Uzd" kind="push" id="GG8-Ne-QrR"/>
+                                                        <segue destination="f5O-SM-Uzd" kind="push" identifier="savePassword" id="GG8-Ne-QrR"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzj-rV-LUf">
@@ -1546,6 +1546,122 @@
         <image name="notes.png" width="30" height="30"/>
         <image name="passwords.png" width="32" height="32"/>
     </resources>
+    <classes>
+        <class className="AddLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="passwordCheckTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddNoteViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddNoteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddpasswordViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddpasswordViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
+        </class>
+        <class className="GeneratorViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="copyToClipboard:"/>
+                <relationship kind="action" name="generateButton:"/>
+                <relationship kind="action" name="setCapitalSliderToZero:"/>
+                <relationship kind="action" name="setLowerSliderToZero:"/>
+                <relationship kind="action" name="setNumberSliderToZero:"/>
+                <relationship kind="action" name="setSpecialSliderToZero:"/>
+                <relationship kind="action" name="sliderAdjustment:"/>
+                <relationship kind="action" name="updateCapitalSlider:"/>
+                <relationship kind="action" name="updateLengthSlider:"/>
+                <relationship kind="action" name="updateLowerSlider:"/>
+                <relationship kind="action" name="updateNumbersSlider:"/>
+                <relationship kind="action" name="updateSpecialSlider:"/>
+                <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="capitalSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="generateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lengthLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lengthSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="lowerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lowerSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="lowersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="makeNewPasswordButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="passwordCopyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="specialSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="specialsSlider" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="login:"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NoteViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
+        </class>
+        <class className="PasswordViewController" superclassName="CoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PasswordViewController.h"/>
+        </class>
+        <class className="ServerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="saveData:"/>
+                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="URLTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="UsernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="TabBarViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>
+        </class>
+        <class className="noteDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/noteDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="passwordDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/passwordDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

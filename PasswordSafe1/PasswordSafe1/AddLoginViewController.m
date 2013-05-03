@@ -22,7 +22,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -30,13 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)save:(id)sender
@@ -60,6 +57,9 @@
     
             user.masterUsername = __usernameTextField.text;
             user.masterPassword = __passwordTextField.text;
+            
+            [self SaveIsValidPopup];
+            
             [[[AppDelegate sharedAppDelegate] managedObjectContext] save:nil];  // write to database
         } else {
             [self UsernameIsInvalidPopup];
@@ -74,6 +74,15 @@
 - (void)SaveIsInvalidPopup{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Creation was Unsuccessful"
                                                     message:@"Passwords are not the same"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)SaveIsValidPopup{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Creation was Successful"
+                                                    message:@"User account created"
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];

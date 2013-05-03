@@ -24,7 +24,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -32,13 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(IBAction)saveData:(id)sender{
@@ -60,11 +57,16 @@
         [[AppDelegate sharedAppDelegate] syncFiles];
         
         [self SaveIsValidPopup];
+        
+        [[[AppDelegate sharedAppDelegate] managedObjectContext] save:nil];
     } else {        
         [[AppDelegate sharedAppDelegate] setServerURL:previousURL];
         [[AppDelegate sharedAppDelegate] setUsername:previousUsername];
         [[AppDelegate sharedAppDelegate] setPassword:previousPassword];
+        
         [self SaveIsInvalidPopup];
+        
+        [[[AppDelegate sharedAppDelegate] managedObjectContext] save:nil];
     }
 }
 

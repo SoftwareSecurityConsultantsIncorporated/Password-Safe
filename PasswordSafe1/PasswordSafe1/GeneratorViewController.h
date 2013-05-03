@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Generator.h"
+#import "AddPasswordViewController.h"
 @interface GeneratorViewController : UITableViewController {
     Generator *generator;
-    NSMutableArray *sliders;
     NSMutableDictionary *switches;
 }
 @property (strong, nonatomic) IBOutlet UISlider *lengthSlider;

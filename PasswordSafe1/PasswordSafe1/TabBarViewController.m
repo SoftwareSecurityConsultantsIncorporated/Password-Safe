@@ -19,7 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -35,13 +34,11 @@
     if(![[AppDelegate sharedAppDelegate] getLoggedIn]){
         [self LoginScreePopUp];
     }
-    NSLog(@"Fuck you");
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)loginWasSuccessful:(LoginViewController *)controller{
@@ -49,10 +46,7 @@
 }
 
 -(void)LoginScreePopUp{
-    //LoginViewController *LoginScreen = [[LoginViewController alloc] init];
-    //LoginScreen.delegate = self;
-    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:LoginScreen];
-//    [self presentViewController:navigationController animated:TRUE completion:nil];
+    
     [self performSegueWithIdentifier:@"showLoginScreen" sender:self];
 }
 @end

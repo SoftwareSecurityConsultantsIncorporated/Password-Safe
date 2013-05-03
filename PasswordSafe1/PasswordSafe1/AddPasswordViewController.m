@@ -25,20 +25,15 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    __passwordTextField.text = passedPassword;
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    passedPassword = @"";
 }
 
 - (IBAction)save:(id)sender
@@ -53,7 +48,7 @@
     password.password = __passwordTextField.text;
     password.site = __websiteTextField.text;
     password.pwDecscription = __accountDescriptionTextField.text;
-    [self.managedObjectContext save:nil];  // write to database
+    [self.managedObjectContext save:nil]; 
     
     [self.delegate theSaveButtonOnTheAddpasswordViewControllerWasTapped:self];
 }
@@ -61,7 +56,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)setPassword:(NSString *)password
+{
+    passedPassword = password;
 }
 
 
