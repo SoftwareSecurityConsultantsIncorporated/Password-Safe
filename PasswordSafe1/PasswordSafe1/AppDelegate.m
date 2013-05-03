@@ -116,12 +116,28 @@
     url = @"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml";
     username = @"passwordsync";
     password = @"password";
-    if([api validCredentials]){
-        [api download];
-        NSRunLoop *theRL = [NSRunLoop currentRunLoop];
-        while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
-    }
+//    if([api validCredentials]){
+//        [api download];
+//        NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+//        while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+//    }
+//    
+//    [self syncFiles];
+//    
+//    [api upload];
+    [api download];
+    NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+    while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
     
+    if([api validCredentials]){
+        [self syncFiles];
+        [api upload];
+    }
+
+}
+
+- (void)syncFiles
+{
     NSData* serverData = [[NSData alloc] initWithContentsOfFile:[self getDownloadedFilepath]];
     NSData* localData = [[NSData alloc] initWithContentsOfFile:[self getFilepath]];
     NSXMLParser *serverParser = [[NSXMLParser alloc] initWithData:serverData];
@@ -166,8 +182,6 @@
         
         [self.managedObjectContext save:nil];
     }else {NSLog(@"Local more recent");}
-    
-    [api upload];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -273,7 +287,6 @@
 
 - (NSURL *)getServerURL
 {
-   // return [NSURL URLWithString:@"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml"];
     return [NSURL URLWithString:url];
 }
 

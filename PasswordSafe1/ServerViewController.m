@@ -42,13 +42,23 @@
 }
 
 -(IBAction)saveData:(id)sender{
+    NSString *previousURL = [[[AppDelegate sharedAppDelegate] getServerURL] absoluteString];
+    NSString *previousUsername = [[AppDelegate sharedAppDelegate] getUsername];
+    NSString *previousPassword = [[AppDelegate sharedAppDelegate] getPassword];
+    
     [[AppDelegate sharedAppDelegate] setServerURL:self.URLTextField.text];
     [[AppDelegate sharedAppDelegate] setUsername:self.UsernameTextField.text];
     [[AppDelegate sharedAppDelegate] setPassword:self.PasswordTextField.text];
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
+    [api download];
+    NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+    while (![api connectionDone] && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
     if([api validCredentials]){
         [self SaveIsValidPopup];
     } else {
+        [[AppDelegate sharedAppDelegate] setServerURL:previousURL];
+        [[AppDelegate sharedAppDelegate] setUsername:previousUsername];
+        [[AppDelegate sharedAppDelegate] setPassword:previousPassword];
         [self SaveIsInvalidPopup];
     }
 }

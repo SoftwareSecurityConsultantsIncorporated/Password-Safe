@@ -19,5 +19,6 @@
 - (void) download;
 - (void) upload;
 - (BOOL) validCredentials;
+- (BOOL) connectionDone;
 
 @end

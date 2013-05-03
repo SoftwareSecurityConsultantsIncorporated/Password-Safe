@@ -12,7 +12,9 @@
 @implementation WebDAVAPI
 
 -(void) download
-{    
+{
+    invalidCredentials = FALSE;
+    
     receivedData = [[NSMutableData alloc] initWithLength:0];
     
     NSString *filepath = [[AppDelegate sharedAppDelegate] getDownloadedFilepath];
@@ -158,18 +160,20 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 
 - (BOOL) validCredentials
 {
-    invalidCredentials = FALSE;
-    connectionDone = FALSE;
-    NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3];
-    
-    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
-    
-    NSRunLoop *theRL = [NSRunLoop currentRunLoop];
-    while (!connectionDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+//    invalidCredentials = FALSE;
+//    connectionDone = FALSE;
+//    NSURL *url = [[AppDelegate sharedAppDelegate] getServerURL];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:3];
+//    
+//    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+//    [connection start];
     
     return !invalidCredentials;
+}
+
+-(BOOL)connectionDone
+{
+    return connectionDone;
 }
 
 @end
