@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B2080" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Note View Controller - Notes-->
@@ -48,141 +48,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdX-Ec-pil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1253" y="-126"/>
-        </scene>
-        <!--Server View Controller - Server Settings-->
-        <scene sceneID="47V-mE-BUW">
-            <objects>
-                <tableViewController id="ebz-c9-oYH" customClass="ServerViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ycQ-sV-cYi">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="faV-fJ-PPw">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="G7t-Tw-DQV">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6V-i6-VHu">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="155" id="a8J-8f-hPQ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IP Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGA-cC-mfR">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="FMe-oN-1DM"/>
-                                                        <constraint firstAttribute="width" constant="71" id="rfB-DB-ZWe"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="D6V-i6-VHu" firstAttribute="leading" secondItem="G7t-Tw-DQV" secondAttribute="leading" constant="147" id="AZH-ly-7pL"/>
-                                            <constraint firstItem="uGA-cC-mfR" firstAttribute="leading" secondItem="G7t-Tw-DQV" secondAttribute="leading" constant="25" id="IyZ-2r-cE7"/>
-                                            <constraint firstItem="uGA-cC-mfR" firstAttribute="centerY" secondItem="G7t-Tw-DQV" secondAttribute="centerY" type="default" id="Wae-OT-AUG"/>
-                                            <constraint firstItem="D6V-i6-VHu" firstAttribute="top" secondItem="G7t-Tw-DQV" secondAttribute="top" constant="8" id="Wku-PZ-FHS"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qc3-ue-cWl">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGm-lS-bEX">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="155" id="Veg-Jr-2pV"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpQ-4S-O65">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="71" id="fyd-n7-qhg"/>
-                                                        <constraint firstAttribute="height" constant="21" id="r4v-rw-9d3"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="UGm-lS-bEX" firstAttribute="leading" secondItem="qc3-ue-cWl" secondAttribute="leading" constant="147" id="8ug-7m-OMy"/>
-                                            <constraint firstItem="xpQ-4S-O65" firstAttribute="top" secondItem="qc3-ue-cWl" secondAttribute="top" constant="11" id="Fa1-tg-kJk"/>
-                                            <constraint firstItem="xpQ-4S-O65" firstAttribute="leading" secondItem="qc3-ue-cWl" secondAttribute="leading" constant="25" id="MWl-GF-TwU"/>
-                                            <constraint firstItem="UGm-lS-bEX" firstAttribute="centerY" secondItem="qc3-ue-cWl" secondAttribute="centerY" type="default" id="OWb-08-Bwo"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QTi-VV-zIs">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-GP-teo">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="155" id="uZL-im-CZG"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgg-jR-47j">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="9dE-2o-EkR"/>
-                                                        <constraint firstAttribute="width" constant="71" id="Sao-UI-Ars"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="qbX-GP-teo" firstAttribute="centerY" secondItem="QTi-VV-zIs" secondAttribute="centerY" type="default" id="J38-NB-SZQ"/>
-                                            <constraint firstItem="Cgg-jR-47j" firstAttribute="top" secondItem="QTi-VV-zIs" secondAttribute="top" constant="11" id="N6I-Zi-T4o"/>
-                                            <constraint firstItem="qbX-GP-teo" firstAttribute="leading" secondItem="QTi-VV-zIs" secondAttribute="leading" constant="147" id="sM7-UC-xaa"/>
-                                            <constraint firstItem="Cgg-jR-47j" firstAttribute="leading" secondItem="QTi-VV-zIs" secondAttribute="leading" constant="24" id="yxz-mk-jcU"/>
-                                        </constraints>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="ebz-c9-oYH" id="SBr-aA-VzW"/>
-                            <outlet property="delegate" destination="ebz-c9-oYH" id="kQd-Xa-bAC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Server Settings" id="cNn-As-PMz">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="emj-V1-GUV">
-                            <connections>
-                                <action selector="checkSaveIsValid:" destination="ebz-c9-oYH" id="zsR-JE-Uiu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="ipAddressField" destination="D6V-i6-VHu" id="eVS-Pr-bcg"/>
-                        <outlet property="passwordField" destination="qbX-GP-teo" id="gVK-c3-qaQ"/>
-                        <outlet property="usernameField" destination="UGm-lS-bEX" id="sKz-14-Yvg"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ee5-nf-Wqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="945" y="-672"/>
         </scene>
         <!--Add Note View Controller - New Note-->
         <scene sceneID="W8M-XA-pon">
@@ -391,7 +256,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ODr-gA-39A">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKY-bQ-WM7">
                                 <constraints>
@@ -414,19 +279,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.55030599442773653" green="0.59448246481528977" blue="0.64980769230769231" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ODr-gA-39A" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="111" id="36p-Jt-qkA"/>
                             <constraint firstItem="ODr-gA-39A" firstAttribute="trailing" secondItem="Get-qQ-uQu" secondAttribute="trailing" type="default" id="5Tp-t3-Zhg"/>
-                            <constraint firstItem="H3H-3y-zKm" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Xg-d4-Fu3"/>
-                            <constraint firstItem="Get-qQ-uQu" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="150" id="BlL-Gz-zsw"/>
-                            <constraint firstItem="0sD-Xb-5Qm" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OCy-CH-2k5"/>
-                            <constraint firstItem="AKY-bQ-WM7" firstAttribute="centerX" secondItem="0sD-Xb-5Qm" secondAttribute="centerX" type="default" id="OGm-mm-ciW"/>
-                            <constraint firstItem="ODr-gA-39A" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="197" id="PHH-AJ-GWW"/>
+                            <constraint firstItem="Get-qQ-uQu" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="64" id="6bv-mM-EJd"/>
+                            <constraint firstItem="H3H-3y-zKm" firstAttribute="leading" secondItem="0sD-Xb-5Qm" secondAttribute="leading" type="default" id="DkW-Q4-y3X"/>
+                            <constraint firstItem="0sD-Xb-5Qm" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="17" id="Fr7-BE-lHb"/>
+                            <constraint firstItem="H3H-3y-zKm" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="115" id="KhI-g0-Lcc"/>
                             <constraint firstItem="Get-qQ-uQu" firstAttribute="trailing" secondItem="aaD-7i-RUG" secondAttribute="trailing" type="default" id="Q0f-hm-UK8"/>
+                            <constraint firstItem="aaD-7i-RUG" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="119" id="Tjm-Hw-BWb"/>
                             <constraint firstItem="ODr-gA-39A" firstAttribute="leading" secondItem="Get-qQ-uQu" secondAttribute="leading" type="default" id="TkD-WA-vB5"/>
                             <constraint firstItem="0sD-Xb-5Qm" firstAttribute="baseline" secondItem="Get-qQ-uQu" secondAttribute="baseline" type="default" id="WCm-Nc-7NU"/>
-                            <constraint firstItem="aaD-7i-RUG" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="106" id="YM0-dJ-ZcT"/>
+                            <constraint firstItem="AKY-bQ-WM7" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="38" id="WOo-UT-RTt"/>
                             <constraint firstItem="aaD-7i-RUG" firstAttribute="baseline" secondItem="AKY-bQ-WM7" secondAttribute="baseline" type="default" id="daT-dW-AS1"/>
-                            <constraint firstItem="H3H-3y-zKm" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="201" id="kyL-NK-AwB"/>
-                            <constraint firstItem="aaD-7i-RUG" firstAttribute="leading" secondItem="WqB-nf-uKj" secondAttribute="leading" constant="122" id="lIP-q9-jPF"/>
+                            <constraint firstItem="aaD-7i-RUG" firstAttribute="top" secondItem="WqB-nf-uKj" secondAttribute="top" constant="20" symbolic="YES" type="default" id="erJ-pk-eGO"/>
                             <constraint firstItem="Get-qQ-uQu" firstAttribute="leading" secondItem="aaD-7i-RUG" secondAttribute="leading" type="default" id="vwv-qC-rX6"/>
                         </constraints>
                     </view>
@@ -694,7 +559,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrR-z7-Ps2">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-5h-ThQ">
                                 <constraints>
@@ -709,6 +574,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="oxw-lJ-O25" eventType="touchUpInside" id="LGd-yY-5lw"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4M-EM-lva">
                                 <constraints>
@@ -718,20 +586,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmA-75-gaZ">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="4bK-2K-JHo"/>
-                                    <constraint firstAttribute="height" constant="30" id="LLl-6v-HI4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="New User">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBY-d3-WrH">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -745,26 +599,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="J4M-EM-lva" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="186" id="4p8-G3-eUw"/>
-                            <constraint firstItem="kmA-75-gaZ" firstAttribute="leading" secondItem="ap6-Aw-Lai" secondAttribute="leading" constant="125" id="IcB-sV-m4e"/>
+                            <constraint firstItem="KBY-d3-WrH" firstAttribute="leading" secondItem="ap6-Aw-Lai" secondAttribute="leading" constant="25" id="8Po-tg-rXh"/>
+                            <constraint firstItem="ld7-5h-ThQ" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="127" id="ASa-No-hYn"/>
+                            <constraint firstItem="fum-9y-Dev" firstAttribute="trailing" secondItem="KBY-d3-WrH" secondAttribute="trailing" type="default" id="EXP-gA-NsK"/>
                             <constraint firstItem="IrR-z7-Ps2" firstAttribute="trailing" secondItem="J4M-EM-lva" secondAttribute="trailing" type="default" id="IlP-bY-Ksq"/>
+                            <constraint firstItem="KBY-d3-WrH" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="41" id="JqY-fF-Mfd"/>
                             <constraint firstItem="IrR-z7-Ps2" firstAttribute="leading" secondItem="ld7-5h-ThQ" secondAttribute="leading" type="default" id="QEU-AR-5cD"/>
-                            <constraint firstAttribute="bottom" secondItem="ld7-5h-ThQ" secondAttribute="bottom" constant="204" id="Z6B-z3-jRh"/>
                             <constraint firstItem="ld7-5h-ThQ" firstAttribute="centerX" secondItem="ap6-Aw-Lai" secondAttribute="centerX" type="default" id="Zba-K1-aHE"/>
-                            <constraint firstItem="KBY-d3-WrH" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="190" id="Zzs-eH-egt"/>
-                            <constraint firstItem="KBY-d3-WrH" firstAttribute="leading" secondItem="ap6-Aw-Lai" secondAttribute="leading" constant="29" id="bTY-MB-ToQ"/>
-                            <constraint firstItem="fum-9y-Dev" firstAttribute="leading" secondItem="KBY-d3-WrH" secondAttribute="leading" type="default" id="e4F-WC-PKf"/>
+                            <constraint firstItem="J4M-EM-lva" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="37" id="csR-BI-y0E"/>
+                            <constraint firstItem="fum-9y-Dev" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="79" id="foA-GO-1Xa"/>
+                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="top" secondItem="J4M-EM-lva" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gkS-m9-pKr"/>
                             <constraint firstItem="IrR-z7-Ps2" firstAttribute="leading" secondItem="J4M-EM-lva" secondAttribute="leading" type="default" id="kV1-md-t7k"/>
-                            <constraint firstAttribute="bottom" secondItem="kmA-75-gaZ" secondAttribute="bottom" constant="165" id="lIN-XE-1AW"/>
                             <constraint firstItem="KBY-d3-WrH" firstAttribute="baseline" secondItem="J4M-EM-lva" secondAttribute="baseline" type="default" id="wHC-Yb-lbj"/>
-                            <constraint firstItem="fum-9y-Dev" firstAttribute="top" secondItem="ap6-Aw-Lai" secondAttribute="top" constant="225" id="xXv-kn-oKm"/>
-                            <constraint firstItem="IrR-z7-Ps2" firstAttribute="top" secondItem="J4M-EM-lva" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zfh-k7-OXT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jmo-kt-wKQ">
                         <barButtonItem key="rightBarButtonItem" title="New User" id="au3-kl-odm">
                             <connections>
-                                <segue destination="Xp1-pI-96O" kind="push" identifier="New User Segue" id="btr-s3-nsS"/>
+                                <segue destination="Xp1-pI-96O" kind="push" id="uBt-kl-Ynp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -803,7 +655,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zga-Vs-w0f">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xA6-Fj-am0">
                                 <constraints>
@@ -827,7 +679,7 @@
                                     <constraint firstAttribute="height" constant="30" id="jAX-Rw-MHh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Re-enter Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-yf-6HR">
                                 <constraints>
@@ -841,28 +693,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WxV-zY-Y2F" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="199" id="31h-z8-x7F"/>
-                            <constraint firstItem="gWa-yf-6HR" firstAttribute="leading" secondItem="85g-qy-BbK" secondAttribute="leading" constant="25" id="5w8-Gj-h19"/>
                             <constraint firstItem="eN4-E5-HgF" firstAttribute="leading" secondItem="WxV-zY-Y2F" secondAttribute="leading" type="default" id="7BZ-VL-W88"/>
                             <constraint firstItem="rji-EA-jCI" firstAttribute="trailing" secondItem="Zga-Vs-w0f" secondAttribute="trailing" type="default" id="8Jw-Un-QP0"/>
-                            <constraint firstItem="gWa-yf-6HR" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="237" id="8w5-wq-w60"/>
+                            <constraint firstItem="WxV-zY-Y2F" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="77" id="9VP-zF-oe2"/>
+                            <constraint firstItem="rji-EA-jCI" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="121" id="A0t-bf-oMA"/>
                             <constraint firstItem="rji-EA-jCI" firstAttribute="baseline" secondItem="gWa-yf-6HR" secondAttribute="baseline" type="default" id="CCQ-QQ-IJB"/>
                             <constraint firstItem="xA6-Fj-am0" firstAttribute="baseline" secondItem="eN4-E5-HgF" secondAttribute="baseline" type="default" id="EMF-cQ-807"/>
+                            <constraint firstItem="xA6-Fj-am0" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="33" id="Fjh-wR-Zme"/>
+                            <constraint firstItem="gWa-yf-6HR" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="115" id="M2y-Ri-j6t"/>
+                            <constraint firstItem="Zga-Vs-w0f" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="76" id="NLd-R4-HEj"/>
                             <constraint firstItem="Zga-Vs-w0f" firstAttribute="trailing" secondItem="xA6-Fj-am0" secondAttribute="trailing" type="default" id="PHX-UG-7ER"/>
-                            <constraint firstItem="eN4-E5-HgF" firstAttribute="leading" secondItem="85g-qy-BbK" secondAttribute="leading" constant="45" id="QLb-YR-uTA"/>
-                            <constraint firstItem="Zga-Vs-w0f" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="198" id="XVl-7W-tye"/>
+                            <constraint firstItem="gWa-yf-6HR" firstAttribute="leading" secondItem="85g-qy-BbK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Xtq-cj-6Eq"/>
                             <constraint firstItem="rji-EA-jCI" firstAttribute="leading" secondItem="Zga-Vs-w0f" secondAttribute="leading" type="default" id="Ysd-En-Fmi"/>
+                            <constraint firstItem="eN4-E5-HgF" firstAttribute="bottom" secondItem="xA6-Fj-am0" secondAttribute="bottom" type="default" id="fDs-NP-BUy"/>
                             <constraint firstItem="Zga-Vs-w0f" firstAttribute="leading" secondItem="xA6-Fj-am0" secondAttribute="leading" type="default" id="gGJ-Dq-ypy"/>
-                            <constraint firstItem="rji-EA-jCI" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="243" id="gWy-5T-KEB"/>
-                            <constraint firstItem="xA6-Fj-am0" firstAttribute="centerY" secondItem="eN4-E5-HgF" secondAttribute="centerY" type="default" id="mTg-K2-CzX"/>
-                            <constraint firstItem="xA6-Fj-am0" firstAttribute="top" secondItem="85g-qy-BbK" secondAttribute="top" constant="159" id="qNz-sd-DYp"/>
                             <constraint firstItem="rji-EA-jCI" firstAttribute="leading" secondItem="gWa-yf-6HR" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xKe-LD-CGL"/>
+                            <constraint firstItem="eN4-E5-HgF" firstAttribute="leading" secondItem="85g-qy-BbK" secondAttribute="leading" constant="40" id="xyN-h7-SsB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6pa-fY-SIO">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9LC-yZ-ukh">
                             <connections>
-                                <segue destination="oxw-lJ-O25" kind="push" id="BAn-Cb-cQs"/>
+                                <action selector="save:" destination="Xp1-pI-96O" id="PHE-SL-buV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1231,7 +1083,7 @@
                                                         <constraint firstAttribute="width" constant="100" id="WEY-a3-W69"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                    <state key="normal" title="New Password">
+                                                    <state key="normal" title="Save Password">
                                                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1694,129 +1546,13 @@
         <image name="notes.png" width="30" height="30"/>
         <image name="passwords.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="AddLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="passwordCheckTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddNoteViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddNoteViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddpasswordViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddpasswordViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoreDataTableViewController.h"/>
-        </class>
-        <class className="GeneratorViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GeneratorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="copyToClipboard:"/>
-                <relationship kind="action" name="generateButton:"/>
-                <relationship kind="action" name="setCapitalSliderToZero:"/>
-                <relationship kind="action" name="setLowerSliderToZero:"/>
-                <relationship kind="action" name="setNumberSliderToZero:"/>
-                <relationship kind="action" name="setSpecialSliderToZero:"/>
-                <relationship kind="action" name="sliderAdjustment:"/>
-                <relationship kind="action" name="updateCapitalSlider:"/>
-                <relationship kind="action" name="updateLengthSlider:"/>
-                <relationship kind="action" name="updateLowerSlider:"/>
-                <relationship kind="action" name="updateNumbersSlider:"/>
-                <relationship kind="action" name="updateSpecialSlider:"/>
-                <relationship kind="outlet" name="capitalLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="capitalSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="capitalsSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="generateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lengthLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lengthSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="lowerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lowerSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="lowersSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="makeNewPasswordButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="numberLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numberSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="numbersSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="passwordCopyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="specialLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="specialSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="specialsSlider" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NoteViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoteViewController.h"/>
-        </class>
-        <class className="PasswordViewController" superclassName="CoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PasswordViewController.h"/>
-        </class>
-        <class className="ServerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="saveData:"/>
-                <relationship kind="outlet" name="PasswordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="URLTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="UsernameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="TabBarViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TabBarViewController.h"/>
-        </class>
-        <class className="noteDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/noteDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="noteContentTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="noteTitleTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="passwordDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/passwordDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="accountDescriptionTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="accountTitleTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="websiteTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="GG8-Ne-QrR"/>
         <segue reference="pCD-x8-pd2"/>
-        <segue reference="lyK-HN-099"/>
-        <segue reference="M2K-DT-dlB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -54,8 +54,13 @@
     NSRunLoop *theRL = [NSRunLoop currentRunLoop];
     while (![api connectionDone] && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
     if([api validCredentials]){
+        [[AppDelegate sharedAppDelegate] getUser].serverURL = self.URLTextField.text;
+        [[AppDelegate sharedAppDelegate] getUser].serverUsername = self.UsernameTextField.text;
+        [[AppDelegate sharedAppDelegate] getUser].serverPassword = self.PasswordTextField.text;
+        [[AppDelegate sharedAppDelegate] syncFiles];
+        
         [self SaveIsValidPopup];
-    } else {
+    } else {        
         [[AppDelegate sharedAppDelegate] setServerURL:previousURL];
         [[AppDelegate sharedAppDelegate] setUsername:previousUsername];
         [[AppDelegate sharedAppDelegate] setPassword:previousPassword];

@@ -60,12 +60,15 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    loggedIn = FALSE;
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    loggedIn = false;
+    
     NSMutableString *xml = [[NSMutableString alloc] init];
     [xml appendString:@"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"];
     [xml appendString:@"<content>"];
@@ -106,34 +109,45 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    loggedIn = FALSE;
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    loggedIn = FALSE;
+    TabBarViewController *tabBarController = (TabBarViewController *)self.window.rootViewController;
+    [tabBarController LoginScreePopUp];
+    
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+
+}
+
+- (void) sync
+{
     WebDAVAPI *api = [[WebDAVAPI alloc] init];
     downloadDone = FALSE;
-    url = @"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml";
-    username = @"passwordsync";
-    password = @"password";
-//    if([api validCredentials]){
-//        [api download];
-//        NSRunLoop *theRL = [NSRunLoop currentRunLoop];
-//        while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
-//    }
-//    
-//    [self syncFiles];
-//    
-//    [api upload];
+    //    url = @"https://sync14.omnigroup.com/passwordsync/passwordSync/password.xml";
+    //    username = @"passwordsync";
+    //    password = @"password";
+    //    if([api validCredentials]){
+    //        [api download];
+    //        NSRunLoop *theRL = [NSRunLoop currentRunLoop];
+    //        while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    //    }
+    //
+    //    [self syncFiles];
+    //
+    //    [api upload];
     [api download];
     NSRunLoop *theRL = [NSRunLoop currentRunLoop];
-    while (!downloadDone && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
+    while (![api connectionDone] && [theRL runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]]);
     
     if([api validCredentials]){
         [self syncFiles];
         [api upload];
     }
-
 }
 
 - (void)syncFiles
@@ -287,31 +301,31 @@
 
 - (NSURL *)getServerURL
 {
-    return [NSURL URLWithString:url];
+    return [NSURL URLWithString:user.serverURL];
 }
 
 - (void)setServerURL: (NSString *) input
 {
-    url = input;
+    user.serverURL = input;
 }
 
 - (NSString *)getUsername
 {
-    return username;
+    return user.serverUsername;
 }
 
 - (void)setUsername: (NSString *) input
 {
-    username = input;
+    user.serverUsername = input;
 }
 
 - (NSString *)getPassword
 {
-    return password;
+    return user.serverPassword;
 }
 - (void)setPassword: (NSString *) input
 {
-    password = input;
+    user.serverPassword = input;
 }
 
 - (NSString *) getFilepath
@@ -332,5 +346,26 @@
 {
     downloadDone = TRUE;
 }
+
+- (void) loggedIn
+{
+    loggedIn = TRUE;
+}
+
+- (BOOL) getLoggedIn
+{
+    return loggedIn;
+}
+
+- (void) setUser:(User *)theUser
+{
+    user = theUser;
+}
+
+- (User *) getUser
+{
+    return user;
+}
+
 
 @end

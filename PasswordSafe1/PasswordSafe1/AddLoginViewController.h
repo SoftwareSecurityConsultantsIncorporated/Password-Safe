@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "AppDelegate.h"
+#import <Foundation/Foundation.h>
 @class AddLoginViewController;
 
 @protocol AddLoginControllerDelegate
@@ -23,5 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordCheckTextField;
+
+- (IBAction)save:(id)sender;
 
 @end

@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     BOOL downloadDone;
-    NSString *url;
-    NSString *username;
-    NSString *password;
+    BOOL loggedIn;
+    User *user;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -33,6 +33,11 @@
 - (NSString *) getFilepath;
 - (NSString *) getDownloadedFilepath;
 - (void) downloadDone;
-
+- (void) loggedIn;
+- (BOOL) getLoggedIn;
+- (void) setUser:(User *)theUser;
+- (User *) getUser;
+- (void)syncFiles;
+- (void) sync;
 
 @end

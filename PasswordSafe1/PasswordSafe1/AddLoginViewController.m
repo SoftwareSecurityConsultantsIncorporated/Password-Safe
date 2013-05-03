@@ -42,12 +42,28 @@
 - (IBAction)save:(id)sender
 {
     if([__passwordTextField.text isEqualToString:__passwordCheckTextField.text]){
-        User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User"
-                                                       inManagedObjectContext:self.managedObjectContext];
+        BOOL foundUser = FALSE;
+        
+        NSFetchRequest *fetchUsers = [[NSFetchRequest alloc] init];
+        [fetchUsers setEntity:[NSEntityDescription entityForName:@"User" inManagedObjectContext:[[AppDelegate sharedAppDelegate] managedObjectContext]]];
+        NSArray *users = [[[AppDelegate sharedAppDelegate] managedObjectContext] executeFetchRequest:fetchUsers error:nil];
+        
+        for(User *user in users){
+            if([[user masterUsername] isEqualToString:__usernameTextField.text]){
+                foundUser = TRUE;
+            }
+        }
+
+        if(!foundUser){
+            User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                                                       inManagedObjectContext:[[AppDelegate sharedAppDelegate] managedObjectContext]];
     
-        user.masterUsername = __usernameTextField.text;
-        user.masterPassword = __passwordTextField.text;
-        [self.managedObjectContext save:nil];  // write to database
+            user.masterUsername = __usernameTextField.text;
+            user.masterPassword = __passwordTextField.text;
+            [[[AppDelegate sharedAppDelegate] managedObjectContext] save:nil];  // write to database
+        } else {
+            [self UsernameIsInvalidPopup];
+        }
     
         [self.delegate theCreateButtonOnTheAddLoginViewControllerWasTapped:self];
     } else {
@@ -58,6 +74,15 @@
 - (void)SaveIsInvalidPopup{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Creation was Unsuccessful"
                                                     message:@"Passwords are not the same"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)UsernameIsInvalidPopup{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Creation was Unsuccessful"
+                                                    message:@"Username already exists"
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];

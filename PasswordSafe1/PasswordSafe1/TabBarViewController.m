@@ -32,7 +32,10 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self LoginScreePopUp];
+    if(![[AppDelegate sharedAppDelegate] getLoggedIn]){
+        [self LoginScreePopUp];
+    }
+    NSLog(@"Fuck you");
 }
 
 - (void)didReceiveMemoryWarning
