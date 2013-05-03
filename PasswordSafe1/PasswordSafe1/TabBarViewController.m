@@ -32,6 +32,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self LoginScreePopUp];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,9 +46,10 @@
 }
 
 -(void)LoginScreePopUp{
-    LoginViewController *LoginScreen = [[LoginViewController alloc] init];
-    LoginScreen.delegate = self;
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:LoginScreen];
-    [self presentViewController:navigationController animated:TRUE completion:nil];
+    //LoginViewController *LoginScreen = [[LoginViewController alloc] init];
+    //LoginScreen.delegate = self;
+    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:LoginScreen];
+//    [self presentViewController:navigationController animated:TRUE completion:nil];
+    [self performSegueWithIdentifier:@"showLoginScreen" sender:self];
 }
 @end

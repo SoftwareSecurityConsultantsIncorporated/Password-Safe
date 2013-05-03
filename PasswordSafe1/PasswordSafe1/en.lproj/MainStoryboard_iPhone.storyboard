@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B2080" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fVs-Az-vNv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Note View Controller - Notes-->
@@ -677,6 +677,7 @@
                         <segue destination="u0F-e2-nep" kind="relationship" relationship="viewControllers" id="PHQ-kC-kX6"/>
                         <segue destination="iK5-fF-5P9" kind="relationship" relationship="viewControllers" id="xgU-Lj-kUC"/>
                         <segue destination="RK3-DA-quY" kind="relationship" relationship="viewControllers" id="wys-cL-XeX"/>
+                        <segue destination="i2W-1V-SxK" kind="modal" identifier="showLoginScreen" id="vxb-XP-nBs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbB-zi-Rhm" userLabel="First Responder" sceneMemberID="firstResponder"/>

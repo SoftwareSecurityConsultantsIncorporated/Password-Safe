@@ -45,7 +45,7 @@
     PasswordViewController *passwordTVC = [[passwordsTVCnav viewControllers] objectAtIndex:0];
     passwordTVC.managedObjectContext = self.managedObjectContext;
     
-    [tabBarController LoginScreePopUp];
+    //[tabBarController LoginScreePopUp];
     
     //NOTE: Be very careful to change these indexes if you change the tab order
     

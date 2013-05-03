@@ -40,6 +40,9 @@
 
 -(void)theCreateButtonOnTheAddLoginViewControllerWasTapped:(AddLoginViewController *)controller{
     [controller.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        NSLog(@"Dismissed");
+    }];
 }
 
 
